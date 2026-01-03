@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration>
+	<Properties>
+			<Property name="basePath">./logs</Property>
+	</Properties>
+
+
+	 <Appenders>
+		        <!-- DARK THEME COLORED CONSOLE -->
+    <!--     <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout
+              pattern="%d{HH:mm:ss.SSS} [%t] %highlight{%-5level}{
+                FATAL=bg_red, 
+                ERROR=bright_red bold, 
+                WARN=bright_yellow bold, 
+                INFO=bright_green, 
+                DEBUG=bright_cyan, 
+                TRACE=bright_blue
+              } %style{%logger{36}}{white} - %msg%n"/>
+        </Console> -->
+        
+		   <Console name="Console" target="SYSTEM_OUT">
+		      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+		   </Console> 
+		    
+		  <RollingFile name="File" fileName="${basePath}/automation.log" filePattern="${basePath}/automation-%d{yyyy-MM-dd}.log">
+		     <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+		      <SizeBasedTriggeringPolicy size="5MB" />
+		   </RollingFile>
+	  </Appenders>
+  
+	  <Loggers>
+		    <Root level="Debug"><!-- Here you can use multiple log levels All < Trace < Debug < Info < Warn < Error < Fatal < Off -->
+		      <AppenderRef ref="File"/>   
+		       <AppenderRef ref="Console"/> 
+		    </Root>
+	  </Loggers>
+  
+</Configuration>
+
+
+

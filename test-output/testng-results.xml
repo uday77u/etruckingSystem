@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-01-02T21:44:09 IST" name="Default suite" finished-at="2026-01-02T21:46:34 IST" duration-ms="144990">
+    <groups>
+    </groups>
+    <test started-at="2026-01-02T21:44:09 IST" name="Default test" finished-at="2026-01-02T21:46:34 IST" duration-ms="144990">
+      <class name="ui_TestCases.TC001_AdminSignup">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:ui_TestCases.TC001_AdminSignup@533bda92]" started-at="2026-01-02T21:44:09 IST" name="setup" finished-at="2026-01-02T21:44:51 IST" duration-ms="41756" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifySignupRegistration()[pri:0, instance:ui_TestCases.TC001_AdminSignup@533bda92]" started-at="2026-01-02T21:44:51 IST" name="verifySignupRegistration" finished-at="2026-01-02T21:46:32 IST" duration-ms="100590" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySignupRegistration -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui_TestCases.TC001_AdminSignup@533bda92]" started-at="2026-01-02T21:46:32 IST" name="tearDown" finished-at="2026-01-02T21:46:34 IST" duration-ms="2362" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- ui_TestCases.TC001_AdminSignup -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

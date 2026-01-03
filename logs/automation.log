@@ -1,0 +1,144 @@
+12:05:26.075 [main] INFO  ui_TestCases.TC001_AdminSignup - chrome launched in NORMAL mode.
+12:05:26.327 [main] INFO  ui_TestCases.TC001_AdminSignup - Browser Window is maximized.
+12:05:26.423 [main] DEBUG ui_TestCases.TC001_AdminSignup - logging started
+12:05:26.424 [main] INFO  ui_TestCases.TC001_AdminSignup - starting TC001_RegisterUser
+12:05:27.005 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 1: Launching the browser
+12:05:27.006 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 2: Navigating to baseURL:  https://etruckingsystem.com/auth 
+12:05:43.259 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 3: Clicking on 'AdminYesTextLink'
+12:05:48.273 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 4: Verify login page is visible
+12:05:53.848 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 5: Clicked on signuplink
+12:05:59.526 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 6: Enter FirstName
+12:06:06.779 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 7: Enter LastName
+12:06:13.054 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 8: Enter email
+12:06:19.776 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 9: Enter phone
+12:06:20.908 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 10: Enter DotNumber
+12:06:21.598 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 11: Click 'submitButton' button
+12:06:27.663 [main] DEBUG ui_TestCases.TC001_AdminSignup - application logs end.......
+12:06:27.664 [main] INFO  ui_TestCases.TC001_AdminSignup - **** finished TC001a_verifySignupRegistration  *****
+12:06:31.880 [main] INFO  ui_TestCases.TC001_AdminSignup - Browser is closed.
+
+12:28:10.601 [main] INFO  ui_TestCases.TC001_AdminSignup - chrome launched in NORMAL mode.
+12:28:13.572 [main] INFO  ui_TestCases.TC001_AdminSignup - Browser Window is maximized.
+12:28:14.441 [main] DEBUG ui_TestCases.TC001_AdminSignup - logging started
+12:28:14.441 [main] INFO  ui_TestCases.TC001_AdminSignup - starting TC001_RegisterUser
+12:28:14.442 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 1: Launching the browser
+12:28:14.442 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 2: Navigating to baseURL:  https://etruckingsystem.com/auth 
+12:28:25.408 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 3: Clicking on 'AdminYesTextLink'
+12:28:30.422 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 4: Verify login page is visible
+12:28:35.714 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 5: Clicked on signuplink
+12:28:40.985 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 6: Verify register page is visible
+12:28:46.012 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 7: Enter FirstName
+12:28:52.029 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 8: Enter LastName
+12:28:57.533 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 9: Enter email
+12:29:03.057 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 10: Enter phone
+12:29:03.636 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 11: Enter DotNumber
+12:29:03.997 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 12: Click 'submitButton' button
+12:29:09.576 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 13: Verify password page is visible
+12:29:14.607 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 14: Enter Password
+12:29:20.250 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 15: Enter ConfirmPassword
+12:29:25.577 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 16: click SignupButton
+12:29:30.777 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 17: Verify 'verifyPhone' page is visible
+12:29:35.942 [main] INFO  ui_TestCases.TC001_AdminSignup - getOTPcontainsMessage: Your OTP is 170278
+12:29:36.006 [main] INFO  ui_TestCases.TC001_AdminSignup - getLinkSentMessage: Verification link has been sent to user.1767077937534@gmail.com
+12:29:36.066 [main] INFO  ui_TestCases.TC001_AdminSignup - getOTPsentMessage: OTP has sent to 9874563210
+12:29:36.066 [main] DEBUG ui_TestCases.TC001_AdminSignup - application logs end.......
+12:29:36.066 [main] INFO  ui_TestCases.TC001_AdminSignup - **** finished TC001a_verifySignupRegistration  *****
+12:29:37.992 [main] INFO  ui_TestCases.TC001_AdminSignup - Browser is closed.
+
+18:28:35.111 [main] INFO  api_Utilities.TestListener - Test Suite Started!!!
+18:28:35.204 [main] INFO  api_Utilities.TestListener - Started!!!!loginTest
+18:28:35.204 [main] INFO  api_Utilities.TestListener - Description!!Verify if Login API is working...
+18:28:38.216 [main] INFO  api_Utilities.LoggingFilter - BASE URI:http://64.227.160.186:8080
+18:28:38.217 [main] INFO  api_Utilities.LoggingFilter - Request Header:Accept=*/*
+Content-Type=application/json
+18:28:38.217 [main] INFO  api_Utilities.LoggingFilter - Request PayLoad:{"username":"uday1234","password":"uday1234"}
+18:28:39.318 [main] INFO  api_Utilities.LoggingFilter - STATUS CODE:401
+18:28:39.319 [main] INFO  api_Utilities.LoggingFilter - Response Header :Vary=Origin
+Vary=Access-Control-Request-Method
+Vary=Access-Control-Request-Headers
+Access-Control-Allow-Origin=https://swift.techwithjatin.com
+Access-Control-Allow-Methods=GET, POST, PUT, DELETE, OPTIONS
+Access-Control-Max-Age=3600
+Access-Control-Allow-Headers=Authorization, Content-Type, Accept
+Access-Control-Allow-Credentials=true
+X-Content-Type-Options=nosniff
+X-XSS-Protection=0
+Cache-Control=no-cache, no-store, max-age=0, must-revalidate
+Pragma=no-cache
+Expires=0
+X-Frame-Options=DENY
+Content-Type=application/json
+Transfer-Encoding=chunked
+Date=Tue, 30 Dec 2025 12:58:39 GMT
+Keep-Alive=timeout=60
+Connection=keep-alive
+18:28:39.416 [main] INFO  api_Utilities.LoggingFilter - Request Body:{
+    "timestamp": "2025-12-30 12:58:39",
+    "status": 401,
+    "error": "Invalid Credentials",
+    "message": "The username or password you entered is incorrect",
+    "path": "uri=/api/auth/login",
+    "solution": "Please check your credentials and try again",
+    "errorCode": "AUTH_002"
+}
+18:28:39.593 [main] ERROR api_Utilities.TestListener - Failed!!!!loginTest
+18:28:39.743 [main] INFO  api_Utilities.TestListener - Test Suite Completed!!!
+21:29:21.890 [main] INFO  ui_TestCases.TC001_AdminSignup - chrome launched in NORMAL mode.
+21:29:22.300 [main] INFO  ui_TestCases.TC001_AdminSignup - Browser Window is maximized.
+21:29:24.888 [main] DEBUG ui_TestCases.TC001_AdminSignup - logging started
+21:29:24.889 [main] INFO  ui_TestCases.TC001_AdminSignup - starting TC001_RegisterUser
+21:29:24.891 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 1: Launching the browser
+21:29:24.892 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 2: Navigating to baseURL:  https://etruckingsystem.com/auth 
+21:29:38.199 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 3: Clicking on 'AdminYesTextLink'
+21:29:43.209 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 4: Verify login page is visible
+21:29:54.449 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 5: Clicked on signuplink
+21:30:00.812 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 6: Verify register page is visible
+21:30:05.900 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 7: Enter FirstName
+21:30:12.689 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 8: Enter LastName
+21:30:19.178 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 9: Enter email
+21:30:25.943 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 10: Enter phone
+21:30:27.314 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 11: Enter DotNumber
+21:30:28.129 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 12: Click 'submitButton' button
+21:30:34.897 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 13: Verify password page is visible
+21:30:39.944 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 14: Enter Password
+21:30:46.388 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 15: Enter ConfirmPassword
+21:30:52.711 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 16: click SignupButton
+21:30:58.498 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 17: Verify 'verifyPhone' page is visible
+21:31:08.154 [main] INFO  ui_TestCases.TC001_AdminSignup - getOTPcontainsMessage: Your OTP is 844072
+21:31:08.335 [main] INFO  ui_TestCases.TC001_AdminSignup - getLinkSentMessage: Verification link has been sent to user.1767369619180@gmail.com
+21:31:08.490 [main] INFO  ui_TestCases.TC001_AdminSignup - getOTPsentMessage: OTP has sent to 9874563210
+21:31:08.491 [main] DEBUG ui_TestCases.TC001_AdminSignup - application logs end.......
+21:31:08.492 [main] INFO  ui_TestCases.TC001_AdminSignup - **** finished TC001a_verifySignupRegistration  *****
+21:31:12.639 [main] INFO  ui_TestCases.TC001_AdminSignup - Browser is closed.
+
+21:44:51.242 [main] INFO  ui_TestCases.TC001_AdminSignup - chrome launched in NORMAL mode.
+21:44:51.578 [main] INFO  ui_TestCases.TC001_AdminSignup - Browser Window is maximized.
+21:44:52.069 [main] DEBUG ui_TestCases.TC001_AdminSignup - logging started
+21:44:52.070 [main] INFO  ui_TestCases.TC001_AdminSignup - starting TC001_RegisterUser
+21:44:52.071 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 1: Launching the browser
+21:44:52.072 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 2: Navigating to baseURL:  https://etruckingsystem.com/auth 
+21:45:09.614 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 3: Clicking on 'AdminYesTextLink'
+21:45:14.620 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 4: Verify login page is visible
+21:45:19.820 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 5: Clicked on signuplink
+21:45:25.591 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 6: Verify register page is visible
+21:45:30.629 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 7: Enter FirstName
+21:45:37.083 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 8: Enter LastName
+21:45:43.027 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 9: Enter email
+21:45:49.391 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 10: Enter phone
+21:45:51.311 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 11: Enter DotNumber
+21:45:53.016 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 12: Click 'submitButton' button
+21:46:03.264 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 13: Verify password page is visible
+21:46:08.381 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 14: Enter Password
+21:46:14.579 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 15: Enter ConfirmPassword
+21:46:20.529 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 16: click SignupButton
+21:46:26.107 [main] INFO  ui_TestCases.TC001_AdminSignup - STEP 17: Verify 'verifyPhone' page is visible
+21:46:31.577 [main] INFO  ui_TestCases.TC001_AdminSignup - getOTPcontainsMessage: Your OTP is 477959
+21:46:31.767 [main] INFO  ui_TestCases.TC001_AdminSignup - getLinkSentMessage: Verification link has been sent to user.1767370543028@gmail.com
+21:46:31.939 [main] INFO  ui_TestCases.TC001_AdminSignup - getOTPsentMessage: OTP has sent to 9874563210
+21:46:32.175 [main] INFO  ui_TestCases.TC001_AdminSignup - ExtractOTPcontainsMessage: 477959
+21:46:32.176 [main] DEBUG ui_TestCases.TC001_AdminSignup - application logs end.......
+21:46:32.176 [main] INFO  ui_TestCases.TC001_AdminSignup - **** finished TC001a_verifySignupRegistration  *****
+21:46:34.580 [main] INFO  ui_TestCases.TC001_AdminSignup - Browser is closed.
+
+22:01:08.120 [main] INFO  ui_Utilities.ExtentReportManager - 
+		******* Test Case execution started 2026.01.02.22.01.08******
