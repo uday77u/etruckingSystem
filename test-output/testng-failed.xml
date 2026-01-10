@@ -3,11 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="practice.Test001_VerifyUser">
+      <class name="api_tests.Test001_VerifyUser">
         <methods>
-          <include name="TestVerifyUser"/>
+          <include name="setup"/>
+          <include name="TestVerifyUser_MissingEmail"/>
+          <include name="TestVerifyUser_MinPhoneLength"/>
+          <include name="TestVerifyUser_MissingPhone"/>
+          <include name="TestVerifyUser_successSchemaValidation"/>
+          <include name="TestVerifyUser_InvalidEmailFormat"/>
+          <include name="TestVerifyUser_InvalidPhoneFormat"/>
+          <include name="TestVerifyUser_MaxPhoneLength"/>
         </methods>
-      </class> <!-- practice.Test001_VerifyUser -->
+      </class> <!-- api_tests.Test001_VerifyUser -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

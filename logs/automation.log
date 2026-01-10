@@ -142,3 +142,768 @@ Connection=keep-alive
 
 22:01:08.120 [main] INFO  ui_Utilities.ExtentReportManager - 
 		******* Test Case execution started 2026.01.02.22.01.08******
+21:32:08.557 [main] INFO  ui_Utilities.ExtentReportManager - 
+		******* Test Case execution started 2026.01.07.21.32.08******
+21:32:41.965 [main] INFO  ui_Utilities.ExtentReportManager - ******* Test Case execution finished2026.01.07.21.32.08 ******
+21:34:39.754 [main] INFO  api_Utilities.TestListener - Test Suite Started!!!
+21:34:41.989 [main] INFO  api_Utilities.TestListener - Started!!!!TestVerifyUser
+21:34:41.990 [main] INFO  api_Utilities.TestListener - Description!!
+21:34:52.405 [main] INFO  api_Utilities.TestListener - Passed!!!!TestVerifyUser
+21:34:52.439 [main] INFO  api_Utilities.TestListener - Started!!!!TestVerifyUser_MissingEmail
+21:34:52.440 [main] INFO  api_Utilities.TestListener - Description!!
+21:34:53.245 [main] INFO  api_Utilities.TestListener - Passed!!!!TestVerifyUser_MissingEmail
+21:34:53.264 [main] INFO  api_Utilities.TestListener - Started!!!!TestVerifyUser_MissingPhone
+21:34:53.266 [main] INFO  api_Utilities.TestListener - Description!!
+21:34:54.019 [main] INFO  api_Utilities.TestListener - Passed!!!!TestVerifyUser_MissingPhone
+21:34:54.033 [main] INFO  api_Utilities.TestListener - Started!!!!TestVerifyUser_InvalidEmailFormat
+21:34:54.034 [main] INFO  api_Utilities.TestListener - Description!!
+21:34:54.622 [main] INFO  api_Utilities.TestListener - Passed!!!!TestVerifyUser_InvalidEmailFormat
+21:34:54.629 [main] INFO  api_Utilities.TestListener - Started!!!!TestVerifyUser_InvalidPhoneFormat
+21:34:54.630 [main] INFO  api_Utilities.TestListener - Description!!
+21:34:55.245 [main] INFO  api_Utilities.TestListener - Passed!!!!TestVerifyUser_InvalidPhoneFormat
+21:34:55.251 [main] INFO  api_Utilities.TestListener - Started!!!!TestVerifyUser_MinPhoneLength
+21:34:55.252 [main] INFO  api_Utilities.TestListener - Description!!
+21:34:55.891 [main] INFO  api_Utilities.TestListener - Passed!!!!TestVerifyUser_MinPhoneLength
+21:34:55.898 [main] INFO  api_Utilities.TestListener - Started!!!!TestVerifyUser_MaxPhoneLength
+21:34:55.899 [main] INFO  api_Utilities.TestListener - Description!!
+21:34:56.608 [main] INFO  api_Utilities.TestListener - Passed!!!!TestVerifyUser_MaxPhoneLength
+21:34:56.744 [main] INFO  api_Utilities.TestListener - Test Suite Completed!!!
+23:01:40.640 [main] INFO  api_Utilities.TestListener - Test Suite Started!!!
+23:01:44.356 [main] INFO  api_Utilities.TestListener - Started!!!!TestVerifyUser
+23:01:44.357 [main] INFO  api_Utilities.TestListener - Description!!
+23:02:01.968 [main] INFO  api_Utilities.TestListener - Passed!!!!TestVerifyUser
+23:02:02.019 [main] INFO  api_Utilities.TestListener - Started!!!!TestVerifyUser_MissingEmail
+23:02:02.020 [main] INFO  api_Utilities.TestListener - Description!!
+23:02:02.719 [main] INFO  api_Utilities.TestListener - Passed!!!!TestVerifyUser_MissingEmail
+23:02:02.775 [main] INFO  api_Utilities.TestListener - Started!!!!TestVerifyUser_MissingPhone
+23:02:02.781 [main] INFO  api_Utilities.TestListener - Description!!
+23:02:03.441 [main] INFO  api_Utilities.TestListener - Passed!!!!TestVerifyUser_MissingPhone
+23:02:03.450 [main] INFO  api_Utilities.TestListener - Started!!!!TestVerifyUser_InvalidEmailFormat
+23:02:03.451 [main] INFO  api_Utilities.TestListener - Description!!
+23:02:04.086 [main] INFO  api_Utilities.TestListener - Passed!!!!TestVerifyUser_InvalidEmailFormat
+23:02:04.100 [main] INFO  api_Utilities.TestListener - Started!!!!TestVerifyUser_InvalidPhoneFormat
+23:02:04.101 [main] INFO  api_Utilities.TestListener - Description!!
+23:02:04.720 [main] INFO  api_Utilities.TestListener - Passed!!!!TestVerifyUser_InvalidPhoneFormat
+23:02:04.728 [main] INFO  api_Utilities.TestListener - Started!!!!TestVerifyUser_MinPhoneLength
+23:02:04.729 [main] INFO  api_Utilities.TestListener - Description!!
+23:02:05.333 [main] INFO  api_Utilities.TestListener - Passed!!!!TestVerifyUser_MinPhoneLength
+23:02:05.342 [main] INFO  api_Utilities.TestListener - Started!!!!TestVerifyUser_MaxPhoneLength
+23:02:05.343 [main] INFO  api_Utilities.TestListener - Description!!
+23:02:05.925 [main] INFO  api_Utilities.TestListener - Passed!!!!TestVerifyUser_MaxPhoneLength
+23:02:06.122 [main] INFO  api_Utilities.TestListener - Test Suite Completed!!!
+23:07:24.883 [main] INFO  api_Utilities.TestListener - Test Suite Started!!!
+23:07:25.146 [main] INFO  api_Utilities.TestListener - Started!!!!loginTest
+23:07:25.147 [main] INFO  api_Utilities.TestListener - Description!!Verify if Login API is working...
+23:07:33.213 [main] INFO  api_Utilities.LoggingFilter - BASE URI:http://64.227.160.186:8080
+23:07:33.217 [main] INFO  api_Utilities.LoggingFilter - Request Header:Accept=*/*
+Content-Type=application/json
+23:07:33.217 [main] INFO  api_Utilities.LoggingFilter - Request PayLoad:{"username":"uday1234","password":"uday1234"}
+23:07:37.754 [main] INFO  api_Utilities.LoggingFilter - STATUS CODE:401
+23:07:37.757 [main] INFO  api_Utilities.LoggingFilter - Response Header :Vary=Origin
+Vary=Access-Control-Request-Method
+Vary=Access-Control-Request-Headers
+Access-Control-Allow-Origin=https://swift.techwithjatin.com
+Access-Control-Allow-Methods=GET, POST, PUT, DELETE, OPTIONS
+Access-Control-Max-Age=3600
+Access-Control-Allow-Headers=Authorization, Content-Type, Accept
+Access-Control-Allow-Credentials=true
+X-Content-Type-Options=nosniff
+X-XSS-Protection=0
+Cache-Control=no-cache, no-store, max-age=0, must-revalidate
+Pragma=no-cache
+Expires=0
+X-Frame-Options=DENY
+Content-Type=application/json
+Transfer-Encoding=chunked
+Date=Thu, 08 Jan 2026 17:37:37 GMT
+Keep-Alive=timeout=60
+Connection=keep-alive
+23:07:38.197 [main] INFO  api_Utilities.LoggingFilter - Request Body:{
+    "timestamp": "2026-01-08 17:37:37",
+    "status": 401,
+    "error": "Invalid Credentials",
+    "message": "The username or password you entered is incorrect",
+    "path": "uri=/api/auth/login",
+    "solution": "Please check your credentials and try again",
+    "errorCode": "AUTH_002"
+}
+23:07:38.724 [main] ERROR api_Utilities.TestListener - Failed!!!!loginTest
+23:07:39.576 [main] INFO  api_Utilities.TestListener - Test Suite Completed!!!
+00:07:38.483 [main] INFO  com.bigwings.etruckingsystem.utilities.TestListener - Test Suite Started!!!
+00:07:41.207 [main] INFO  com.bigwings.etruckingsystem.utilities.TestListener - Started!!!!TestVerifyUser
+00:07:41.208 [main] INFO  com.bigwings.etruckingsystem.utilities.TestListener - Description!!
+00:07:50.252 [main] INFO  com.bigwings.etruckingsystem.utilities.TestListener - Passed!!!!TestVerifyUser
+00:07:50.270 [main] INFO  com.bigwings.etruckingsystem.utilities.TestListener - Started!!!!TestVerifyUser_MissingEmail
+00:07:50.271 [main] INFO  com.bigwings.etruckingsystem.utilities.TestListener - Description!!
+00:07:50.841 [main] INFO  com.bigwings.etruckingsystem.utilities.TestListener - Passed!!!!TestVerifyUser_MissingEmail
+00:07:50.863 [main] INFO  com.bigwings.etruckingsystem.utilities.TestListener - Started!!!!TestVerifyUser_MissingPhone
+00:07:50.863 [main] INFO  com.bigwings.etruckingsystem.utilities.TestListener - Description!!
+00:07:51.412 [main] INFO  com.bigwings.etruckingsystem.utilities.TestListener - Passed!!!!TestVerifyUser_MissingPhone
+00:07:51.424 [main] INFO  com.bigwings.etruckingsystem.utilities.TestListener - Started!!!!TestVerifyUser_InvalidEmailFormat
+00:07:51.424 [main] INFO  com.bigwings.etruckingsystem.utilities.TestListener - Description!!
+00:07:52.090 [main] INFO  com.bigwings.etruckingsystem.utilities.TestListener - Passed!!!!TestVerifyUser_InvalidEmailFormat
+00:07:52.095 [main] INFO  com.bigwings.etruckingsystem.utilities.TestListener - Started!!!!TestVerifyUser_InvalidPhoneFormat
+00:07:52.096 [main] INFO  com.bigwings.etruckingsystem.utilities.TestListener - Description!!
+00:07:52.634 [main] INFO  com.bigwings.etruckingsystem.utilities.TestListener - Passed!!!!TestVerifyUser_InvalidPhoneFormat
+00:07:52.637 [main] INFO  com.bigwings.etruckingsystem.utilities.TestListener - Started!!!!TestVerifyUser_MinPhoneLength
+00:07:52.637 [main] INFO  com.bigwings.etruckingsystem.utilities.TestListener - Description!!
+00:07:53.184 [main] INFO  com.bigwings.etruckingsystem.utilities.TestListener - Passed!!!!TestVerifyUser_MinPhoneLength
+00:07:53.186 [main] INFO  com.bigwings.etruckingsystem.utilities.TestListener - Started!!!!TestVerifyUser_MaxPhoneLength
+00:07:53.187 [main] INFO  com.bigwings.etruckingsystem.utilities.TestListener - Description!!
+00:07:53.670 [main] INFO  com.bigwings.etruckingsystem.utilities.TestListener - Passed!!!!TestVerifyUser_MaxPhoneLength
+00:07:53.800 [main] INFO  com.bigwings.etruckingsystem.utilities.TestListener - Test Suite Completed!!!
+11:35:27.541 [main] INFO  com.bigwings.etruckingsystem.uiTest.TC001_AdminSignup - chrome launched in NORMAL mode.
+11:35:27.717 [main] INFO  com.bigwings.etruckingsystem.uiTest.TC001_AdminSignup - Browser Window is maximized.
+11:35:30.025 [main] DEBUG com.bigwings.etruckingsystem.uiTest.TC001_AdminSignup - logging started
+11:35:30.026 [main] INFO  com.bigwings.etruckingsystem.uiTest.TC001_AdminSignup - starting TC001_RegisterUser
+11:35:30.027 [main] INFO  com.bigwings.etruckingsystem.uiTest.TC001_AdminSignup - STEP 1: Launching the browser
+11:35:30.027 [main] INFO  com.bigwings.etruckingsystem.uiTest.TC001_AdminSignup - STEP 2: Navigating to baseURL:  https://etruckingsystem.com/auth 
+11:36:00.650 [main] INFO  com.bigwings.etruckingsystem.uiTest.TC001_AdminSignup - STEP 3: Clicking on 'AdminYesTextLink'
+11:36:05.655 [main] INFO  com.bigwings.etruckingsystem.uiTest.TC001_AdminSignup - STEP 4: Verify login page is visible
+11:36:10.796 [main] INFO  com.bigwings.etruckingsystem.uiTest.TC001_AdminSignup - STEP 5: Clicked on signuplink
+11:36:19.933 [main] INFO  com.bigwings.etruckingsystem.uiTest.TC001_AdminSignup - STEP 6: Verify register page is visible
+11:36:25.041 [main] INFO  com.bigwings.etruckingsystem.uiTest.TC001_AdminSignup - STEP 7: Enter FirstName
+11:36:31.915 [main] INFO  com.bigwings.etruckingsystem.uiTest.TC001_AdminSignup - STEP 8: Enter LastName
+11:36:32.345 [main] ERROR com.bigwings.etruckingsystem.uiTest.TC001_AdminSignup - ❌ Unexpected exception in verifySignupRegistration: Unable to find element with locator By.xpath: //input[@name='lastName']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.39.0', revision: '126f156aee'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: driver.version: RemoteWebDriver
+org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: //input[@name='lastName']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.39.0', revision: '126f156aee'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:169) ~[selenium-remote-driver-4.39.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60) ~[selenium-remote-driver-4.39.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:384) ~[selenium-remote-driver-4.39.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:378) ~[selenium-remote-driver-4.39.0.jar:?]
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68) ~[selenium-support-4.39.0.jar:?]
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38) ~[selenium-support-4.39.0.jar:?]
+	at jdk.proxy2.$Proxy31.sendKeys(Unknown Source) ~[?:?]
+	at com.bigwings.etruckingsystem.pages.RegisterPage.enterlastNameText(RegisterPage.java:29) ~[classes/:?]
+	at com.bigwings.etruckingsystem.uiTest.TC001_AdminSignup.verifySignupRegistration(TC001_AdminSignup.java:56) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.11.0.jar:7.11.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:741) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.11.0.jar:7.11.0]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
+11:36:36.767 [main] INFO  com.bigwings.etruckingsystem.uiTest.TC001_AdminSignup - Browser is closed.
+
+12:16:49.457 [main] INFO  com.bigwings.etruckingsystem.utilities.ExtentNew - Starting Test 1 : com.bigwings.etruckingsystem.uiTest.TC001_AdminSignup :: verifySignupRegistration
+12:16:52.139 [main] INFO  com.bigwings.etruckingsystem.utilities.ExtentNew - Execution finished. Report: UI-Test-Report-2026.01.10.12.16.47.html
+12:22:23.954 [main] INFO  com.bigwings.etruckingsystem.utilities.ExtentNew - Starting Test 1 : com.bigwings.etruckingsystem.uiTest.TC001_AdminSignup :: verifySignupRegistration
+12:22:26.726 [main] INFO  com.bigwings.etruckingsystem.utilities.ExtentNew - Execution finished. Report: UI-Test-Report-2026.01.10.12.22.22.html
+13:09:56.615 [main] INFO  utilities.ExtentNew - Starting Test 1 : ui_tests.TC001_AdminSignup :: verifySignupRegistration
+13:09:59.591 [main] INFO  utilities.ExtentNew - Execution finished. Report: UI-Test-Report-2026.01.10.13.09.54.html
+13:11:39.031 [main] INFO  utilities.ExtentNew - Starting Test 1 : ui_tests.TC001_AdminSignup :: verifySignupRegistration
+13:11:41.571 [main] INFO  utilities.ExtentNew - Execution finished. Report: UI-Test-Report-2026.01.10.13.11.37.html
+13:18:28.688 [main] INFO  ui_tests.TC001_AdminSignup - chrome launched in NORMAL mode.
+13:18:29.029 [main] INFO  ui_tests.TC001_AdminSignup - Browser Window is maximized.
+13:18:29.215 [main] INFO  utilities.ExtentNew - Starting Test 1 : ui_tests.TC001_AdminSignup :: verifySignupRegistration
+13:18:29.506 [main] DEBUG ui_tests.TC001_AdminSignup - logging started
+13:18:29.507 [main] INFO  ui_tests.TC001_AdminSignup - starting TC001_RegisterUser
+13:18:29.508 [main] INFO  ui_tests.TC001_AdminSignup - STEP 1: Launching the browser
+13:18:29.509 [main] INFO  ui_tests.TC001_AdminSignup - STEP 2: Navigating to baseURL: http://dev.etruckingsystem.com/auth
+13:18:45.662 [main] INFO  ui_tests.TC001_AdminSignup - STEP 3: Clicking on 'AdminYesTextLink'
+13:18:45.667 [main] INFO  ui_tests.TC001_AdminSignup - STEP 4: Verify login page is visible
+13:18:45.819 [main] INFO  ui_tests.TC001_AdminSignup - STEP 5: Clicked on signuplink
+13:18:49.583 [main] INFO  ui_tests.TC001_AdminSignup - STEP 6: Verify register page is visible
+13:18:49.616 [main] INFO  ui_tests.TC001_AdminSignup - STEP 7: Enter FirstName
+13:18:59.429 [main] INFO  ui_tests.TC001_AdminSignup - STEP 8: Enter LastName
+13:19:03.331 [main] INFO  ui_tests.TC001_AdminSignup - STEP 9: Enter email
+13:19:05.184 [main] INFO  ui_tests.TC001_AdminSignup - STEP 10: Enter phone
+13:19:06.985 [main] INFO  ui_tests.TC001_AdminSignup - STEP 11: Enter DotNumber
+13:19:08.171 [main] INFO  ui_tests.TC001_AdminSignup - STEP 12: Click 'submitButton' button
+13:19:18.085 [main] INFO  ui_tests.TC001_AdminSignup - STEP 13: Verify password page is visible
+13:19:18.933 [main] INFO  ui_tests.TC001_AdminSignup - STEP 14: Enter Password
+13:19:20.574 [main] INFO  ui_tests.TC001_AdminSignup - STEP 15: Enter ConfirmPassword
+13:19:21.666 [main] INFO  ui_tests.TC001_AdminSignup - STEP 16: click SignupButton
+13:19:22.481 [main] INFO  ui_tests.TC001_AdminSignup - STEP 17: Verify 'verifyPhone' page is visible
+13:19:26.486 [main] INFO  ui_tests.TC001_AdminSignup - getOTPcontainsMessage: Your OTP is 423113
+13:19:27.224 [main] INFO  ui_tests.TC001_AdminSignup - getLinkSentMessage: Verification link has been sent to user.1768031343333@gmail.com
+13:19:28.298 [main] INFO  ui_tests.TC001_AdminSignup - getOTPsentMessage: OTP has sent to 9874563210
+13:19:29.285 [main] INFO  ui_tests.TC001_AdminSignup - ExtractOTPcontainsMessage: 423113
+13:19:29.285 [main] DEBUG ui_tests.TC001_AdminSignup - application logs end.......
+13:19:29.286 [main] INFO  ui_tests.TC001_AdminSignup - **** finished TC001a_verifySignupRegistration  *****
+13:19:34.030 [main] INFO  ui_tests.TC001_AdminSignup - Browser is closed.
+
+13:19:36.321 [main] INFO  utilities.ExtentNew - Execution finished. Report: UI-Test-Report-2026.01.10.13.17.49.html
+14:20:44.691 [main] INFO  ui_tests.TC001_AdminSignup - chrome launched in NORMAL mode.
+14:20:45.212 [main] INFO  ui_tests.TC001_AdminSignup - Browser Window is maximized.
+14:20:45.333 [main] INFO  utilities.ExtentNew - Starting Test 1 : ui_tests.TC001_AdminSignup :: verifySignupRegistration
+14:20:45.889 [main] DEBUG ui_tests.TC001_AdminSignup - logging started
+14:20:45.890 [main] INFO  ui_tests.TC001_AdminSignup - starting TC001_RegisterUser
+14:20:45.891 [main] INFO  ui_tests.TC001_AdminSignup - STEP 1: Launching the browser
+14:20:45.892 [main] INFO  ui_tests.TC001_AdminSignup - STEP 2: Navigating to baseURL: http://dev.etruckingsystem.com/auth
+14:21:12.058 [main] INFO  ui_tests.TC001_AdminSignup - STEP 3: Clicking on 'AdminYesTextLink'
+14:21:12.059 [main] INFO  ui_tests.TC001_AdminSignup - STEP 4: Verify login page is visible
+14:21:12.154 [main] INFO  ui_tests.TC001_AdminSignup - STEP 5: Clicked on signuplink
+14:21:16.652 [main] INFO  ui_tests.TC001_AdminSignup - STEP 6: Verify register page is visible
+14:21:16.749 [main] INFO  ui_tests.TC001_AdminSignup - STEP 7: Enter FirstName
+14:21:19.615 [main] INFO  ui_tests.TC001_AdminSignup - STEP 8: Enter LastName
+14:21:21.673 [main] INFO  ui_tests.TC001_AdminSignup - STEP 9: Enter email
+14:21:23.254 [main] INFO  ui_tests.TC001_AdminSignup - STEP 10: Enter phone
+14:21:24.600 [main] INFO  ui_tests.TC001_AdminSignup - STEP 11: Enter DotNumber
+14:21:25.421 [main] INFO  ui_tests.TC001_AdminSignup - STEP 12: Click 'submitButton' button
+14:21:27.347 [main] INFO  ui_tests.TC001_AdminSignup - STEP 13: Verify password page is visible
+14:21:27.622 [main] INFO  ui_tests.TC001_AdminSignup - STEP 14: Enter Password
+14:21:29.066 [main] INFO  ui_tests.TC001_AdminSignup - STEP 15: Enter ConfirmPassword
+14:21:30.094 [main] INFO  ui_tests.TC001_AdminSignup - STEP 16: click SignupButton
+14:21:30.846 [main] INFO  ui_tests.TC001_AdminSignup - STEP 17: Verify 'verifyPhone' page is visible
+14:21:42.803 [main] INFO  ui_tests.TC001_AdminSignup - getOTPcontainsMessage: Your OTP is 327082
+14:21:42.898 [main] INFO  ui_tests.TC001_AdminSignup - getLinkSentMessage: Verification link has been sent to user.1768035081674@gmail.com
+14:21:43.017 [main] INFO  ui_tests.TC001_AdminSignup - getOTPsentMessage: OTP has sent to 9874563210
+14:21:43.118 [main] INFO  ui_tests.TC001_AdminSignup - ExtractOTPcontainsMessage: 327082
+14:21:55.270 [main] DEBUG ui_tests.TC001_AdminSignup - application logs end.......
+14:21:55.276 [main] INFO  ui_tests.TC001_AdminSignup - **** finished TC001a_verifySignupRegistration  *****
+14:22:08.531 [main] INFO  ui_tests.TC001_AdminSignup - Browser is closed.
+
+14:22:11.437 [main] INFO  utilities.ExtentNew - Execution finished. Report: UI-Test-Report-2026.01.10.14.19.51.html
+14:30:14.461 [main] INFO  ui_tests.TC001_AdminSignup - chrome launched in NORMAL mode.
+14:30:15.538 [main] INFO  ui_tests.TC001_AdminSignup - Browser Window is maximized.
+14:30:15.924 [main] INFO  utilities.ExtentNew - Starting Test 1 : ui_tests.TC001_AdminSignup :: verifySignupRegistration
+14:30:16.234 [main] DEBUG ui_tests.TC001_AdminSignup - logging started
+14:30:16.234 [main] INFO  ui_tests.TC001_AdminSignup - starting TC001_RegisterUser
+14:30:16.235 [main] INFO  ui_tests.TC001_AdminSignup - STEP 1: Launching the browser
+14:30:16.237 [main] INFO  ui_tests.TC001_AdminSignup - STEP 2: Navigating to baseURL: http://dev.etruckingsystem.com/auth
+14:30:27.131 [main] INFO  ui_tests.TC001_AdminSignup - STEP 3: Clicking on 'AdminYesTextLink'
+14:30:27.132 [main] INFO  ui_tests.TC001_AdminSignup - STEP 4: Verify login page is visible
+14:30:27.214 [main] INFO  ui_tests.TC001_AdminSignup - STEP 5: Clicked on signuplink
+14:30:30.378 [main] INFO  ui_tests.TC001_AdminSignup - STEP 6: Verify register page is visible
+14:30:30.553 [main] INFO  ui_tests.TC001_AdminSignup - STEP 7: Enter FirstName: Tester1
+14:30:33.721 [main] INFO  ui_tests.TC001_AdminSignup - STEP 8: Enter LastName
+14:30:34.956 [main] INFO  ui_tests.TC001_AdminSignup - STEP 9: Enter email: User.1768035615984@gmail.com
+14:30:36.213 [main] INFO  ui_tests.TC001_AdminSignup - STEP 10: Enter phone
+14:30:37.437 [main] INFO  ui_tests.TC001_AdminSignup - STEP 11: Enter DotNumber
+14:30:38.500 [main] INFO  ui_tests.TC001_AdminSignup - STEP 12: Click 'submitButton' button
+14:30:39.651 [main] INFO  ui_tests.TC001_AdminSignup - STEP 13: Verify password page is visible
+14:30:40.669 [main] INFO  ui_tests.TC001_AdminSignup - STEP 14: Enter Password
+14:30:42.293 [main] INFO  ui_tests.TC001_AdminSignup - STEP 15: Enter ConfirmPassword
+14:30:43.316 [main] INFO  ui_tests.TC001_AdminSignup - STEP 16: click SignupButton
+14:30:43.785 [main] INFO  ui_tests.TC001_AdminSignup - STEP 17: Verify 'verifyPhone' page is visible
+14:30:46.439 [main] INFO  ui_tests.TC001_AdminSignup - getOTPcontainsMessage: Your OTP is 324031
+14:30:46.658 [main] INFO  ui_tests.TC001_AdminSignup - getLinkSentMessage: Verification link has been sent to user.1768035615984@gmail.com
+14:30:46.848 [main] INFO  ui_tests.TC001_AdminSignup - getOTPsentMessage: OTP has sent to 9874563210
+14:30:47.040 [main] INFO  ui_tests.TC001_AdminSignup - ExtractOTPcontainsMessage: 324031
+14:30:53.837 [main] DEBUG ui_tests.TC001_AdminSignup - application logs end.......
+14:30:53.838 [main] INFO  ui_tests.TC001_AdminSignup - **** finished TC001a_verifySignupRegistration  *****
+14:30:56.143 [main] INFO  ui_tests.TC001_AdminSignup - Browser is closed.
+
+14:30:58.359 [main] INFO  utilities.ExtentNew - Execution finished. Report: UI-Test-Report-2026.01.10.14.29.41.html
+14:39:17.611 [main] INFO  ui_tests.TC001_AdminSignup - chrome launched in NORMAL mode.
+14:39:18.006 [main] INFO  ui_tests.TC001_AdminSignup - Browser Window is maximized.
+14:39:18.430 [main] INFO  utilities.ExtentNew - Starting Test 1 : ui_tests.TC001_AdminSignup :: verifySignupRegistration
+14:39:18.690 [main] DEBUG ui_tests.TC001_AdminSignup - logging started
+14:39:18.691 [main] INFO  ui_tests.TC001_AdminSignup - starting TC001_RegisterUser
+14:39:18.704 [main] INFO  ui_tests.TC001_AdminSignup - STEP 1: Launching the browser
+14:39:18.705 [main] INFO  ui_tests.TC001_AdminSignup - STEP 2: Navigating to baseURL: http://dev.etruckingsystem.com/auth
+14:39:29.910 [main] INFO  ui_tests.TC001_AdminSignup - STEP 3: Clicking on 'AdminYesTextLink'
+14:39:29.911 [main] INFO  ui_tests.TC001_AdminSignup - STEP 4: Verify login page is visible
+14:39:29.949 [main] INFO  ui_tests.TC001_AdminSignup - STEP 5: Clicked on signuplink
+14:39:32.733 [main] INFO  ui_tests.TC001_AdminSignup - STEP 6: Verify register page is visible
+14:39:32.771 [main] INFO  ui_tests.TC001_AdminSignup - STEP 7: Enter FirstName: Tester1
+14:39:36.502 [main] INFO  ui_tests.TC001_AdminSignup - STEP 8: Enter LastName
+14:39:37.422 [main] INFO  ui_tests.TC001_AdminSignup - STEP 9: Enter email: User.1768036158469@gmail.com
+14:39:39.380 [main] INFO  ui_tests.TC001_AdminSignup - STEP 10: Enter phone
+14:39:41.031 [main] INFO  ui_tests.TC001_AdminSignup - STEP 11: Enter DotNumber
+14:39:41.882 [main] INFO  ui_tests.TC001_AdminSignup - STEP 12: Click 'submitButton' button
+14:39:42.960 [main] INFO  ui_tests.TC001_AdminSignup - STEP 13: Verify password page is visible
+14:39:44.093 [main] INFO  ui_tests.TC001_AdminSignup - STEP 14: Enter Password
+14:39:45.420 [main] INFO  ui_tests.TC001_AdminSignup - STEP 15: Enter ConfirmPassword
+14:39:46.356 [main] INFO  ui_tests.TC001_AdminSignup - STEP 16: click SignupButton
+14:39:47.266 [main] INFO  ui_tests.TC001_AdminSignup - STEP 17: Verify 'verifyPhone' page is visible
+14:39:49.498 [main] INFO  ui_tests.TC001_AdminSignup - getOTPcontainsMessage: Your OTP is 921821
+14:39:49.884 [main] INFO  ui_tests.TC001_AdminSignup - getLinkSentMessage: Verification link has been sent to user.1768036158469@gmail.com
+14:39:50.075 [main] INFO  ui_tests.TC001_AdminSignup - getOTPsentMessage: OTP has sent to 9874563210
+14:39:50.443 [main] INFO  ui_tests.TC001_AdminSignup - ExtractOTPcontainsMessage: 921821
+14:39:57.069 [main] INFO  ui_tests.TC001_AdminSignup - STEP 18: Clicked on 'verify' button
+14:39:58.417 [main] DEBUG ui_tests.TC001_AdminSignup - application logs end.......
+14:39:58.418 [main] INFO  ui_tests.TC001_AdminSignup - **** finished TC001a_verifySignupRegistration  *****
+14:40:01.999 [main] INFO  ui_tests.TC001_AdminSignup - Browser is closed.
+
+14:40:04.947 [main] INFO  utilities.ExtentNew - Execution finished. Report: UI-Test-Report-2026.01.10.14.38.34.html
+14:43:57.423 [main] INFO  ui_tests.TC001_AdminSignup - chrome launched in NORMAL mode.
+14:43:57.918 [main] INFO  ui_tests.TC001_AdminSignup - Browser Window is maximized.
+14:43:58.039 [main] INFO  utilities.ExtentNew - Starting Test 1 : ui_tests.TC001_AdminSignup :: verifySignupRegistration
+14:43:58.596 [main] DEBUG ui_tests.TC001_AdminSignup - logging started
+14:43:58.596 [main] INFO  ui_tests.TC001_AdminSignup - starting TC001_RegisterUser
+14:43:58.599 [main] INFO  ui_tests.TC001_AdminSignup - STEP 1: Launching the browser
+14:43:58.601 [main] INFO  ui_tests.TC001_AdminSignup - STEP 2: Navigating to baseURL: http://dev.etruckingsystem.com/auth
+14:44:28.974 [main] INFO  ui_tests.TC001_AdminSignup - STEP 3: Clicking on 'AdminYesTextLink'
+14:44:28.976 [main] INFO  ui_tests.TC001_AdminSignup - STEP 4: Verify login page is visible
+14:44:29.010 [main] INFO  ui_tests.TC001_AdminSignup - STEP 5: Clicked on signuplink
+14:44:32.091 [main] INFO  ui_tests.TC001_AdminSignup - STEP 6: Verify register page is visible
+14:44:32.263 [main] INFO  ui_tests.TC001_AdminSignup - STEP 7: Enter FirstName: Tester1
+14:44:34.478 [main] INFO  ui_tests.TC001_AdminSignup - STEP 8: Enter LastName
+14:44:35.456 [main] INFO  ui_tests.TC001_AdminSignup - STEP 9: Enter email: User.1768036438073@gmail.com
+14:44:36.765 [main] INFO  ui_tests.TC001_AdminSignup - STEP 10: Enter phone
+14:44:37.953 [main] INFO  ui_tests.TC001_AdminSignup - STEP 11: Enter DotNumber
+14:44:38.742 [main] INFO  ui_tests.TC001_AdminSignup - STEP 12: Click 'submitButton' button
+14:44:39.756 [main] INFO  ui_tests.TC001_AdminSignup - STEP 13: Verify password page is visible
+14:44:40.092 [main] INFO  ui_tests.TC001_AdminSignup - STEP 14: Enter Password
+14:44:42.366 [main] INFO  ui_tests.TC001_AdminSignup - STEP 15: Enter ConfirmPassword
+14:44:43.470 [main] INFO  ui_tests.TC001_AdminSignup - STEP 16: click SignupButton
+14:44:44.062 [main] INFO  ui_tests.TC001_AdminSignup - STEP 17: Verify 'verifyPhone' page is visible
+14:44:45.906 [main] INFO  ui_tests.TC001_AdminSignup - getOTPcontainsMessage: Your OTP is 433057
+14:44:46.332 [main] INFO  ui_tests.TC001_AdminSignup - getLinkSentMessage: Verification link has been sent to user.1768036438073@gmail.com
+14:44:46.483 [main] INFO  ui_tests.TC001_AdminSignup - getOTPsentMessage: OTP has sent to 9874563210
+14:44:46.793 [main] INFO  ui_tests.TC001_AdminSignup - ExtractOTPcontainsMessage: 433057
+14:44:53.110 [main] INFO  ui_tests.TC001_AdminSignup - STEP 18: Clicked on 'verify' button
+14:45:04.648 [main] DEBUG ui_tests.TC001_AdminSignup - application logs end.......
+14:45:04.649 [main] INFO  ui_tests.TC001_AdminSignup - **** finished TC001a_verifySignupRegistration  *****
+14:45:10.238 [main] INFO  ui_tests.TC001_AdminSignup - Browser is closed.
+
+14:45:12.376 [main] INFO  utilities.ExtentNew - Execution finished. Report: UI-Test-Report-2026.01.10.14.43.45.html
+14:52:38.234 [main] INFO  ui_tests.TC001_AdminSignup - chrome launched in NORMAL mode.
+14:52:39.068 [main] INFO  ui_tests.TC001_AdminSignup - Browser Window is maximized.
+14:52:45.339 [main] INFO  utilities.ExtentNew - Starting Test 1 : ui_tests.TC001_AdminSignup :: verifySignupRegistration
+14:52:45.854 [main] DEBUG ui_tests.TC001_AdminSignup - logging started
+14:52:45.855 [main] INFO  ui_tests.TC001_AdminSignup - starting TC001_RegisterUser
+14:52:45.857 [main] INFO  ui_tests.TC001_AdminSignup - STEP 1: Launching the browser
+14:52:45.857 [main] INFO  ui_tests.TC001_AdminSignup - STEP 2: Navigating to baseURL: http://dev.etruckingsystem.com/auth
+14:52:56.097 [main] INFO  ui_tests.TC001_AdminSignup - STEP 3: Clicking on 'AdminYesTextLink'
+14:52:56.098 [main] INFO  ui_tests.TC001_AdminSignup - STEP 4: Verify login page is visible
+14:52:56.262 [main] INFO  ui_tests.TC001_AdminSignup - STEP 5: Clicked on signuplink
+14:52:59.552 [main] INFO  ui_tests.TC001_AdminSignup - STEP 6: Verify register page is visible
+14:52:59.759 [main] INFO  ui_tests.TC001_AdminSignup - STEP 7: Enter FirstName: Tester1
+14:53:03.720 [main] INFO  ui_tests.TC001_AdminSignup - STEP 8: Enter LastName
+14:53:05.014 [main] INFO  ui_tests.TC001_AdminSignup - STEP 9: Enter email: User.1768036965379@gmail.com
+14:53:06.584 [main] INFO  ui_tests.TC001_AdminSignup - STEP 10: Enter phone
+14:53:07.899 [main] INFO  ui_tests.TC001_AdminSignup - STEP 11: Enter DotNumber
+14:53:08.804 [main] INFO  ui_tests.TC001_AdminSignup - STEP 12: Click 'submitButton' button
+14:53:10.042 [main] INFO  ui_tests.TC001_AdminSignup - STEP 13: Verify password page is visible
+14:53:10.575 [main] INFO  ui_tests.TC001_AdminSignup - STEP 14: Enter Password
+14:53:12.331 [main] INFO  ui_tests.TC001_AdminSignup - STEP 15: Enter ConfirmPassword
+14:53:13.874 [main] INFO  ui_tests.TC001_AdminSignup - STEP 16: click SignupButton
+14:53:14.398 [main] INFO  ui_tests.TC001_AdminSignup - STEP 17: Verify 'verifyPhone' page is visible
+14:53:16.584 [main] INFO  ui_tests.TC001_AdminSignup - getOTPcontainsMessage: Your OTP is 478768
+14:53:17.123 [main] INFO  ui_tests.TC001_AdminSignup - getLinkSentMessage: Verification link has been sent to user.1768036965379@gmail.com
+14:53:17.397 [main] INFO  ui_tests.TC001_AdminSignup - getOTPsentMessage: OTP has sent to 9874563210
+14:53:17.747 [main] INFO  ui_tests.TC001_AdminSignup - ExtractOTPcontainsMessage: 478768
+14:53:22.247 [main] INFO  ui_tests.TC001_AdminSignup - STEP 18: Clicked on 'verify' button
+14:53:23.195 [main] INFO  ui_tests.TC001_AdminSignup - STEP 19: Verify 'login' page is visible
+14:53:25.495 [main] INFO  ui_tests.TC001_AdminSignup - 
+14:53:25.496 [main] DEBUG ui_tests.TC001_AdminSignup - application logs end.......
+14:53:25.497 [main] INFO  ui_tests.TC001_AdminSignup - **** finished TC001a_verifySignupRegistration  *****
+14:53:31.653 [main] INFO  utilities.ExtentNew - Execution finished. Report: UI-Test-Report-2026.01.10.14.52.00.html
+15:52:02.686 [main] INFO  ui_tests.TC001_AdminSignup - chrome launched in NORMAL mode.
+15:52:02.976 [main] INFO  ui_tests.TC001_AdminSignup - Browser Window is maximized.
+15:52:03.788 [main] DEBUG ui_tests.TC001_AdminSignup - logging started
+15:52:03.789 [main] INFO  ui_tests.TC001_AdminSignup - starting TC001_RegisterUser
+15:52:03.790 [main] INFO  ui_tests.TC001_AdminSignup - STEP 1: Launching the browser
+15:52:03.791 [main] INFO  ui_tests.TC001_AdminSignup - STEP 2: Navigating to baseURL: http://dev.etruckingsystem.com/auth
+15:52:13.070 [main] INFO  ui_tests.TC001_AdminSignup - STEP 3: Clicking on 'AdminYesTextLink'
+15:52:13.071 [main] INFO  ui_tests.TC001_AdminSignup - STEP 4: Verify login page is visible
+15:52:13.112 [main] INFO  ui_tests.TC001_AdminSignup - STEP 5: Clicked on signuplink
+15:52:16.231 [main] INFO  ui_tests.TC001_AdminSignup - STEP 6: Verify register page is visible
+15:52:16.270 [main] INFO  ui_tests.TC001_AdminSignup - STEP 7: Enter FirstName: Tester1
+15:52:19.705 [main] INFO  ui_tests.TC001_AdminSignup - STEP 8: Enter LastName
+15:52:20.995 [main] INFO  ui_tests.TC001_AdminSignup - STEP 9: Enter email: User.1768040523042@gmail.com
+15:52:22.598 [main] INFO  ui_tests.TC001_AdminSignup - STEP 10: Enter phone
+15:52:24.133 [main] INFO  ui_tests.TC001_AdminSignup - STEP 11: Enter DotNumber
+15:52:25.116 [main] INFO  ui_tests.TC001_AdminSignup - STEP 12: Click 'submitButton' button
+15:52:27.350 [main] INFO  ui_tests.TC001_AdminSignup - STEP 13: Verify password page is visible
+15:52:27.757 [main] INFO  ui_tests.TC001_AdminSignup - STEP 14: Enter Password
+15:52:36.273 [main] INFO  ui_tests.TC001_AdminSignup - STEP 15: Enter ConfirmPassword
+15:52:37.173 [main] INFO  ui_tests.TC001_AdminSignup - STEP 16: click SignupButton
+15:52:37.879 [main] INFO  ui_tests.TC001_AdminSignup - STEP 17: Verify 'verifyPhone' page is visible
+15:52:39.761 [main] INFO  ui_tests.TC001_AdminSignup - getOTPcontainsMessage: Your OTP is 539305
+15:52:39.921 [main] INFO  ui_tests.TC001_AdminSignup - getLinkSentMessage: Verification link has been sent to user.1768040523042@gmail.com
+15:52:40.481 [main] INFO  ui_tests.TC001_AdminSignup - Verifying OTP request Message contains phone number. Message: OTP has sent to 9876543210
+15:52:40.938 [main] INFO  ui_tests.TC001_AdminSignup - ExtractOTPcontainsMessage: 539305
+15:52:45.051 [main] INFO  ui_tests.TC001_AdminSignup - 
+15:52:45.052 [main] DEBUG ui_tests.TC001_AdminSignup - application logs end.......
+15:52:45.054 [main] INFO  ui_tests.TC001_AdminSignup - **** finished TC001a_verifySignupRegistration  *****
+15:55:22.324 [main] INFO  ui_tests.TC001_AdminSignup - chrome launched in NORMAL mode.
+15:55:22.700 [main] INFO  ui_tests.TC001_AdminSignup - Browser Window is maximized.
+15:55:23.975 [main] DEBUG ui_tests.TC001_AdminSignup - logging started
+15:55:23.997 [main] INFO  ui_tests.TC001_AdminSignup - starting TC001_RegisterUser
+15:55:23.998 [main] INFO  ui_tests.TC001_AdminSignup - STEP 1: Launching the browser
+15:55:23.998 [main] INFO  ui_tests.TC001_AdminSignup - STEP 2: Navigating to baseURL: http://dev.etruckingsystem.com/auth
+15:55:40.379 [main] INFO  ui_tests.TC001_AdminSignup - STEP 3: Clicking on 'AdminYesTextLink'
+15:55:40.380 [main] INFO  ui_tests.TC001_AdminSignup - STEP 4: Verify login page is visible
+15:55:40.690 [main] INFO  ui_tests.TC001_AdminSignup - STEP 5: Clicked on signuplink
+15:55:45.891 [main] ERROR ui_tests.TC001_AdminSignup - ❌ Unexpected exception in verifySignupRegistration: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='SIGN UP.']"}
+  (Session info: chrome=143.0.7499.192)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.39.0', revision: '126f156aee'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3cdaf439a246949ad9091f20d6004df0, findElement {value=//a[text()='SIGN UP.'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.192, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\UDAYAS~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49524}, goog:processID: 10180, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49524/devtoo..., se:cdpVersion: 143.0.7499.192, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3cdaf439a246949ad9091f20d6004df0
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='SIGN UP.']"}
+  (Session info: chrome=143.0.7499.192)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.39.0', revision: '126f156aee'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3cdaf439a246949ad9091f20d6004df0, findElement {value=//a[text()='SIGN UP.'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.192, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\UDAYAS~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49524}, goog:processID: 10180, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49524/devtoo..., se:cdpVersion: 143.0.7499.192, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3cdaf439a246949ad9091f20d6004df0
+	at jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?]
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167) ~[selenium-remote-driver-4.39.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142) ~[selenium-remote-driver-4.39.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49) ~[selenium-remote-driver-4.39.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215) ~[selenium-remote-driver-4.39.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216) ~[selenium-remote-driver-4.39.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174) ~[selenium-remote-driver-4.39.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561) ~[selenium-remote-driver-4.39.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166) ~[selenium-remote-driver-4.39.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60) ~[selenium-remote-driver-4.39.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:384) ~[selenium-remote-driver-4.39.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:378) ~[selenium-remote-driver-4.39.0.jar:?]
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68) ~[selenium-support-4.39.0.jar:?]
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38) ~[selenium-support-4.39.0.jar:?]
+	at jdk.proxy2.$Proxy30.click(Unknown Source) ~[?:?]
+	at pages.LoginPage.clickSignupLink(LoginPage.java:23) ~[classes/:?]
+	at ui_tests.TC001_AdminSignup.verifySignupRegistration(TC001_AdminSignup.java:49) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.11.0.jar:7.11.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:741) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.11.0.jar:7.11.0]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
+15:57:35.766 [main] INFO  ui_tests.TC001_AdminSignup - chrome launched in NORMAL mode.
+15:57:36.236 [main] INFO  ui_tests.TC001_AdminSignup - Browser Window is maximized.
+15:57:36.874 [main] DEBUG ui_tests.TC001_AdminSignup - logging started
+15:57:36.877 [main] INFO  ui_tests.TC001_AdminSignup - starting TC001_RegisterUser
+15:57:36.881 [main] INFO  ui_tests.TC001_AdminSignup - STEP 1: Launching the browser
+15:57:36.882 [main] INFO  ui_tests.TC001_AdminSignup - STEP 2: Navigating to baseURL: http://dev.etruckingsystem.com/auth
+15:57:49.617 [main] INFO  ui_tests.TC001_AdminSignup - STEP 3: Clicking on 'AdminYesTextLink'
+15:57:49.619 [main] INFO  ui_tests.TC001_AdminSignup - STEP 4: Verify login page is visible
+15:57:49.999 [main] INFO  ui_tests.TC001_AdminSignup - STEP 5: Clicked on signuplink
+15:57:56.257 [main] INFO  ui_tests.TC001_AdminSignup - STEP 6: Verify register page is visible
+15:57:56.784 [main] INFO  ui_tests.TC001_AdminSignup - STEP 7: Enter FirstName: Tester1
+15:58:01.349 [main] INFO  ui_tests.TC001_AdminSignup - STEP 8: Enter LastName
+15:58:03.720 [main] INFO  ui_tests.TC001_AdminSignup - STEP 9: Enter email: User.1768040856316@gmail.com
+15:58:05.647 [main] INFO  ui_tests.TC001_AdminSignup - STEP 10: Enter phone
+15:58:07.736 [main] INFO  ui_tests.TC001_AdminSignup - STEP 11: Enter DotNumber
+15:58:09.661 [main] INFO  ui_tests.TC001_AdminSignup - STEP 12: Click 'submitButton' button
+15:58:11.352 [main] INFO  ui_tests.TC001_AdminSignup - STEP 13: Verify password page is visible
+15:58:12.773 [main] INFO  ui_tests.TC001_AdminSignup - STEP 14: Enter Password
+15:58:14.514 [main] INFO  ui_tests.TC001_AdminSignup - STEP 15: Enter ConfirmPassword
+15:58:16.644 [main] INFO  ui_tests.TC001_AdminSignup - STEP 16: click SignupButton
+15:58:18.050 [main] INFO  ui_tests.TC001_AdminSignup - STEP 17: Verify 'verifyPhone' page is visible
+15:58:21.046 [main] INFO  ui_tests.TC001_AdminSignup - getOTPcontainsMessage: Your OTP is 624222
+15:58:21.295 [main] INFO  ui_tests.TC001_AdminSignup - getLinkSentMessage: Verification link has been sent to user.1768040856316@gmail.com
+15:58:22.238 [main] INFO  ui_tests.TC001_AdminSignup - Verifying OTP request Message contains phone number. Message: OTP has sent to 9876543210
+15:58:24.283 [main] INFO  ui_tests.TC001_AdminSignup - ExtractOTPcontainsMessage: 624222
+15:58:34.041 [main] INFO  ui_tests.TC001_AdminSignup - STEP 18: Clicked on 'verify' button
+15:58:35.889 [main] INFO  ui_tests.TC001_AdminSignup - 
+15:58:35.891 [main] DEBUG ui_tests.TC001_AdminSignup - application logs end.......
+15:58:35.892 [main] INFO  ui_tests.TC001_AdminSignup - **** finished TC001a_verifySignupRegistration  *****
+16:16:03.558 [main] INFO  ui_tests.TC001_AdminSignup - chrome launched in NORMAL mode.
+16:16:03.842 [main] INFO  ui_tests.TC001_AdminSignup - Browser Window is maximized.
+16:16:04.125 [main] DEBUG ui_tests.TC001_AdminSignup - logging started
+16:16:04.126 [main] INFO  ui_tests.TC001_AdminSignup - starting TC001_RegisterUser
+16:16:04.128 [main] INFO  ui_tests.TC001_AdminSignup - STEP 1: Launching the browser
+16:16:04.129 [main] INFO  ui_tests.TC001_AdminSignup - STEP 2: Navigating to baseURL: http://dev.etruckingsystem.com/auth
+16:16:14.401 [main] INFO  ui_tests.TC001_AdminSignup - STEP 3: Clicking on 'AdminYesTextLink'
+16:16:14.402 [main] INFO  ui_tests.TC001_AdminSignup - STEP 4: Verify login page is visible
+16:16:14.509 [main] INFO  ui_tests.TC001_AdminSignup - STEP 5: Clicked on signuplink
+16:16:16.511 [main] INFO  ui_tests.TC001_AdminSignup - STEP 6: Verify register page is visible
+16:16:16.544 [main] INFO  ui_tests.TC001_AdminSignup - STEP 7: Enter FirstName: Tester1
+16:16:19.940 [main] INFO  ui_tests.TC001_AdminSignup - STEP 8: Enter LastName
+16:16:21.703 [main] INFO  ui_tests.TC001_AdminSignup - STEP 9: Enter email: User.1768041963896@gmail.com
+16:16:23.373 [main] INFO  ui_tests.TC001_AdminSignup - STEP 10: Enter phone
+16:16:24.448 [main] INFO  ui_tests.TC001_AdminSignup - STEP 11: Enter DotNumber
+16:16:25.425 [main] INFO  ui_tests.TC001_AdminSignup - STEP 12: Click 'submitButton' button
+16:16:26.735 [main] INFO  ui_tests.TC001_AdminSignup - STEP 13: Verify password page is visible
+16:16:27.448 [main] INFO  ui_tests.TC001_AdminSignup - STEP 14: Enter Password
+16:16:29.109 [main] INFO  ui_tests.TC001_AdminSignup - STEP 15: Enter ConfirmPassword
+16:16:29.939 [main] INFO  ui_tests.TC001_AdminSignup - STEP 16: click SignupButton
+16:16:30.538 [main] INFO  ui_tests.TC001_AdminSignup - STEP 17: Verify 'verifyPhone' page is visible
+16:16:32.363 [main] INFO  ui_tests.TC001_AdminSignup - STEP 18:Verifying verification link Message contains email. Message: Verification link has been sent to user.1768041963896@gmail.com
+16:16:32.517 [main] ERROR ui_tests.TC001_AdminSignup - ❌ Assertion failed in verifySignupRegistration: OTP request message, sent phone number is mis-matching. expected [true] but found [false]
+java.lang.AssertionError: OTP request message, sent phone number is mis-matching. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.Assert.failNotEquals(Assert.java:1590) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.Assert.assertTrue(Assert.java:57) ~[testng-7.11.0.jar:7.11.0]
+	at ui_tests.TC001_AdminSignup.verifySignupRegistration(TC001_AdminSignup.java:90) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.11.0.jar:7.11.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:741) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.11.0.jar:7.11.0]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
+16:27:23.025 [main] INFO  ui_tests.TC001_AdminSignup - chrome launched in NORMAL mode.
+16:27:23.660 [main] INFO  ui_tests.TC001_AdminSignup - Browser Window is maximized.
+16:27:24.463 [main] DEBUG ui_tests.TC001_AdminSignup - logging started
+16:27:24.464 [main] INFO  ui_tests.TC001_AdminSignup - starting TC001_RegisterUser
+16:27:24.465 [main] INFO  ui_tests.TC001_AdminSignup - STEP 1: Launching the browser
+16:27:24.466 [main] INFO  ui_tests.TC001_AdminSignup - STEP 2: Navigating to baseURL: http://dev.etruckingsystem.com/auth
+16:27:40.546 [main] INFO  ui_tests.TC001_AdminSignup - STEP 3: Clicking on 'AdminYesTextLink'
+16:27:40.547 [main] INFO  ui_tests.TC001_AdminSignup - STEP 4: Verify login page is visible
+16:27:40.639 [main] INFO  ui_tests.TC001_AdminSignup - STEP 5: Clicked on signuplink
+16:27:46.018 [main] INFO  ui_tests.TC001_AdminSignup - STEP 6: Verify register page is visible
+16:27:46.420 [main] INFO  ui_tests.TC001_AdminSignup - STEP 7: Enter FirstName: Tester1
+16:27:51.290 [main] INFO  ui_tests.TC001_AdminSignup - STEP 8: Enter LastName
+16:27:52.566 [main] INFO  ui_tests.TC001_AdminSignup - STEP 9: Enter email: User.1768042643761@gmail.com
+16:27:54.793 [main] INFO  ui_tests.TC001_AdminSignup - STEP 10: Enter phone
+16:27:57.067 [main] INFO  ui_tests.TC001_AdminSignup - STEP 11: Enter DotNumber
+16:27:58.432 [main] INFO  ui_tests.TC001_AdminSignup - STEP 12: Click 'submitButton' button
+16:28:00.711 [main] INFO  ui_tests.TC001_AdminSignup - STEP 13: Verify password page is visible
+16:28:02.538 [main] INFO  ui_tests.TC001_AdminSignup - STEP 14: Enter Password
+16:28:04.300 [main] INFO  ui_tests.TC001_AdminSignup - STEP 15: Enter ConfirmPassword
+16:28:06.498 [main] INFO  ui_tests.TC001_AdminSignup - STEP 16: click SignupButton
+16:28:07.689 [main] INFO  ui_tests.TC001_AdminSignup - STEP 17: Verify 'verifyPhone' page is visible
+16:28:11.426 [main] INFO  ui_tests.TC001_AdminSignup - STEP 18:Verifying verification link Message contains email. Message: Verification link has been sent to user.1768042643761@gmail.com
+16:28:11.748 [main] ERROR ui_tests.TC001_AdminSignup - ❌ Assertion failed in verifySignupRegistration: Verification link message, sent to email is mis-matching.Registered email:User.1768042643761@gmail.com expected [true] but found [false]
+java.lang.AssertionError: Verification link message, sent to email is mis-matching.Registered email:User.1768042643761@gmail.com expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.Assert.failNotEquals(Assert.java:1590) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.Assert.assertTrue(Assert.java:57) ~[testng-7.11.0.jar:7.11.0]
+	at ui_tests.TC001_AdminSignup.verifySignupRegistration(TC001_AdminSignup.java:88) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.11.0.jar:7.11.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:741) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.11.0.jar:7.11.0]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
+16:32:31.630 [main] INFO  ui_tests.TC001_AdminSignup - chrome launched in NORMAL mode.
+16:32:32.046 [main] INFO  ui_tests.TC001_AdminSignup - Browser Window is maximized.
+16:32:32.559 [main] DEBUG ui_tests.TC001_AdminSignup - logging started
+16:32:32.560 [main] INFO  ui_tests.TC001_AdminSignup - starting TC001_RegisterUser
+16:32:32.561 [main] INFO  ui_tests.TC001_AdminSignup - STEP 1: Launching the browser
+16:32:32.561 [main] INFO  ui_tests.TC001_AdminSignup - STEP 2: Navigating to baseURL: http://dev.etruckingsystem.com/auth
+16:32:46.450 [main] INFO  ui_tests.TC001_AdminSignup - STEP 3: Clicking on 'AdminYesTextLink'
+16:32:46.455 [main] INFO  ui_tests.TC001_AdminSignup - STEP 4: Verify login page is visible
+16:32:46.977 [main] INFO  ui_tests.TC001_AdminSignup - STEP 5: Clicked on signuplink
+16:32:51.164 [main] INFO  ui_tests.TC001_AdminSignup - STEP 6: Verify register page is visible
+16:32:51.636 [main] INFO  ui_tests.TC001_AdminSignup - STEP 7: Enter FirstName: Tester1
+16:32:55.362 [main] INFO  ui_tests.TC001_AdminSignup - STEP 8: Enter LastName
+16:32:56.960 [main] INFO  ui_tests.TC001_AdminSignup - STEP 9: Enter email: User.1768042952114@gmail.com
+16:32:59.746 [main] INFO  ui_tests.TC001_AdminSignup - STEP 10: Enter phone
+16:33:01.373 [main] INFO  ui_tests.TC001_AdminSignup - STEP 11: Enter DotNumber
+16:33:02.628 [main] INFO  ui_tests.TC001_AdminSignup - STEP 12: Click 'submitButton' button
+16:33:05.007 [main] INFO  ui_tests.TC001_AdminSignup - STEP 13: Verify password page is visible
+16:33:06.478 [main] INFO  ui_tests.TC001_AdminSignup - STEP 14: Enter Password
+16:33:08.823 [main] INFO  ui_tests.TC001_AdminSignup - STEP 15: Enter ConfirmPassword
+16:33:10.680 [main] INFO  ui_tests.TC001_AdminSignup - STEP 16: click SignupButton
+16:33:11.528 [main] INFO  ui_tests.TC001_AdminSignup - STEP 17: Verify 'verifyPhone' page is visible
+16:33:14.169 [main] INFO  ui_tests.TC001_AdminSignup - STEP 18:Verifying verification link Message contains email. Message: Verification link has been sent to user.1768042952114@gmail.com
+16:33:15.073 [main] ERROR ui_tests.TC001_AdminSignup - ❌ Assertion failed in verifySignupRegistration: Verification link message, sent to email is mis-matching.Registered email:User.1768042952114@gmail.com expected [true] but found [false]
+java.lang.AssertionError: Verification link message, sent to email is mis-matching.Registered email:User.1768042952114@gmail.com expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.Assert.failNotEquals(Assert.java:1590) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.Assert.assertTrue(Assert.java:57) ~[testng-7.11.0.jar:7.11.0]
+	at ui_tests.TC001_AdminSignup.verifySignupRegistration(TC001_AdminSignup.java:88) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.11.0.jar:7.11.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:741) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.11.0.jar:7.11.0]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
+16:37:43.875 [main] INFO  ui_tests.TC001_AdminSignup - chrome launched in NORMAL mode.
+16:37:44.587 [main] INFO  ui_tests.TC001_AdminSignup - Browser Window is maximized.
+16:37:46.281 [main] DEBUG ui_tests.TC001_AdminSignup - logging started
+16:37:46.283 [main] INFO  ui_tests.TC001_AdminSignup - starting TC001_RegisterUser
+16:37:46.284 [main] INFO  ui_tests.TC001_AdminSignup - STEP 1: Launching the browser
+16:37:46.285 [main] INFO  ui_tests.TC001_AdminSignup - STEP 2: Navigating to baseURL: http://dev.etruckingsystem.com/auth
+16:38:06.593 [main] INFO  ui_tests.TC001_AdminSignup - STEP 3: Clicking on 'AdminYesTextLink'
+16:38:06.594 [main] INFO  ui_tests.TC001_AdminSignup - STEP 4: Verify login page is visible
+16:38:06.700 [main] INFO  ui_tests.TC001_AdminSignup - STEP 5: Clicked on signuplink
+16:38:11.949 [main] ERROR ui_tests.TC001_AdminSignup - ❌ Unexpected exception in verifySignupRegistration: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='SIGN UP.']"}
+  (Session info: chrome=143.0.7499.192)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.39.0', revision: '126f156aee'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8134515af46b6a4a296e726601eca597, findElement {value=//a[text()='SIGN UP.'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.192, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\UDAYAS~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51986}, goog:processID: 11456, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51986/devtoo..., se:cdpVersion: 143.0.7499.192, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8134515af46b6a4a296e726601eca597
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='SIGN UP.']"}
+  (Session info: chrome=143.0.7499.192)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.39.0', revision: '126f156aee'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8134515af46b6a4a296e726601eca597, findElement {value=//a[text()='SIGN UP.'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.192, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\UDAYAS~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51986}, goog:processID: 11456, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51986/devtoo..., se:cdpVersion: 143.0.7499.192, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8134515af46b6a4a296e726601eca597
+	at jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?]
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167) ~[selenium-remote-driver-4.39.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142) ~[selenium-remote-driver-4.39.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49) ~[selenium-remote-driver-4.39.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215) ~[selenium-remote-driver-4.39.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216) ~[selenium-remote-driver-4.39.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174) ~[selenium-remote-driver-4.39.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561) ~[selenium-remote-driver-4.39.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166) ~[selenium-remote-driver-4.39.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60) ~[selenium-remote-driver-4.39.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:384) ~[selenium-remote-driver-4.39.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:378) ~[selenium-remote-driver-4.39.0.jar:?]
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68) ~[selenium-support-4.39.0.jar:?]
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38) ~[selenium-support-4.39.0.jar:?]
+	at jdk.proxy2.$Proxy30.click(Unknown Source) ~[?:?]
+	at pages.LoginPage.clickSignupLink(LoginPage.java:23) ~[classes/:?]
+	at ui_tests.TC001_AdminSignup.verifySignupRegistration(TC001_AdminSignup.java:49) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.11.0.jar:7.11.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:741) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.11.0.jar:7.11.0]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
+19:22:48.113 [main] INFO  utilities.API_ExtentReportManager - ******* API Test Execution Started: 2026.01.10.19.22.47 *******
+19:22:54.896 [main] INFO  utilities.API_ExtentReportManager - Starting Test 1 : TestVerifyUser_successSchemaValidation
+19:22:55.185 [main] INFO  utilities.API_ExtentReportManager - Starting Test 2 : TestVerifyUser_MissingEmail
+19:22:55.278 [main] INFO  utilities.API_ExtentReportManager - Starting Test 3 : TestVerifyUser_MissingPhone
+19:22:55.334 [main] INFO  utilities.API_ExtentReportManager - Starting Test 4 : TestVerifyUser_InvalidEmailFormat
+19:22:55.400 [main] INFO  utilities.API_ExtentReportManager - Starting Test 5 : TestVerifyUser_InvalidPhoneFormat
+19:22:55.463 [main] INFO  utilities.API_ExtentReportManager - Starting Test 6 : TestVerifyUser_MinPhoneLength
+19:22:55.533 [main] INFO  utilities.API_ExtentReportManager - Starting Test 7 : TestVerifyUser_MaxPhoneLength
+19:22:58.964 [main] INFO  utilities.API_ExtentReportManager - ******* API Test Execution Finished: 2026.01.10.19.22.47 *******
+19:25:52.046 [main] INFO  utilities.API_ExtentReportManager - ******* API Test Execution Started: 2026.01.10.19.25.51 *******
+19:25:56.402 [main] INFO  utilities.API_ExtentReportManager - Starting Test 1 : TestVerifyUser_successSchemaValidation
+19:25:56.588 [main] INFO  utilities.API_ExtentReportManager - Starting Test 2 : TestVerifyUser_MissingEmail
+19:25:56.670 [main] INFO  utilities.API_ExtentReportManager - Starting Test 3 : TestVerifyUser_MissingPhone
+19:25:56.740 [main] INFO  utilities.API_ExtentReportManager - Starting Test 4 : TestVerifyUser_InvalidEmailFormat
+19:25:56.825 [main] INFO  utilities.API_ExtentReportManager - Starting Test 5 : TestVerifyUser_InvalidPhoneFormat
+19:25:56.966 [main] INFO  utilities.API_ExtentReportManager - Starting Test 6 : TestVerifyUser_MinPhoneLength
+19:25:57.054 [main] INFO  utilities.API_ExtentReportManager - Starting Test 7 : TestVerifyUser_MaxPhoneLength
+19:26:00.064 [main] INFO  utilities.API_ExtentReportManager - ******* API Test Execution Finished: 2026.01.10.19.25.51 *******
+19:27:35.779 [main] INFO  utilities.API_ExtentReportManager - ******* API Test Execution Started: 2026.01.10.19.27.35 *******
+19:27:39.570 [main] INFO  utilities.API_ExtentReportManager - Starting Test 1 : TestVerifyUser_successSchemaValidation
+19:27:39.716 [main] INFO  utilities.API_ExtentReportManager - Starting Test 2 : TestVerifyUser_MissingEmail
+19:27:39.765 [main] INFO  utilities.API_ExtentReportManager - Starting Test 3 : TestVerifyUser_MissingPhone
+19:27:39.826 [main] INFO  utilities.API_ExtentReportManager - Starting Test 4 : TestVerifyUser_InvalidEmailFormat
+19:27:39.868 [main] INFO  utilities.API_ExtentReportManager - Starting Test 5 : TestVerifyUser_InvalidPhoneFormat
+19:27:39.944 [main] INFO  utilities.API_ExtentReportManager - Starting Test 6 : TestVerifyUser_MinPhoneLength
+19:27:39.995 [main] INFO  utilities.API_ExtentReportManager - Starting Test 7 : TestVerifyUser_MaxPhoneLength
+19:27:42.133 [main] INFO  utilities.API_ExtentReportManager - ******* API Test Execution Finished: 2026.01.10.19.27.35 *******
+19:35:41.020 [main] INFO  utilities.API_ExtentReportManager - ******* API Test Execution Started: 2026.01.10.19.35.40 *******
+19:35:44.912 [main] INFO  utilities.API_ExtentReportManager - Starting Test 1 : TestVerifyUser_successSchemaValidation
+19:35:45.117 [main] INFO  utilities.API_ExtentReportManager - Starting Test 2 : TestVerifyUser_MissingEmail
+19:35:45.187 [main] INFO  utilities.API_ExtentReportManager - Starting Test 3 : TestVerifyUser_MissingPhone
+19:35:45.311 [main] INFO  utilities.API_ExtentReportManager - Starting Test 4 : TestVerifyUser_InvalidEmailFormat
+19:35:45.433 [main] INFO  utilities.API_ExtentReportManager - Starting Test 5 : TestVerifyUser_InvalidPhoneFormat
+19:35:45.519 [main] INFO  utilities.API_ExtentReportManager - Starting Test 6 : TestVerifyUser_MinPhoneLength
+19:35:45.629 [main] INFO  utilities.API_ExtentReportManager - Starting Test 7 : TestVerifyUser_MaxPhoneLength
+19:35:47.947 [main] INFO  utilities.API_ExtentReportManager - ******* API Test Execution Finished: 2026.01.10.19.35.40 *******
