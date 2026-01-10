@@ -7,12 +7,11 @@
         <methods>
           <include name="setup"/>
           <include name="TestVerifyUser_MissingEmail"/>
-          <include name="TestVerifyUser_MinPhoneLength"/>
           <include name="TestVerifyUser_MissingPhone"/>
+          <include name="TestVerifyUser_MinPhoneLength"/>
           <include name="TestVerifyUser_successSchemaValidation"/>
           <include name="TestVerifyUser_InvalidEmailFormat"/>
           <include name="TestVerifyUser_InvalidPhoneFormat"/>
-          <include name="TestVerifyUser_MaxPhoneLength"/>
         </methods>
       </class> <!-- api_tests.Test001_VerifyUser -->
     </classes>
