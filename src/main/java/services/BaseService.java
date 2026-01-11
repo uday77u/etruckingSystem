@@ -9,10 +9,11 @@ import org.apache.logging.log4j.Logger;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import utilities.ConfigManager;
 
 public class  BaseService{
 	
-	private final static String BASE_URI="https://etruckingsystem.com:8000";
+	private final static String BASE_URI="https://etruckingsystem.com:8000";//ConfigManager.get("API_BASE_URI");
 	private RequestSpecification requestSpecification;
 	public Logger logger;
 	

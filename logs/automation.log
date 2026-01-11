@@ -1,0 +1,1067 @@
+11:40:22.518 [main] INFO  utilities.API_ExtentReportManager - ******* API Test Execution Started: 2026.01.11.11.40.22 *******
+11:40:27.404 [main] DEBUG api_tests.Test001_VerifyUser - **** Logging test cases started ****
+11:40:28.795 [main] INFO  utilities.API_ExtentReportManager - Starting Test 1 : TestVerifyUser_successSchemaValidation
+11:40:28.899 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@gmail.com, countryENCode=IN, countryCode=+91, phone=9876543211, dotNumber=253]
+11:40:28.900 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Sending 'verifyUser' request with data
+11:40:35.966 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+11:40:35.991 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+11:40:35.992 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+11:40:35.993 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":"9876543211","dotnumber":"253","DOTNumber":"253"}
+11:40:40.953 [main] INFO  utilities.API_ExtentReportManager - Starting Test 2 : TestVerifyUser_MissingEmail
+11:40:40.970 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=null, countryENCode=IN, countryCode=+91, phone=9876543211, dotNumber=253]
+11:40:40.972 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Send verifyUser request with data
+11:40:41.028 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+11:40:41.033 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+11:40:41.034 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+11:40:41.035 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":null,"countryENCode":"IN","countryCode":"+91","phone":"9876543211","dotnumber":"253","DOTNumber":"253"}
+11:40:41.204 [main] INFO  utilities.API_ExtentReportManager - Starting Test 3 : TestVerifyUser_MissingPhone
+11:40:41.249 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@gmail.com, countryENCode=IN, countryCode=+91, phone=null, dotNumber=253]
+11:40:41.253 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Sending 'verifyUser' request with data
+11:40:41.301 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+11:40:41.314 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+11:40:41.315 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+11:40:41.316 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":null,"dotnumber":"253","DOTNumber":"253"}
+11:40:41.488 [main] INFO  utilities.API_ExtentReportManager - Starting Test 4 : TestVerifyUser_InvalidEmailFormat
+11:40:41.512 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@@gmail, countryENCode=IN, countryCode=+91, phone=9876543211, dotNumber=253]
+11:40:41.515 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Sending 'verifyUser' request with data
+11:40:41.554 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+11:40:41.559 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+11:40:41.560 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+11:40:41.561 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@@gmail","countryENCode":"IN","countryCode":"+91","phone":"9876543211","dotnumber":"253","DOTNumber":"253"}
+11:40:41.696 [main] INFO  utilities.API_ExtentReportManager - Starting Test 5 : TestVerifyUser_InvalidPhoneFormat
+11:40:41.764 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@gmail.com, countryENCode=IN, countryCode=+91, phone=98ABCD211, dotNumber=253]
+11:40:41.766 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Sending 'verifyUser' request with data
+11:40:41.815 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+11:40:41.823 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+11:40:41.825 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+11:40:41.826 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":"98ABCD211","dotnumber":"253","DOTNumber":"253"}
+11:40:42.235 [main] INFO  utilities.API_ExtentReportManager - Starting Test 6 : TestVerifyUser_MinPhoneLength
+11:40:42.253 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@gmail.com, countryENCode=IN, countryCode=+91, phone=98, dotNumber=253]
+11:40:42.254 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Sending 'verifyUser' request with data
+11:40:42.350 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+11:40:42.354 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+11:40:42.355 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+11:40:42.356 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":"98","dotnumber":"253","DOTNumber":"253"}
+11:40:42.495 [main] INFO  utilities.API_ExtentReportManager - Starting Test 7 : TestVerifyUser_MaxPhoneLength
+11:40:42.580 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@gmail.com, countryENCode=IN, countryCode=+91, phone=12345678901234567890, dotNumber=253]
+11:40:42.581 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Sending 'verifyUser' request with data
+11:40:42.681 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+11:40:42.688 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+11:40:42.689 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+11:40:42.690 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":"12345678901234567890","dotnumber":"253","DOTNumber":"253"}
+11:40:47.039 [main] INFO  utilities.API_ExtentReportManager - ******* API Test Execution Finished: 2026.01.11.11.40.22 *******
+11:41:36.096 [main] INFO  utilities.API_ExtentReportManager - ******* API Test Execution Started: 2026.01.11.11.41.35 *******
+11:41:39.498 [main] DEBUG api_tests.Test001_VerifyUser - **** Logging test cases started ****
+11:41:40.483 [main] INFO  utilities.API_ExtentReportManager - Starting Test 1 : TestVerifyUser_successSchemaValidation
+11:41:40.542 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@gmail.com, countryENCode=IN, countryCode=+91, phone=9876543211, dotNumber=253]
+11:41:40.549 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Sending 'verifyUser' request with data
+11:41:46.262 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+11:41:46.284 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+11:41:46.286 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+11:41:46.287 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":"9876543211","dotnumber":"253","DOTNumber":"253"}
+11:41:55.732 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 200
+11:41:55.742 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": true,
+    "message": "new user",
+    "data": "new user"
+}
+11:41:55.743 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 9481 ms
+11:41:56.083 [main] INFO  api_tests.Test001_VerifyUser - STEP 3 :Recieved response verifyUserResponseData: VerifyUserResponseData [status=true, message=new user, code=null, error=null, description=null]
+11:42:03.052 [main] INFO  api_tests.Test001_VerifyUser - ========== Verify User Response Validation ==========
+11:42:03.054 [main] INFO  api_tests.Test001_VerifyUser - STEP 4 :Response Status: true
+11:42:03.109 [main] INFO  api_tests.Test001_VerifyUser - STEP 5 :Response Code: null
+11:42:03.110 [main] INFO  api_tests.Test001_VerifyUser - STEP 6 :Response Message: new user
+11:42:03.111 [main] INFO  api_tests.Test001_VerifyUser - STEP 7 :Response Error: null
+11:42:03.112 [main] INFO  api_tests.Test001_VerifyUser - STEP 8 :Response Description: null
+11:42:03.113 [main] INFO  api_tests.Test001_VerifyUser - STEP 9 :Response Data: new user
+11:42:03.254 [main] INFO  utilities.API_ExtentReportManager - Starting Test 2 : TestVerifyUser_MissingEmail
+11:42:03.280 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=null, countryENCode=IN, countryCode=+91, phone=9876543211, dotNumber=253]
+11:42:03.293 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Send verifyUser request with data
+11:42:03.400 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+11:42:03.409 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+11:42:03.410 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+11:42:03.411 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":null,"countryENCode":"IN","countryCode":"+91","phone":"9876543211","dotnumber":"253","DOTNumber":"253"}
+11:42:04.811 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+11:42:04.821 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "email: email must be a string",
+    "code": 400,
+    "error": "email: email must be a string",
+    "description": "email: email must be a string"
+}
+11:42:04.821 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 1421 ms
+11:42:04.837 [main] INFO  api_tests.Test001_VerifyUser - STEP 3 :Recieved response UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=null, countryENCode=IN, countryCode=+91, phone=9876543211, dotNumber=253]
+11:42:04.838 [main] INFO  api_tests.Test001_VerifyUser - STEP 4 :Response Status code: 400
+11:42:04.841 [main] INFO  api_tests.Test001_VerifyUser - STEP 5 :Response Status: false
+11:42:04.844 [main] INFO  api_tests.Test001_VerifyUser - STEP 6 :Response Message: email: email must be a string
+11:42:05.029 [main] INFO  utilities.API_ExtentReportManager - Starting Test 3 : TestVerifyUser_MissingPhone
+11:42:05.071 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@gmail.com, countryENCode=IN, countryCode=+91, phone=null, dotNumber=253]
+11:42:05.073 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Sending 'verifyUser' request with data
+11:42:05.131 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+11:42:05.136 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+11:42:05.137 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+11:42:05.138 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":null,"dotnumber":"253","DOTNumber":"253"}
+11:42:06.923 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+11:42:06.928 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "phone: phone must be a string",
+    "code": 400,
+    "error": "phone: phone must be a string",
+    "description": "phone: phone must be a string"
+}
+11:42:06.930 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 1798 ms
+11:42:06.941 [main] INFO  api_tests.Test001_VerifyUser - STEP 3 :Recieved response verifyUserResponseData: VerifyUserResponseData [status=false, message=phone: phone must be a string, code=400, error=phone: phone must be a string, description=phone: phone must be a string]
+11:42:06.942 [main] INFO  api_tests.Test001_VerifyUser - STEP 4 :Response Status code: 400
+11:42:06.943 [main] INFO  api_tests.Test001_VerifyUser - STEP 5 :Response Status: false
+11:42:06.943 [main] INFO  api_tests.Test001_VerifyUser - STEP 6 :Response Message: phone: phone must be a string
+11:42:06.988 [main] INFO  utilities.API_ExtentReportManager - Starting Test 4 : TestVerifyUser_InvalidEmailFormat
+11:42:07.000 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@@gmail, countryENCode=IN, countryCode=+91, phone=9876543211, dotNumber=253]
+11:42:07.001 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Sending 'verifyUser' request with data
+11:42:07.076 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+11:42:07.089 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+11:42:07.091 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+11:42:07.092 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@@gmail","countryENCode":"IN","countryCode":"+91","phone":"9876543211","dotnumber":"253","DOTNumber":"253"}
+11:42:08.437 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+11:42:08.441 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "email: email must be a valid email",
+    "code": 400,
+    "error": "email: email must be a valid email",
+    "description": "email: email must be a valid email"
+}
+11:42:08.442 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 1366 ms
+11:42:08.453 [main] INFO  api_tests.Test001_VerifyUser - STEP 3 :Recieved response verifyUserResponseData: VerifyUserResponseData [status=false, message=email: email must be a valid email, code=400, error=email: email must be a valid email, description=email: email must be a valid email]
+11:42:08.454 [main] INFO  api_tests.Test001_VerifyUser - STEP 4 :Response Status code: 400
+11:42:08.455 [main] INFO  api_tests.Test001_VerifyUser - STEP 5 :Response Status: false
+11:42:08.456 [main] INFO  api_tests.Test001_VerifyUser - STEP 6 :Response Message: email: email must be a valid email
+11:42:08.476 [main] INFO  utilities.API_ExtentReportManager - Starting Test 5 : TestVerifyUser_InvalidPhoneFormat
+11:42:08.482 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@gmail.com, countryENCode=IN, countryCode=+91, phone=98ABCD211, dotNumber=253]
+11:42:08.485 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Sending 'verifyUser' request with data
+11:42:08.521 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+11:42:08.525 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+11:42:08.526 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+11:42:08.527 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":"98ABCD211","dotnumber":"253","DOTNumber":"253"}
+11:42:09.519 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+11:42:09.523 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "phone: Invalid phone",
+    "code": 400,
+    "error": "phone: Invalid phone",
+    "description": "phone: Invalid phone"
+}
+11:42:09.524 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 1003 ms
+11:42:09.535 [main] INFO  api_tests.Test001_VerifyUser - STEP 3 :Recieved response verifyUserResponseData: VerifyUserResponseData [status=false, message=phone: Invalid phone, code=400, error=phone: Invalid phone, description=phone: Invalid phone]
+11:42:09.536 [main] INFO  api_tests.Test001_VerifyUser - STEP 4 :Response Status code: 400
+11:42:09.536 [main] INFO  api_tests.Test001_VerifyUser - STEP 5 :Response Status: false
+11:42:09.537 [main] INFO  api_tests.Test001_VerifyUser - STEP 6 :Response Message: phone: Invalid phone
+11:42:09.555 [main] INFO  utilities.API_ExtentReportManager - Starting Test 6 : TestVerifyUser_MinPhoneLength
+11:42:09.566 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@gmail.com, countryENCode=IN, countryCode=+91, phone=98, dotNumber=253]
+11:42:09.567 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Sending 'verifyUser' request with data
+11:42:09.639 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+11:42:09.643 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+11:42:09.644 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+11:42:09.645 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":"98","dotnumber":"253","DOTNumber":"253"}
+11:42:10.720 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+11:42:10.724 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "phone: phone length must be at least 7 characters long",
+    "code": 400,
+    "error": "phone: phone length must be at least 7 characters long",
+    "description": "phone: phone length must be at least 7 characters long"
+}
+11:42:10.725 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 1086 ms
+11:42:10.769 [main] INFO  api_tests.Test001_VerifyUser - STEP 3 :Response Status: false
+11:42:10.770 [main] INFO  api_tests.Test001_VerifyUser - STEP 4 :Response Message: phone: phone length must be at least 7 characters long
+11:42:10.806 [main] INFO  utilities.API_ExtentReportManager - Starting Test 7 : TestVerifyUser_MaxPhoneLength
+11:42:10.818 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@gmail.com, countryENCode=IN, countryCode=+91, phone=12345678901234567890, dotNumber=253]
+11:42:10.819 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Sending 'verifyUser' request with data
+11:42:10.860 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+11:42:10.865 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+11:42:10.867 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+11:42:10.868 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":"12345678901234567890","dotnumber":"253","DOTNumber":"253"}
+11:42:14.938 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+11:42:14.942 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "phone: phone length must be less than or equal to 15 characters long",
+    "code": 400,
+    "error": "phone: phone length must be less than or equal to 15 characters long",
+    "description": "phone: phone length must be less than or equal to 15 characters long"
+}
+11:42:14.943 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 4083 ms
+11:42:14.953 [main] INFO  api_tests.Test001_VerifyUser - STEP 3 :Response Status: false
+11:42:14.954 [main] INFO  api_tests.Test001_VerifyUser - STEP 4 :Response Message: phone: phone length must be less than or equal to 15 characters long
+11:42:20.132 [main] INFO  utilities.API_ExtentReportManager - ******* API Test Execution Finished: 2026.01.11.11.41.35 *******
+13:10:48.468 [main] INFO  utilities.API_ExtentReportManager - ******* API Test Execution Started: 2026.01.11.13.10.48 *******
+13:10:50.949 [main] DEBUG api_tests.Test001_VerifyUser - **** Logging test cases started ****
+13:10:51.532 [main] INFO  utilities.API_ExtentReportManager - Starting Test 1 : TestVerifyUser_successSchemaValidation
+13:10:51.549 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@gmail.com, countryENCode=IN, countryCode=+91, phone=9876543211, dotNumber=253]
+13:10:51.549 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Sending 'verifyUser' request with data
+13:10:54.153 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+13:10:54.160 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+13:10:54.161 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+13:10:54.161 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":"9876543211","dotnumber":"253","DOTNumber":"253"}
+13:10:57.136 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 200
+13:10:57.139 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": true,
+    "message": "new user",
+    "data": "new user"
+}
+13:10:57.140 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 2987 ms
+13:10:57.262 [main] INFO  api_tests.Test001_VerifyUser - STEP 3 :Recieved response verifyUserResponseData: VerifyUserResponseData [status=true, message=new user, code=null, error=null, description=null]
+13:10:58.298 [main] INFO  api_tests.Test001_VerifyUser - ========== Verify User Response Validation ==========
+13:10:58.298 [main] INFO  api_tests.Test001_VerifyUser - STEP 4 :Verify Response Status: true
+13:10:58.303 [main] INFO  api_tests.Test001_VerifyUser - STEP 5 :Verify Response Code: null
+13:10:58.303 [main] INFO  api_tests.Test001_VerifyUser - STEP 6 :Verify Response Message: new user
+13:10:58.304 [main] INFO  api_tests.Test001_VerifyUser - STEP 7 :Verify Response Error: null
+13:10:58.304 [main] INFO  api_tests.Test001_VerifyUser - STEP 8 :Verify Response Description: null
+13:10:58.304 [main] INFO  api_tests.Test001_VerifyUser - STEP 9 :Verify Response Data: new user
+13:10:58.359 [main] INFO  utilities.API_ExtentReportManager - Starting Test 2 : TestVerifyUser_MissingEmail
+13:10:58.375 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=null, countryENCode=IN, countryCode=+91, phone=9876543211, dotNumber=253]
+13:10:58.377 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Send verifyUser request with data
+13:10:58.403 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+13:10:58.406 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+13:10:58.407 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+13:10:58.409 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":null,"countryENCode":"IN","countryCode":"+91","phone":"9876543211","dotnumber":"253","DOTNumber":"253"}
+13:10:59.143 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+13:10:59.149 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "email: email must be a string",
+    "code": 400,
+    "error": "email: email must be a string",
+    "description": "email: email must be a string"
+}
+13:10:59.150 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 747 ms
+13:10:59.164 [main] INFO  api_tests.Test001_VerifyUser - STEP 3 :Recieved response UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=null, countryENCode=IN, countryCode=+91, phone=9876543211, dotNumber=253]
+13:10:59.166 [main] INFO  api_tests.Test001_VerifyUser - STEP 4 :Verify Response Status code: 400
+13:10:59.167 [main] INFO  api_tests.Test001_VerifyUser - STEP 5 :Verify Response Status: false
+13:10:59.169 [main] INFO  api_tests.Test001_VerifyUser - STEP 6 :Verify Response Message: email: email must be a string
+13:10:59.211 [main] INFO  utilities.API_ExtentReportManager - Starting Test 3 : TestVerifyUser_MissingPhone
+13:10:59.229 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@gmail.com, countryENCode=IN, countryCode=+91, phone=null, dotNumber=253]
+13:10:59.230 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Sending 'verifyUser' request with data
+13:10:59.253 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+13:10:59.256 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+13:10:59.257 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+13:10:59.257 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":null,"dotnumber":"253","DOTNumber":"253"}
+13:10:59.987 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+13:10:59.995 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "phone: phone must be a string",
+    "code": 400,
+    "error": "phone: phone must be a string",
+    "description": "phone: phone must be a string"
+}
+13:10:59.999 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 746 ms
+13:11:00.010 [main] INFO  api_tests.Test001_VerifyUser - STEP 3 :Recieved response verifyUserResponseData: VerifyUserResponseData [status=false, message=phone: phone must be a string, code=400, error=phone: phone must be a string, description=phone: phone must be a string]
+13:11:00.011 [main] INFO  api_tests.Test001_VerifyUser - STEP 4 :Response Status code: 400
+13:11:00.012 [main] INFO  api_tests.Test001_VerifyUser - STEP 5 :Response Status: false
+13:11:00.012 [main] INFO  api_tests.Test001_VerifyUser - STEP 6 :Response Message: phone: phone must be a string
+13:11:00.022 [main] INFO  utilities.API_ExtentReportManager - Starting Test 4 : TestVerifyUser_InvalidEmailFormat
+13:11:00.027 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@@gmail, countryENCode=IN, countryCode=+91, phone=9876543211, dotNumber=253]
+13:11:00.031 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Sending 'verifyUser' request with data
+13:11:00.063 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+13:11:00.069 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+13:11:00.070 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+13:11:00.070 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@@gmail","countryENCode":"IN","countryCode":"+91","phone":"9876543211","dotnumber":"253","DOTNumber":"253"}
+13:11:00.936 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+13:11:00.940 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "email: email must be a valid email",
+    "code": 400,
+    "error": "email: email must be a valid email",
+    "description": "email: email must be a valid email"
+}
+13:11:00.941 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 878 ms
+13:11:00.955 [main] INFO  api_tests.Test001_VerifyUser - STEP 3 :Recieved response verifyUserResponseData: VerifyUserResponseData [status=false, message=email: email must be a valid email, code=400, error=email: email must be a valid email, description=email: email must be a valid email]
+13:11:00.956 [main] INFO  api_tests.Test001_VerifyUser - STEP 4 :Response Status code: 400
+13:11:00.957 [main] INFO  api_tests.Test001_VerifyUser - STEP 5 :Response Status: false
+13:11:00.958 [main] INFO  api_tests.Test001_VerifyUser - STEP 6 :Response Message: email: email must be a valid email
+13:11:00.976 [main] INFO  utilities.API_ExtentReportManager - Starting Test 5 : TestVerifyUser_InvalidPhoneFormat
+13:11:00.979 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@gmail.com, countryENCode=IN, countryCode=+91, phone=98ABCD211, dotNumber=253]
+13:11:00.979 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Sending 'verifyUser' request with data
+13:11:00.997 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+13:11:00.999 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+13:11:00.999 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+13:11:01.000 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":"98ABCD211","dotnumber":"253","DOTNumber":"253"}
+13:11:02.094 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+13:11:02.096 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "phone: Invalid phone",
+    "code": 400,
+    "error": "phone: Invalid phone",
+    "description": "phone: Invalid phone"
+}
+13:11:02.096 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 1099 ms
+13:11:02.102 [main] INFO  api_tests.Test001_VerifyUser - STEP 3 :Recieved response verifyUserResponseData: VerifyUserResponseData [status=false, message=phone: Invalid phone, code=400, error=phone: Invalid phone, description=phone: Invalid phone]
+13:11:02.103 [main] INFO  api_tests.Test001_VerifyUser - STEP 4 :Response Status code: 400
+13:11:02.103 [main] INFO  api_tests.Test001_VerifyUser - STEP 5 :Response Status: false
+13:11:02.104 [main] INFO  api_tests.Test001_VerifyUser - STEP 6 :Response Message: phone: Invalid phone
+13:11:02.117 [main] INFO  utilities.API_ExtentReportManager - Starting Test 6 : TestVerifyUser_MinPhoneLength
+13:11:02.123 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@gmail.com, countryENCode=IN, countryCode=+91, phone=98, dotNumber=253]
+13:11:02.124 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Sending 'verifyUser' request with data
+13:11:02.138 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+13:11:02.140 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+13:11:02.141 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+13:11:02.141 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":"98","dotnumber":"253","DOTNumber":"253"}
+13:11:02.826 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+13:11:02.831 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "phone: phone length must be at least 7 characters long",
+    "code": 400,
+    "error": "phone: phone length must be at least 7 characters long",
+    "description": "phone: phone length must be at least 7 characters long"
+}
+13:11:02.832 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 694 ms
+13:11:02.845 [main] INFO  api_tests.Test001_VerifyUser - STEP 3 :Response Status: false
+13:11:02.846 [main] INFO  api_tests.Test001_VerifyUser - STEP 4 :Response Message: phone: phone length must be at least 7 characters long
+13:11:02.864 [main] INFO  utilities.API_ExtentReportManager - Starting Test 7 : TestVerifyUser_MaxPhoneLength
+13:11:02.875 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@gmail.com, countryENCode=IN, countryCode=+91, phone=12345678901234567890, dotNumber=253]
+13:11:02.876 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Sending 'verifyUser' request with data
+13:11:02.897 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+13:11:02.899 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+13:11:02.899 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+13:11:02.900 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":"12345678901234567890","dotnumber":"253","DOTNumber":"253"}
+13:11:03.588 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+13:11:03.592 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "phone: phone length must be less than or equal to 15 characters long",
+    "code": 400,
+    "error": "phone: phone length must be less than or equal to 15 characters long",
+    "description": "phone: phone length must be less than or equal to 15 characters long"
+}
+13:11:03.593 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 696 ms
+13:11:03.603 [main] INFO  api_tests.Test001_VerifyUser - STEP 3 :Response Status: false
+13:11:03.603 [main] INFO  api_tests.Test001_VerifyUser - STEP 4 :Response Message: phone: phone length must be less than or equal to 15 characters long
+13:11:04.634 [main] INFO  utilities.API_ExtentReportManager - ******* API Test Execution Finished: 2026.01.11.13.10.48 *******
+13:19:18.823 [main] INFO  utilities.API_ExtentReportManager - ******* API Test Execution Started: 2026.01.11.13.19.18 *******
+13:19:20.075 [main] DEBUG api_tests.Test001_VerifyUser - **** Logging test cases started ****
+13:19:20.448 [main] INFO  utilities.API_ExtentReportManager - Starting Test 1 : TestVerifyUser_successSchemaValidation
+13:19:20.470 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@gmail.com, countryENCode=IN, countryCode=+91, phone=9876543211, dotNumber=253]
+13:19:20.471 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Sending 'verifyUser' request with data
+13:19:22.277 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+13:19:22.288 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+13:19:22.290 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+13:19:22.291 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":"9876543211","dotnumber":"253","DOTNumber":"253"}
+13:19:25.996 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 200
+13:19:26.001 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": true,
+    "message": "new user",
+    "data": "new user"
+}
+13:19:26.002 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 3725 ms
+13:19:26.110 [main] INFO  api_tests.Test001_VerifyUser - STEP 3 :Recieved response verifyUserResponseData: VerifyUserResponseData [status=true, message=new user, code=null, error=null, description=null]
+13:19:26.694 [main] INFO  api_tests.Test001_VerifyUser - ========== Verify User Response Validation ==========
+13:19:26.694 [main] INFO  api_tests.Test001_VerifyUser - STEP 4 :Verify Response Status: true
+13:19:27.763 [main] INFO  utilities.API_ExtentReportManager - ******* API Test Execution Finished: 2026.01.11.13.19.18 *******
+14:22:31.496 [main] INFO  utilities.API_ExtentReportManager - ******* API Test Execution Started: 2026.01.11.14.22.31 *******
+14:22:35.173 [main] DEBUG api_tests.Test001_VerifyUser2 - **** Logging test cases started ****
+14:22:35.946 [main] INFO  utilities.API_ExtentReportManager - Starting Test 1 : verifyUser_success
+14:22:35.962 [main] INFO  api_tests.Test001_VerifyUser2 - Sending Verify User request: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@gmail.com, countryENCode=IN, countryCode=+91, phone=9876543211, dotNumber=253]
+14:22:39.826 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+14:22:39.833 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+14:22:39.834 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+14:22:39.834 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":"9876543211","dotnumber":"253","DOTNumber":"253"}
+14:22:44.314 [main] INFO  utilities.API_ExtentReportManager - Starting Test 2 : verifyUser_missingEmail
+14:22:44.338 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+14:22:44.340 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+14:22:44.340 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+14:22:44.341 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":null,"countryENCode":"IN","countryCode":"+91","phone":"9876543211","dotnumber":"253","DOTNumber":"253"}
+14:22:44.398 [main] INFO  utilities.API_ExtentReportManager - Starting Test 3 : verifyUser_missingPhone
+14:22:44.418 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+14:22:44.421 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+14:22:44.421 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+14:22:44.421 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":null,"dotnumber":"253","DOTNumber":"253"}
+14:22:44.474 [main] INFO  utilities.API_ExtentReportManager - Starting Test 4 : verifyUser_invalidEmailFormat
+14:22:44.510 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+14:22:44.514 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+14:22:44.515 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+14:22:44.516 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@@gmail","countryENCode":"IN","countryCode":"+91","phone":"9876543211","dotnumber":"253","DOTNumber":"253"}
+14:22:44.609 [main] INFO  utilities.API_ExtentReportManager - Starting Test 5 : verifyUser_invalidPhoneFormat
+14:22:44.658 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+14:22:44.674 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+14:22:44.675 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+14:22:44.732 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":"98ABCD211","dotnumber":"253","DOTNumber":"253"}
+14:22:44.799 [main] INFO  utilities.API_ExtentReportManager - Starting Test 6 : verifyUser_minPhoneLength
+14:22:44.827 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+14:22:44.829 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+14:22:44.830 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+14:22:44.830 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":"98","dotnumber":"253","DOTNumber":"253"}
+14:22:44.888 [main] INFO  utilities.API_ExtentReportManager - Starting Test 7 : verifyUser_maxPhoneLength
+14:22:44.914 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+14:22:44.917 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+14:22:44.918 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+14:22:44.918 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":"12345678901234567890","dotnumber":"253","DOTNumber":"253"}
+14:22:46.816 [main] INFO  utilities.API_ExtentReportManager - ******* API Test Execution Finished: 2026.01.11.14.22.31 *******
+14:24:01.524 [main] INFO  utilities.API_ExtentReportManager - ******* API Test Execution Started: 2026.01.11.14.24.01 *******
+14:24:02.948 [main] DEBUG api_tests.Test001_VerifyUser2 - **** Logging test cases started ****
+14:24:03.405 [main] INFO  utilities.API_ExtentReportManager - Starting Test 1 : verifyUser_success
+14:24:03.426 [main] INFO  api_tests.Test001_VerifyUser2 - Sending Verify User request: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@gmail.com, countryENCode=IN, countryCode=+91, phone=9876543211, dotNumber=253]
+14:24:05.644 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+14:24:05.651 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+14:24:05.651 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+14:24:05.652 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":"9876543211","dotnumber":"253","DOTNumber":"253"}
+14:24:09.273 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 200
+14:24:09.285 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": true,
+    "message": "new user",
+    "data": "new user"
+}
+14:24:09.286 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 3642 ms
+14:24:11.429 [main] INFO  utilities.API_ExtentReportManager - Starting Test 2 : verifyUser_missingEmail
+14:24:11.454 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+14:24:11.459 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+14:24:11.460 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+14:24:11.460 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":null,"countryENCode":"IN","countryCode":"+91","phone":"9876543211","dotnumber":"253","DOTNumber":"253"}
+14:24:12.160 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+14:24:12.163 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "email: email must be a string",
+    "code": 400,
+    "error": "email: email must be a string",
+    "description": "email: email must be a string"
+}
+14:24:12.163 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 709 ms
+14:24:12.179 [main] INFO  utilities.API_ExtentReportManager - Starting Test 3 : verifyUser_missingPhone
+14:24:12.199 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+14:24:12.202 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+14:24:12.202 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+14:24:12.202 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":null,"dotnumber":"253","DOTNumber":"253"}
+14:24:12.871 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+14:24:12.873 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "phone: phone must be a string",
+    "code": 400,
+    "error": "phone: phone must be a string",
+    "description": "phone: phone must be a string"
+}
+14:24:12.874 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 675 ms
+14:24:12.892 [main] INFO  utilities.API_ExtentReportManager - Starting Test 4 : verifyUser_invalidEmailFormat
+14:24:12.915 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+14:24:12.916 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+14:24:12.917 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+14:24:12.917 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@@gmail","countryENCode":"IN","countryCode":"+91","phone":"9876543211","dotnumber":"253","DOTNumber":"253"}
+14:24:13.618 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+14:24:13.623 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "email: email must be a valid email",
+    "code": 400,
+    "error": "email: email must be a valid email",
+    "description": "email: email must be a valid email"
+}
+14:24:13.624 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 709 ms
+14:24:13.639 [main] INFO  utilities.API_ExtentReportManager - Starting Test 5 : verifyUser_invalidPhoneFormat
+14:24:13.656 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+14:24:13.659 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+14:24:13.660 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+14:24:13.661 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":"98ABCD211","dotnumber":"253","DOTNumber":"253"}
+14:24:14.365 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+14:24:14.368 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "phone: Invalid phone",
+    "code": 400,
+    "error": "phone: Invalid phone",
+    "description": "phone: Invalid phone"
+}
+14:24:14.368 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 712 ms
+14:24:14.382 [main] INFO  utilities.API_ExtentReportManager - Starting Test 6 : verifyUser_minPhoneLength
+14:24:14.402 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+14:24:14.406 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+14:24:14.407 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+14:24:14.407 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":"98","dotnumber":"253","DOTNumber":"253"}
+14:24:15.103 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+14:24:15.105 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "phone: phone length must be at least 7 characters long",
+    "code": 400,
+    "error": "phone: phone length must be at least 7 characters long",
+    "description": "phone: phone length must be at least 7 characters long"
+}
+14:24:15.106 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 704 ms
+14:24:15.122 [main] INFO  utilities.API_ExtentReportManager - Starting Test 7 : verifyUser_maxPhoneLength
+14:24:15.147 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+14:24:15.149 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+14:24:15.149 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+14:24:15.150 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":"12345678901234567890","dotnumber":"253","DOTNumber":"253"}
+14:24:15.984 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+14:24:15.987 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "phone: phone length must be less than or equal to 15 characters long",
+    "code": 400,
+    "error": "phone: phone length must be less than or equal to 15 characters long",
+    "description": "phone: phone length must be less than or equal to 15 characters long"
+}
+14:24:15.988 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 841 ms
+14:24:17.546 [main] INFO  utilities.API_ExtentReportManager - ******* API Test Execution Finished: 2026.01.11.14.24.01 *******
+22:59:59.326 [main] INFO  utilities.API_ExtentReportManager - ******* API Test Execution Started: 2026.01.11.22.59.59 *******
+23:00:03.986 [main] DEBUG api_tests.Test001_VerifyUser - **** Logging test cases started ****
+23:00:04.250 [main] INFO  utilities.API_ExtentReportManager - Starting Test 1 : TestVerifyUser_successSchemaValidation
+23:00:04.343 [main] INFO  utilities.API_ExtentReportManager - Starting Test 2 : TestVerifyUser_MissingEmail
+23:00:04.380 [main] INFO  utilities.API_ExtentReportManager - Starting Test 3 : TestVerifyUser_MissingPhone
+23:00:04.418 [main] INFO  utilities.API_ExtentReportManager - Starting Test 4 : TestVerifyUser_InvalidEmailFormat
+23:00:04.460 [main] INFO  utilities.API_ExtentReportManager - Starting Test 5 : TestVerifyUser_InvalidPhoneFormat
+23:00:04.486 [main] INFO  utilities.API_ExtentReportManager - Starting Test 6 : TestVerifyUser_MinPhoneLength
+23:00:04.511 [main] INFO  utilities.API_ExtentReportManager - Starting Test 7 : TestVerifyUser_MaxPhoneLength
+23:00:06.693 [main] INFO  utilities.API_ExtentReportManager - ******* API Test Execution Finished: 2026.01.11.22.59.59 *******
+23:02:55.721 [main] INFO  utilities.API_ExtentReportManager - ******* API Test Execution Started: 2026.01.11.23.02.55 *******
+23:02:57.107 [main] DEBUG api_tests.Test001_VerifyUser - **** Logging test cases started ****
+23:02:58.154 [main] INFO  utilities.API_ExtentReportManager - Starting Test 1 : TestVerifyUser_successSchemaValidation
+23:02:58.177 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@gmail.com, countryENCode=IN, countryCode=+91, phone=9876543211, dotNumber=253]
+23:02:58.178 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Sending 'verifyUser' request with data
+23:03:02.421 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+23:03:02.427 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+23:03:02.428 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+23:03:02.428 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":"9876543211","dotnumber":"253","DOTNumber":"253"}
+23:03:06.312 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 200
+23:03:06.316 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": true,
+    "message": "new user",
+    "data": "new user"
+}
+23:03:06.316 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 3895 ms
+23:03:06.449 [main] INFO  api_tests.Test001_VerifyUser - STEP 3 :Recieved response verifyUserResponseData: VerifyUserResponseData [status=true, message=new user, code=null, error=null, description=null]
+23:03:07.617 [main] INFO  api_tests.Test001_VerifyUser - ========== Verify User Response Validation ==========
+23:03:07.617 [main] INFO  api_tests.Test001_VerifyUser - STEP 4 :Verify Response Status: true
+23:03:07.623 [main] INFO  api_tests.Test001_VerifyUser - STEP 5 :Verify Response Code: null
+23:03:07.623 [main] INFO  api_tests.Test001_VerifyUser - STEP 6 :Verify Response Message: new user
+23:03:07.624 [main] INFO  api_tests.Test001_VerifyUser - STEP 7 :Verify Response Error: null
+23:03:07.624 [main] INFO  api_tests.Test001_VerifyUser - STEP 8 :Verify Response Description: null
+23:03:07.624 [main] INFO  api_tests.Test001_VerifyUser - STEP 9 :Verify Response Data: new user
+23:03:07.659 [main] INFO  utilities.API_ExtentReportManager - Starting Test 2 : TestVerifyUser_MissingEmail
+23:03:07.664 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=null, countryENCode=IN, countryCode=+91, phone=9876543211, dotNumber=253]
+23:03:07.664 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Send verifyUser request with data
+23:03:07.688 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+23:03:07.691 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+23:03:07.694 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+23:03:07.694 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":null,"countryENCode":"IN","countryCode":"+91","phone":"9876543211","dotnumber":"253","DOTNumber":"253"}
+23:03:08.569 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+23:03:08.573 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "email: email must be a string",
+    "code": 400,
+    "error": "email: email must be a string",
+    "description": "email: email must be a string"
+}
+23:03:08.573 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 885 ms
+23:03:08.584 [main] INFO  api_tests.Test001_VerifyUser - STEP 3 :Recieved response UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=null, countryENCode=IN, countryCode=+91, phone=9876543211, dotNumber=253]
+23:03:08.586 [main] INFO  api_tests.Test001_VerifyUser - STEP 4 :Verify Response Status code: 400
+23:03:08.586 [main] INFO  api_tests.Test001_VerifyUser - STEP 5 :Verify Response Status: false
+23:03:08.587 [main] INFO  api_tests.Test001_VerifyUser - STEP 6 :Verify Response Message: email: email must be a string
+23:03:08.655 [main] INFO  utilities.API_ExtentReportManager - Starting Test 3 : TestVerifyUser_MissingPhone
+23:03:08.665 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@gmail.com, countryENCode=IN, countryCode=+91, phone=null, dotNumber=253]
+23:03:08.665 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Sending 'verifyUser' request with data
+23:03:08.679 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+23:03:08.682 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+23:03:08.683 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+23:03:08.683 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":null,"dotnumber":"253","DOTNumber":"253"}
+23:03:09.702 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+23:03:09.707 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "phone: phone must be a string",
+    "code": 400,
+    "error": "phone: phone must be a string",
+    "description": "phone: phone must be a string"
+}
+23:03:09.708 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 1029 ms
+23:03:09.720 [main] INFO  api_tests.Test001_VerifyUser - STEP 3 :Recieved response verifyUserResponseData: VerifyUserResponseData [status=false, message=phone: phone must be a string, code=400, error=phone: phone must be a string, description=phone: phone must be a string]
+23:03:09.721 [main] INFO  api_tests.Test001_VerifyUser - STEP 4 :Verify Response Status code: 400
+23:03:09.723 [main] INFO  api_tests.Test001_VerifyUser - STEP 5 :Verify Response Status: false
+23:03:09.723 [main] INFO  api_tests.Test001_VerifyUser - STEP 6 :Verify Response Message: phone: phone must be a string
+23:03:09.743 [main] INFO  utilities.API_ExtentReportManager - Starting Test 4 : TestVerifyUser_InvalidEmailFormat
+23:03:09.753 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@@gmail, countryENCode=IN, countryCode=+91, phone=9876543211, dotNumber=253]
+23:03:09.756 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Sending 'verifyUser' request with data
+23:03:09.776 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+23:03:09.778 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+23:03:09.778 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+23:03:09.779 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@@gmail","countryENCode":"IN","countryCode":"+91","phone":"9876543211","dotnumber":"253","DOTNumber":"253"}
+23:03:10.497 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+23:03:10.501 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "email: email must be a valid email",
+    "code": 400,
+    "error": "email: email must be a valid email",
+    "description": "email: email must be a valid email"
+}
+23:03:10.502 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 726 ms
+23:03:10.511 [main] INFO  api_tests.Test001_VerifyUser - STEP 3 :Recieved response verifyUserResponseData: VerifyUserResponseData [status=false, message=email: email must be a valid email, code=400, error=email: email must be a valid email, description=email: email must be a valid email]
+23:03:10.512 [main] INFO  api_tests.Test001_VerifyUser - STEP 4 :Verify Response Status code: 400
+23:03:10.513 [main] INFO  api_tests.Test001_VerifyUser - STEP 5 :Verify Response Status: false
+23:03:10.513 [main] INFO  api_tests.Test001_VerifyUser - STEP 6 :Verify Response Message: email: email must be a valid email
+23:03:10.550 [main] INFO  utilities.API_ExtentReportManager - Starting Test 5 : TestVerifyUser_InvalidPhoneFormat
+23:03:10.568 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@gmail.com, countryENCode=IN, countryCode=+91, phone=98ABCD211, dotNumber=253]
+23:03:10.573 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Sending 'verifyUser' request with data
+23:03:10.586 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+23:03:10.589 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+23:03:10.590 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+23:03:10.590 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":"98ABCD211","dotnumber":"253","DOTNumber":"253"}
+23:03:11.271 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+23:03:11.274 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "phone: Invalid phone",
+    "code": 400,
+    "error": "phone: Invalid phone",
+    "description": "phone: Invalid phone"
+}
+23:03:11.275 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 689 ms
+23:03:11.286 [main] INFO  api_tests.Test001_VerifyUser - STEP 3 :Recieved response verifyUserResponseData: VerifyUserResponseData [status=false, message=phone: Invalid phone, code=400, error=phone: Invalid phone, description=phone: Invalid phone]
+23:03:11.287 [main] INFO  api_tests.Test001_VerifyUser - STEP 4 :Verify Response Status code: 400
+23:03:11.288 [main] INFO  api_tests.Test001_VerifyUser - STEP 5 :Response Status: false
+23:03:11.289 [main] INFO  api_tests.Test001_VerifyUser - STEP 6 :Verify Response Message: phone: Invalid phone
+23:03:11.320 [main] INFO  utilities.API_ExtentReportManager - Starting Test 6 : TestVerifyUser_MinPhoneLength
+23:03:11.336 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@gmail.com, countryENCode=IN, countryCode=+91, phone=98, dotNumber=253]
+23:03:11.337 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Sending 'verifyUser' request with data
+23:03:11.365 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+23:03:11.367 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+23:03:11.367 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+23:03:11.367 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":"98","dotnumber":"253","DOTNumber":"253"}
+23:03:12.171 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+23:03:12.175 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "phone: phone length must be at least 7 characters long",
+    "code": 400,
+    "error": "phone: phone length must be at least 7 characters long",
+    "description": "phone: phone length must be at least 7 characters long"
+}
+23:03:12.177 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 812 ms
+23:03:12.188 [main] INFO  api_tests.Test001_VerifyUser - STEP 3 :Verify Response Status: false
+23:03:12.189 [main] INFO  api_tests.Test001_VerifyUser - STEP 4 :Verify Response Message: phone: phone length must be at least 7 characters long
+23:03:12.203 [main] INFO  utilities.API_ExtentReportManager - Starting Test 7 : TestVerifyUser_MaxPhoneLength
+23:03:12.207 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@gmail.com, countryENCode=IN, countryCode=+91, phone=12345678901234567890, dotNumber=253]
+23:03:12.208 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Sending 'verifyUser' request with data
+23:03:12.229 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+23:03:12.232 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+23:03:12.233 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+23:03:12.234 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":"12345678901234567890","dotnumber":"253","DOTNumber":"253"}
+23:03:12.968 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+23:03:12.972 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "phone: phone length must be less than or equal to 15 characters long",
+    "code": 400,
+    "error": "phone: phone length must be less than or equal to 15 characters long",
+    "description": "phone: phone length must be less than or equal to 15 characters long"
+}
+23:03:12.973 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 744 ms
+23:03:12.985 [main] INFO  api_tests.Test001_VerifyUser - STEP 3 :Verify Response Status: false
+23:03:12.986 [main] INFO  api_tests.Test001_VerifyUser - STEP 4 :Verify Response Message: phone: phone length must be less than or equal to 15 characters long
+23:03:13.994 [main] INFO  utilities.API_ExtentReportManager - ******* API Test Execution Finished: 2026.01.11.23.02.55 *******
+23:08:22.697 [main] INFO  utilities.API_ExtentReportManager - ******* API Test Execution Started: 2026.01.11.23.08.22 *******
+23:08:23.993 [main] DEBUG api_tests.Test001_VerifyUser - **** Logging test cases started ****
+23:08:24.379 [main] INFO  utilities.API_ExtentReportManager - Starting Test 1 : TestVerifyUser_successSchemaValidation
+23:08:24.396 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@gmail.com, countryENCode=IN, countryCode=+91, phone=9876543211, dotNumber=253]
+23:08:24.397 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Sending 'verifyUser' request with data
+23:08:26.109 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+23:08:26.118 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+23:08:26.120 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+23:08:26.121 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":"9876543211","dotnumber":"253","DOTNumber":"253"}
+23:08:28.745 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 200
+23:08:28.751 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": true,
+    "message": "new user",
+    "data": "new user"
+}
+23:08:28.752 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 2643 ms
+23:08:28.754 [main] INFO  api_tests.Test001_VerifyUser - Status Code: 200
+23:08:28.830 [main] INFO  utilities.API_ExtentReportManager - Starting Test 2 : TestVerifyUser_MissingEmail
+23:08:28.837 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=null, countryENCode=IN, countryCode=+91, phone=9876543211, dotNumber=253]
+23:08:28.837 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Send verifyUser request with data
+23:08:28.861 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+23:08:28.863 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+23:08:28.864 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+23:08:28.864 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":null,"countryENCode":"IN","countryCode":"+91","phone":"9876543211","dotnumber":"253","DOTNumber":"253"}
+23:08:29.629 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+23:08:29.634 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "email: email must be a string",
+    "code": 400,
+    "error": "email: email must be a string",
+    "description": "email: email must be a string"
+}
+23:08:29.636 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 775 ms
+23:08:29.786 [main] INFO  api_tests.Test001_VerifyUser - STEP 3 :Recieved response UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=null, countryENCode=IN, countryCode=+91, phone=9876543211, dotNumber=253]
+23:08:29.786 [main] INFO  api_tests.Test001_VerifyUser - STEP 4 :Verify Response Status code: 400
+23:08:29.787 [main] INFO  api_tests.Test001_VerifyUser - STEP 5 :Verify Response Status: false
+23:08:29.787 [main] INFO  api_tests.Test001_VerifyUser - STEP 6 :Verify Response Message: email: email must be a string
+23:08:29.806 [main] INFO  utilities.API_ExtentReportManager - Starting Test 3 : TestVerifyUser_MissingPhone
+23:08:29.816 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@gmail.com, countryENCode=IN, countryCode=+91, phone=null, dotNumber=253]
+23:08:29.823 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Sending 'verifyUser' request with data
+23:08:29.856 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+23:08:29.863 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+23:08:29.865 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+23:08:29.865 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":null,"dotnumber":"253","DOTNumber":"253"}
+23:08:30.586 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+23:08:30.590 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "phone: phone must be a string",
+    "code": 400,
+    "error": "phone: phone must be a string",
+    "description": "phone: phone must be a string"
+}
+23:08:30.591 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 735 ms
+23:08:30.603 [main] INFO  api_tests.Test001_VerifyUser - STEP 3 :Recieved response verifyUserResponseData: VerifyUserResponseData [status=false, message=phone: phone must be a string, code=400, error=phone: phone must be a string, description=phone: phone must be a string]
+23:08:30.604 [main] INFO  api_tests.Test001_VerifyUser - STEP 4 :Verify Response Status code: 400
+23:08:30.605 [main] INFO  api_tests.Test001_VerifyUser - STEP 5 :Verify Response Status: false
+23:08:30.606 [main] INFO  api_tests.Test001_VerifyUser - STEP 6 :Verify Response Message: phone: phone must be a string
+23:08:30.629 [main] INFO  utilities.API_ExtentReportManager - Starting Test 4 : TestVerifyUser_InvalidEmailFormat
+23:08:30.636 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@@gmail, countryENCode=IN, countryCode=+91, phone=9876543211, dotNumber=253]
+23:08:30.638 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Sending 'verifyUser' request with data
+23:08:30.656 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+23:08:30.658 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+23:08:30.659 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+23:08:30.659 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@@gmail","countryENCode":"IN","countryCode":"+91","phone":"9876543211","dotnumber":"253","DOTNumber":"253"}
+23:08:31.356 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+23:08:31.360 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "email: email must be a valid email",
+    "code": 400,
+    "error": "email: email must be a valid email",
+    "description": "email: email must be a valid email"
+}
+23:08:31.361 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 705 ms
+23:08:31.370 [main] INFO  api_tests.Test001_VerifyUser - STEP 3 :Recieved response verifyUserResponseData: VerifyUserResponseData [status=false, message=email: email must be a valid email, code=400, error=email: email must be a valid email, description=email: email must be a valid email]
+23:08:31.371 [main] INFO  api_tests.Test001_VerifyUser - STEP 4 :Verify Response Status code: 400
+23:08:31.372 [main] INFO  api_tests.Test001_VerifyUser - STEP 5 :Verify Response Status: false
+23:08:31.372 [main] INFO  api_tests.Test001_VerifyUser - STEP 6 :Verify Response Message: email: email must be a valid email
+23:08:31.400 [main] INFO  utilities.API_ExtentReportManager - Starting Test 5 : TestVerifyUser_InvalidPhoneFormat
+23:08:31.408 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@gmail.com, countryENCode=IN, countryCode=+91, phone=98ABCD211, dotNumber=253]
+23:08:31.411 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Sending 'verifyUser' request with data
+23:08:31.430 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+23:08:31.436 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+23:08:31.437 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+23:08:31.439 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":"98ABCD211","dotnumber":"253","DOTNumber":"253"}
+23:08:32.163 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+23:08:32.167 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "phone: Invalid phone",
+    "code": 400,
+    "error": "phone: Invalid phone",
+    "description": "phone: Invalid phone"
+}
+23:08:32.168 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 738 ms
+23:08:32.178 [main] INFO  api_tests.Test001_VerifyUser - STEP 3 :Recieved response verifyUserResponseData: VerifyUserResponseData [status=false, message=phone: Invalid phone, code=400, error=phone: Invalid phone, description=phone: Invalid phone]
+23:08:32.179 [main] INFO  api_tests.Test001_VerifyUser - STEP 4 :Verify Response Status code: 400
+23:08:32.180 [main] INFO  api_tests.Test001_VerifyUser - STEP 5 :Response Status: false
+23:08:32.180 [main] INFO  api_tests.Test001_VerifyUser - STEP 6 :Verify Response Message: phone: Invalid phone
+23:08:32.201 [main] INFO  utilities.API_ExtentReportManager - Starting Test 6 : TestVerifyUser_MinPhoneLength
+23:08:32.210 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@gmail.com, countryENCode=IN, countryCode=+91, phone=98, dotNumber=253]
+23:08:32.210 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Sending 'verifyUser' request with data
+23:08:32.234 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+23:08:32.237 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+23:08:32.238 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+23:08:32.238 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":"98","dotnumber":"253","DOTNumber":"253"}
+23:08:33.070 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+23:08:33.074 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "phone: phone length must be at least 7 characters long",
+    "code": 400,
+    "error": "phone: phone length must be at least 7 characters long",
+    "description": "phone: phone length must be at least 7 characters long"
+}
+23:08:33.076 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 842 ms
+23:08:33.086 [main] INFO  api_tests.Test001_VerifyUser - STEP 3 :Verify Response Status: false
+23:08:33.087 [main] INFO  api_tests.Test001_VerifyUser - STEP 4 :Verify Response Message: phone: phone length must be at least 7 characters long
+23:08:33.112 [main] INFO  utilities.API_ExtentReportManager - Starting Test 7 : TestVerifyUser_MaxPhoneLength
+23:08:33.121 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@gmail.com, countryENCode=IN, countryCode=+91, phone=12345678901234567890, dotNumber=253]
+23:08:33.122 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Sending 'verifyUser' request with data
+23:08:33.147 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+23:08:33.152 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+23:08:33.153 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+23:08:33.154 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":"12345678901234567890","dotnumber":"253","DOTNumber":"253"}
+23:08:33.898 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+23:08:33.901 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "phone: phone length must be less than or equal to 15 characters long",
+    "code": 400,
+    "error": "phone: phone length must be less than or equal to 15 characters long",
+    "description": "phone: phone length must be less than or equal to 15 characters long"
+}
+23:08:33.902 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 755 ms
+23:08:33.913 [main] INFO  api_tests.Test001_VerifyUser - STEP 3 :Verify Response Status: false
+23:08:33.914 [main] INFO  api_tests.Test001_VerifyUser - STEP 4 :Verify Response Message: phone: phone length must be less than or equal to 15 characters long
+23:08:34.857 [main] INFO  utilities.API_ExtentReportManager - ******* API Test Execution Finished: 2026.01.11.23.08.22 *******
+23:11:13.534 [main] INFO  utilities.API_ExtentReportManager - ******* API Test Execution Started: 2026.01.11.23.11.13 *******
+23:11:14.853 [main] DEBUG api_tests.Test001_VerifyUser2 - **** Logging test cases started ****
+23:11:15.223 [main] INFO  utilities.API_ExtentReportManager - Starting Test 1 : verifyUser_success
+23:11:15.236 [main] INFO  api_tests.Test001_VerifyUser2 - Sending Verify User request: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@gmail.com, countryENCode=IN, countryCode=+91, phone=9876543211, dotNumber=253]
+23:11:17.109 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+23:11:17.121 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+23:11:17.122 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+23:11:17.124 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":"9876543211","dotnumber":"253","DOTNumber":"253"}
+23:11:20.100 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 200
+23:11:20.105 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": true,
+    "message": "new user",
+    "data": "new user"
+}
+23:11:20.105 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 2996 ms
+23:11:20.150 [main] INFO  utilities.API_ExtentReportManager - Starting Test 2 : verifyUser_missingEmail
+23:11:20.172 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+23:11:20.174 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+23:11:20.175 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+23:11:20.175 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":null,"countryENCode":"IN","countryCode":"+91","phone":"9876543211","dotnumber":"253","DOTNumber":"253"}
+23:11:20.975 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+23:11:20.980 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "email: email must be a string",
+    "code": 400,
+    "error": "email: email must be a string",
+    "description": "email: email must be a string"
+}
+23:11:20.981 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 809 ms
+23:11:21.193 [main] INFO  utilities.API_ExtentReportManager - Starting Test 3 : verifyUser_missingPhone
+23:11:21.214 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+23:11:21.219 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+23:11:21.220 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+23:11:21.220 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":null,"dotnumber":"253","DOTNumber":"253"}
+23:11:21.954 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+23:11:21.959 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "phone: phone must be a string",
+    "code": 400,
+    "error": "phone: phone must be a string",
+    "description": "phone: phone must be a string"
+}
+23:11:21.960 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 746 ms
+23:11:21.987 [main] INFO  utilities.API_ExtentReportManager - Starting Test 4 : verifyUser_invalidEmailFormat
+23:11:22.011 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+23:11:22.014 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+23:11:22.015 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+23:11:22.016 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@@gmail","countryENCode":"IN","countryCode":"+91","phone":"9876543211","dotnumber":"253","DOTNumber":"253"}
+23:11:22.726 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+23:11:22.730 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "email: email must be a valid email",
+    "code": 400,
+    "error": "email: email must be a valid email",
+    "description": "email: email must be a valid email"
+}
+23:11:22.732 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 721 ms
+23:11:22.762 [main] INFO  utilities.API_ExtentReportManager - Starting Test 5 : verifyUser_invalidPhoneFormat
+23:11:22.794 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+23:11:22.798 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+23:11:22.801 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+23:11:22.802 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":"98ABCD211","dotnumber":"253","DOTNumber":"253"}
+23:11:23.596 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+23:11:23.601 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "phone: Invalid phone",
+    "code": 400,
+    "error": "phone: Invalid phone",
+    "description": "phone: Invalid phone"
+}
+23:11:23.602 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 808 ms
+23:11:23.630 [main] INFO  utilities.API_ExtentReportManager - Starting Test 6 : verifyUser_minPhoneLength
+23:11:23.661 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+23:11:23.666 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+23:11:23.667 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+23:11:23.667 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":"98","dotnumber":"253","DOTNumber":"253"}
+23:11:24.643 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+23:11:24.647 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "phone: phone length must be at least 7 characters long",
+    "code": 400,
+    "error": "phone: phone length must be at least 7 characters long",
+    "description": "phone: phone length must be at least 7 characters long"
+}
+23:11:24.650 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 989 ms
+23:11:24.678 [main] INFO  utilities.API_ExtentReportManager - Starting Test 7 : verifyUser_maxPhoneLength
+23:11:24.704 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+23:11:24.706 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+23:11:24.707 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+23:11:24.707 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":"12345678901234567890","dotnumber":"253","DOTNumber":"253"}
+23:11:25.527 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+23:11:25.530 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "phone: phone length must be less than or equal to 15 characters long",
+    "code": 400,
+    "error": "phone: phone length must be less than or equal to 15 characters long",
+    "description": "phone: phone length must be less than or equal to 15 characters long"
+}
+23:11:25.531 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 827 ms
+23:11:26.378 [main] INFO  utilities.API_ExtentReportManager - ******* API Test Execution Finished: 2026.01.11.23.11.13 *******
+23:31:11.450 [main] DEBUG api_tests.Test001_VerifyUser - **** Logging test cases started ****
+23:31:11.838 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@gmail.com, countryENCode=IN, countryCode=+91, phone=9876543211, dotNumber=253]
+23:31:11.839 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Sending 'verifyUser' request with data
+23:31:14.216 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+23:31:14.235 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+23:31:14.235 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+23:31:14.236 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":"9876543211","dotnumber":"253","DOTNumber":"253"}
+23:31:19.053 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 200
+23:31:19.058 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": true,
+    "message": "new user",
+    "data": "new user"
+}
+23:31:19.058 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 4887 ms
+23:31:19.061 [main] INFO  api_tests.Test001_VerifyUser - Status Code: 200
+23:31:19.137 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=null, countryENCode=IN, countryCode=+91, phone=9876543211, dotNumber=253]
+23:31:19.138 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Send verifyUser request with data
+23:31:19.166 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+23:31:19.169 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+23:31:19.170 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+23:31:19.170 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":null,"countryENCode":"IN","countryCode":"+91","phone":"9876543211","dotnumber":"253","DOTNumber":"253"}
+23:31:19.913 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+23:31:19.920 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "email: email must be a string",
+    "code": 400,
+    "error": "email: email must be a string",
+    "description": "email: email must be a string"
+}
+23:31:19.922 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 756 ms
+23:31:20.118 [main] INFO  api_tests.Test001_VerifyUser - STEP 3 :Recieved response UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=null, countryENCode=IN, countryCode=+91, phone=9876543211, dotNumber=253]
+23:31:20.119 [main] INFO  api_tests.Test001_VerifyUser - STEP 4 :Verify Response Status code: 400
+23:31:20.120 [main] INFO  api_tests.Test001_VerifyUser - STEP 5 :Verify Response Status: false
+23:31:20.120 [main] INFO  api_tests.Test001_VerifyUser - STEP 6 :Verify Response Message: email: email must be a string
+23:31:20.135 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@gmail.com, countryENCode=IN, countryCode=+91, phone=null, dotNumber=253]
+23:31:20.136 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Sending 'verifyUser' request with data
+23:31:20.152 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+23:31:20.155 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+23:31:20.156 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+23:31:20.156 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":null,"dotnumber":"253","DOTNumber":"253"}
+23:31:21.004 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+23:31:21.009 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "phone: phone must be a string",
+    "code": 400,
+    "error": "phone: phone must be a string",
+    "description": "phone: phone must be a string"
+}
+23:31:21.010 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 858 ms
+23:31:21.024 [main] INFO  api_tests.Test001_VerifyUser - STEP 3 :Recieved response verifyUserResponseData: VerifyUserResponseData [status=false, message=phone: phone must be a string, code=400, error=phone: phone must be a string, description=phone: phone must be a string]
+23:31:21.025 [main] INFO  api_tests.Test001_VerifyUser - STEP 4 :Verify Response Status code: 400
+23:31:21.026 [main] INFO  api_tests.Test001_VerifyUser - STEP 5 :Verify Response Status: false
+23:31:21.027 [main] INFO  api_tests.Test001_VerifyUser - STEP 6 :Verify Response Message: phone: phone must be a string
+23:31:21.051 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@@gmail, countryENCode=IN, countryCode=+91, phone=9876543211, dotNumber=253]
+23:31:21.051 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Sending 'verifyUser' request with data
+23:31:21.073 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+23:31:21.076 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+23:31:21.076 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+23:31:21.077 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@@gmail","countryENCode":"IN","countryCode":"+91","phone":"9876543211","dotnumber":"253","DOTNumber":"253"}
+23:31:21.858 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+23:31:21.863 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "email: email must be a valid email",
+    "code": 400,
+    "error": "email: email must be a valid email",
+    "description": "email: email must be a valid email"
+}
+23:31:21.864 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 791 ms
+23:31:21.875 [main] INFO  api_tests.Test001_VerifyUser - STEP 3 :Recieved response verifyUserResponseData: VerifyUserResponseData [status=false, message=email: email must be a valid email, code=400, error=email: email must be a valid email, description=email: email must be a valid email]
+23:31:21.876 [main] INFO  api_tests.Test001_VerifyUser - STEP 4 :Verify Response Status code: 400
+23:31:21.877 [main] INFO  api_tests.Test001_VerifyUser - STEP 5 :Verify Response Status: false
+23:31:21.877 [main] INFO  api_tests.Test001_VerifyUser - STEP 6 :Verify Response Message: email: email must be a valid email
+23:31:21.911 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@gmail.com, countryENCode=IN, countryCode=+91, phone=98ABCD211, dotNumber=253]
+23:31:21.916 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Sending 'verifyUser' request with data
+23:31:21.933 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+23:31:21.936 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+23:31:21.937 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+23:31:21.937 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":"98ABCD211","dotnumber":"253","DOTNumber":"253"}
+23:31:22.667 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+23:31:22.671 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "phone: Invalid phone",
+    "code": 400,
+    "error": "phone: Invalid phone",
+    "description": "phone: Invalid phone"
+}
+23:31:22.672 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 739 ms
+23:31:22.684 [main] INFO  api_tests.Test001_VerifyUser - STEP 3 :Recieved response verifyUserResponseData: VerifyUserResponseData [status=false, message=phone: Invalid phone, code=400, error=phone: Invalid phone, description=phone: Invalid phone]
+23:31:22.685 [main] INFO  api_tests.Test001_VerifyUser - STEP 4 :Verify Response Status code: 400
+23:31:22.686 [main] INFO  api_tests.Test001_VerifyUser - STEP 5 :Response Status: false
+23:31:22.686 [main] INFO  api_tests.Test001_VerifyUser - STEP 6 :Verify Response Message: phone: Invalid phone
+23:31:22.706 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@gmail.com, countryENCode=IN, countryCode=+91, phone=98, dotNumber=253]
+23:31:22.707 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Sending 'verifyUser' request with data
+23:31:22.730 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+23:31:22.732 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+23:31:22.733 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+23:31:22.733 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":"98","dotnumber":"253","DOTNumber":"253"}
+23:31:23.426 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+23:31:23.429 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "phone: phone length must be at least 7 characters long",
+    "code": 400,
+    "error": "phone: phone length must be at least 7 characters long",
+    "description": "phone: phone length must be at least 7 characters long"
+}
+23:31:23.430 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 700 ms
+23:31:23.436 [main] INFO  api_tests.Test001_VerifyUser - STEP 3 :Verify Response Status: false
+23:31:23.436 [main] INFO  api_tests.Test001_VerifyUser - STEP 4 :Verify Response Message: phone: phone length must be at least 7 characters long
+23:31:23.447 [main] INFO  api_tests.Test001_VerifyUser - STEP 1 :Created UserRequestData: VerifyUserRequestData [firstName=Tester, lastName=LastName, email=tester@gmail.com, countryENCode=IN, countryCode=+91, phone=12345678901234567890, dotNumber=253]
+23:31:23.448 [main] INFO  api_tests.Test001_VerifyUser - STEP 2 :Sending 'verifyUser' request with data
+23:31:23.467 [main] INFO  utilities.ApiLoggingFilter - REQUEST METHOD : POST
+23:31:23.469 [main] INFO  utilities.ApiLoggingFilter - REQUEST URI    : https://etruckingsystem.com:8000/admin/verifyUser
+23:31:23.469 [main] INFO  utilities.ApiLoggingFilter - REQUEST HEADERS: Accept=*/*
+Content-Type=application/json
+23:31:23.470 [main] INFO  utilities.ApiLoggingFilter - REQUEST BODY  : {"firstName":"Tester","lastName":"LastName","email":"tester@gmail.com","countryENCode":"IN","countryCode":"+91","phone":"12345678901234567890","dotnumber":"253","DOTNumber":"253"}
+23:31:24.199 [main] INFO  utilities.ApiLoggingFilter - RESPONSE STATUS: 400
+23:31:24.204 [main] INFO  utilities.ApiLoggingFilter - RESPONSE BODY  : {
+    "status": false,
+    "message": "phone: phone length must be less than or equal to 15 characters long",
+    "code": 400,
+    "error": "phone: phone length must be less than or equal to 15 characters long",
+    "description": "phone: phone length must be less than or equal to 15 characters long"
+}
+23:31:24.205 [main] INFO  utilities.ApiLoggingFilter - RESPONSE TIME  : 738 ms
+23:31:24.216 [main] INFO  api_tests.Test001_VerifyUser - STEP 3 :Verify Response Status: false
+23:31:24.217 [main] INFO  api_tests.Test001_VerifyUser - STEP 4 :Verify Response Message: phone: phone length must be less than or equal to 15 characters long

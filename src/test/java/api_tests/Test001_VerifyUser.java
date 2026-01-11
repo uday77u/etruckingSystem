@@ -18,7 +18,7 @@ import modelsResponse.VerifyUserResponseData;
 import services.AdminService;
 import utilities.API_ExtentReportManager;
 
-@Listeners(API_ExtentReportManager.class)
+//@Listeners(API_ExtentReportManager.class)
 public class Test001_VerifyUser extends BaseAPITest{
 	    private AdminService adminService;
 
@@ -37,37 +37,34 @@ public class Test001_VerifyUser extends BaseAPITest{
 		logger.info("STEP 2 :Sending 'verifyUser' request with data");
 		Response response=adminService.verifyUser(data);
 		
+		logger.info("STEP 3 :HTTP status validation");
+		assertStatusCode(response, 200);
+		
 	    VerifyUserResponseData verifyUserResponseData = response.as(VerifyUserResponseData.class);
-	    logger.info("STEP 3 :Recieved response verifyUserResponseData: "+verifyUserResponseData);
-	    
-	    try {
-	        response.then()
-	            .body(matchesJsonSchemaInClasspath(
-	                "schemas/verify-user-response-schema.json"));
-	    } catch (AssertionError e) {
-	        System.err.println("❌ Schema validation failed:");
-	        System.err.println(e.getMessage());
-	        throw e;
-	    }
+	    logger.info("STEP 4 :Recieved response verifyUserResponseData: "+verifyUserResponseData);
+	   
+	    response.then().body(matchesJsonSchemaInClasspath("schemas/verify-user-response-schema.json"));
 
-	    
-	    logger.info("========== Verify User Response Validation ==========");
-		logger.info("STEP 4 :Response Status: "+verifyUserResponseData.isStatus());
-		assertTrue(verifyUserResponseData.isStatus(), "Success Response status: "  );
+	    logger.info("========== Verify User Response Validation(Business assertions) ==========");
+        
+		logger.info("STEP 5 :Verify Response Status: "+verifyUserResponseData.isStatus());
+		assertTrue(verifyUserResponseData.isStatus(), "Status should be true, success response status: "  );
 		
-		logger.info("STEP 5 :Response Code: "+verifyUserResponseData.getCode());
-		assertNull(verifyUserResponseData.getCode(), "Success Response code: ");
+		logger.info("STEP 6 :Verify Response Code: "+verifyUserResponseData.getCode());
+		assertNull(verifyUserResponseData.getCode(), "Code should be null on success, success response code: ");
 		
-		logger.info("STEP 6 :Response Message: "+verifyUserResponseData.getMessage());
+		logger.info("STEP 7 :Verify Response Message: "+verifyUserResponseData.getMessage());
+		assertNotNull(verifyUserResponseData.getMessage(), "Message should not be null");
 		assertEquals(verifyUserResponseData.getMessage(), "new user","Mis match in the message: ");
 		
-		logger.info("STEP 7 :Response Error: "+verifyUserResponseData.getError());
-		assertNull(verifyUserResponseData.getError(), "Success Response Error: ");
+		logger.info("STEP 8 :Verify Response Error: "+verifyUserResponseData.getError());
+		assertNull(verifyUserResponseData.getError(), "Error should be null on success, success response Error: ");
 		
-		logger.info("STEP 8 :Response Description: "+verifyUserResponseData.getDescription());
-		assertNull(verifyUserResponseData.getDescription(),"Success Response Description: ");
+		logger.info("STEP 9 :Verify Response Description: "+verifyUserResponseData.getDescription());
+		assertNull(verifyUserResponseData.getDescription(),"Description should be null on success, success response Description: ");
 		
-		logger.info("STEP 9 :Response Data: "+verifyUserResponseData.getData());
+		logger.info("STEP 10 :Verify Response Data: "+verifyUserResponseData.getData());
+		assertNotNull(verifyUserResponseData.getData(), "Data should not be null");
 		assertEquals(verifyUserResponseData.getData(), "new user","Success Response Data: ");
 		
 	}
@@ -85,13 +82,13 @@ public class Test001_VerifyUser extends BaseAPITest{
 	    VerifyUserResponseData res = response.as(VerifyUserResponseData.class);
 	    logger.info("STEP 3 :Recieved response UserRequestData: "+data);
 	    
-	    logger.info("STEP 4 :Response Status code: " + response.getStatusCode());
+	    logger.info("STEP 4 :Verify Response Status code: " + response.getStatusCode());
 	    assertEquals(response.getStatusCode(), 400);
 	    
-	    logger.info("STEP 5 :Response Status: " + res.isStatus());
+	    logger.info("STEP 5 :Verify Response Status: " + res.isStatus());
 	    assertFalse(res.isStatus());
 	    
-	    logger.info("STEP 6 :Response Message: "+res.getMessage(),"Response Message: ");
+	    logger.info("STEP 6 :Verify Response Message: "+res.getMessage(),"Response Message: ");
 	    assertNotNull(res.getMessage(),"Response Message is null");
 	    assertEquals(res.getMessage(), MISSING_EMAIL);  //email: email must be a string--defect
 	}
@@ -109,13 +106,13 @@ public class Test001_VerifyUser extends BaseAPITest{
 	    VerifyUserResponseData res = response.as(VerifyUserResponseData.class);
 	    logger.info("STEP 3 :Recieved response verifyUserResponseData: "+res);
 
-	    logger.info("STEP 4 :Response Status code: " + response.getStatusCode());
+	    logger.info("STEP 4 :Verify Response Status code: " + response.getStatusCode());
 	    assertEquals(response.getStatusCode(), 400);
 	    
-	    logger.info("STEP 5 :Response Status: " + res.isStatus());
+	    logger.info("STEP 5 :Verify Response Status: " + res.isStatus());
 	    assertFalse(res.isStatus());
 	    
-	    logger.info("STEP 6 :Response Message: "+res.getMessage(),"Response Message: ");
+	    logger.info("STEP 6 :Verify Response Message: "+res.getMessage(),"Response Message: ");
 	    assertNotNull(res.getMessage(),"Response Message is null");
 	    assertEquals(res.getMessage(), MISSING_PHONE_NUMBER); //phone: phone must be a string --defect
 	}
@@ -133,13 +130,13 @@ public class Test001_VerifyUser extends BaseAPITest{
 	    VerifyUserResponseData res = response.as(VerifyUserResponseData.class);
 	    logger.info("STEP 3 :Recieved response verifyUserResponseData: "+res);
 
-	    logger.info("STEP 4 :Response Status code: " + response.getStatusCode());
+	    logger.info("STEP 4 :Verify Response Status code: " + response.getStatusCode());
 	    assertEquals(response.getStatusCode(), 400);
 	    
-	    logger.info("STEP 5 :Response Status: " + res.isStatus());
+	    logger.info("STEP 5 :Verify Response Status: " + res.isStatus());
 	    assertFalse(res.isStatus());
 	    
-	    logger.info("STEP 6 :Response Message: "+res.getMessage(),"Response Message: ");
+	    logger.info("STEP 6 :Verify Response Message: "+res.getMessage(),"Response Message: ");
 	    assertNotNull(res.getMessage(),"Response Message is null");
 	    assertEquals(res.getMessage(), INVALID_EMAIL); //Invalid email format
 	}
@@ -158,13 +155,13 @@ public class Test001_VerifyUser extends BaseAPITest{
 	    VerifyUserResponseData res = response.as(VerifyUserResponseData.class);
 	    logger.info("STEP 3 :Recieved response verifyUserResponseData: "+res);
 	    
-	    logger.info("STEP 4 :Response Status code: " + response.getStatusCode());
+	    logger.info("STEP 4 :Verify Response Status code: " + response.getStatusCode());
 	    assertEquals(response.getStatusCode(), 400);
 
 	    logger.info("STEP 5 :Response Status: " + res.isStatus());
 	    assertFalse(res.isStatus());
 	    
-	    logger.info("STEP 6 :Response Message: "+res.getMessage(),"Response Message: ");
+	    logger.info("STEP 6 :Verify Response Message: "+res.getMessage(),"Response Message: ");
 	    assertNotNull(res.getMessage(),"Response Message is null");
 	    assertEquals(res.getMessage(), INVALID_PHONE); //Invalid phone number
 	    
@@ -182,10 +179,10 @@ public class Test001_VerifyUser extends BaseAPITest{
 	    
 	    VerifyUserResponseData res = response.as(VerifyUserResponseData.class);
 	    
-	    logger.info("STEP 3 :Response Status: " + res.isStatus());
+	    logger.info("STEP 3 :Verify Response Status: " + res.isStatus());
 	    assertFalse(res.isStatus());
 	    
-	    logger.info("STEP 4 :Response Message: "+res.getMessage(),"Response Message: ");
+	    logger.info("STEP 4 :Verify Response Message: "+res.getMessage(),"Response Message: ");
 	    assertNotNull(res.getMessage(),"Response Message is null");
 	    assertEquals(res.getMessage(), PHONE_LENGTH_LEAST7); //Phone number length must be at least 7 characters long
 	    assertEquals(response.getStatusCode(), 400);
@@ -205,10 +202,10 @@ public class Test001_VerifyUser extends BaseAPITest{
 	    
 	    VerifyUserResponseData res = response.as(VerifyUserResponseData.class);
 	    
-	    logger.info("STEP 3 :Response Status: " + res.isStatus());
+	    logger.info("STEP 3 :Verify Response Status: " + res.isStatus());
 	    assertFalse(res.isStatus());
 	    
-	    logger.info("STEP 4 :Response Message: "+res.getMessage(),"Response Message: ");
+	    logger.info("STEP 4 :Verify Response Message: "+res.getMessage(),"Response Message: ");
 	    assertNotNull(res.getMessage(),"Response Message is null");
 	    assertEquals(res.getMessage(), PHONE_LENGTH_MOST10);
 	    assertEquals(response.getStatusCode(), 400);
@@ -223,7 +220,7 @@ public class Test001_VerifyUser extends BaseAPITest{
 
 	   // Response response = adminService.verifyUserWithoutAuth(data);
 
-	   // assertEquals(response.getStatusCode(), 401);
+	    //assertEquals(response.getStatusCode(), 401);
 	}
 
 	private VerifyUserRequestData validUser() {

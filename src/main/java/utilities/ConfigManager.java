@@ -125,4 +125,13 @@ public final class ConfigManager {
             );
         }
     }
+    
+    //api
+    public static String getProperty(String key) {
+        return properties.getProperty(key);
+    }
+
+    public static int getIntProperty(String key) {
+        return Integer.parseInt(properties.getProperty(key));
+    }
 }
