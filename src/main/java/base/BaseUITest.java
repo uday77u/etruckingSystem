@@ -63,6 +63,10 @@ public class BaseUITest implements FrameWorkConstants{
 				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 				logger.info("Browser Window is maximized.");
 				//driver.get("https://etruckingsystem.com/auth");
+				
+			    logger.info("* Launching the browser");
+			    logger.info("* Navigating to baseURL: "+BASE_URL);
+			    driver.get(BASE_URL);
 			
 		} catch (Exception e) {
 			logger.error("Setup failed", e);

@@ -152,10 +152,14 @@ String     INVALID_CREDENTIALS= "Invalid email or password";
     String LOAD_CANT_DELIVER= "Load can't be delivered as driver has not accepted the load yet";
      String END_REQUEST_NOT_MATCH =" End Trip Location is not as per requested Location";
      
-     //added
+     //=================Added error messages=============================================
     String PHONE_LENGTH_LEAST7="Phone number length must be at least 7 characters long";
     String PHONE_LENGTH_MOST10="phone: phone length must be less than or equal to 15 characters long";
     String MISSING_PHONE_NUMBER= "Phone Number is missing";
+    String MISSING_FIRST_NAME="First name is missing";
+    String MISSING_LAST_NAME="Last name is missing";
+    String MISSING_COUNTRY_CODE="Country code is missing";
+    String INVALID_CHARACTERS="Invalid charecters";
 	
 
 }

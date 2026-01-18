@@ -15,8 +15,8 @@ public HomePage(WebDriver driver) {
 //-------------------------Locators--------------------------------------------------------------------
 
 @FindBy(xpath = "(//div[text()='Yes'])[1]") private WebElement AdminYesTextLink;
-
-
+@FindBy(xpath = "(//div[text()='Yes'])[2]") private WebElement UserYesTextLink;
+@FindBy(xpath = "//span[text()='SIGN UP']") private WebElement signupLink;
 
 //---------------------------------------------Methods for Locators------------------------------------
 
@@ -24,7 +24,13 @@ public void clickAdminYesTextLink() {
 	
 	AdminYesTextLink.click();
 }
-
-
+public void clickUserYesTextLink() {
+	
+	UserYesTextLink.click();
+}
+public void clickSignup() {
+	
+	signupLink.click();
+}
 
 }

@@ -19,7 +19,7 @@ public class VerifyPhonePage extends BasePage{
 	@FindBy(xpath = "//input[@type='text' and @maxlength='1']") private List<WebElement> otpInputs ;
     @FindBy(xpath = "//button[@type='submit']") private WebElement veriftButton;     
 	
-	//button[@type='submit']
+
 	//---------------------------------------------Methods for Locators------------------------------------
 	public String getOTPsentMessage() {
 		return OTPsentMessage.getText();

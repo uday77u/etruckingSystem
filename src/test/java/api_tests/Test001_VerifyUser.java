@@ -116,7 +116,7 @@ public class Test001_VerifyUser extends BaseAPITest{
 	    assertNotNull(res.getMessage(),"Response Message is null");
 	    assertEquals(res.getMessage(), MISSING_PHONE_NUMBER); //phone: phone must be a string --defect
 	}
-	
+	/*
 	@Test(priority = 4,groups = {"regression"})
 	public void TestVerifyUser_InvalidEmailFormat() {
 
@@ -140,7 +140,34 @@ public class Test001_VerifyUser extends BaseAPITest{
 	    assertNotNull(res.getMessage(),"Response Message is null");
 	    assertEquals(res.getMessage(), INVALID_EMAIL); //Invalid email format
 	}
+	*/
 	
+	@Test(groups = {"regression"})
+	public void verifyUser_shouldReturn400_whenEmailFormatIsInvalid() {
+
+	    // ----------- Arrange -----------
+	    VerifyUserRequestData request = validUser();
+	    request.setEmail("tester@@gmail");
+
+	    logger.info("VerifyUser request with invalid email: {}", request);
+
+	    // ----------- Act -----------
+	    Response response = adminService.verifyUser(request);
+	    VerifyUserResponseData responseBody =
+	            response.as(VerifyUserResponseData.class);
+
+	    logger.info("VerifyUser response: {}", responseBody);
+
+	    // ----------- Assert -----------
+	    assertBadRequest(response, responseBody);
+
+	    assertEquals(
+	            responseBody.getMessage(),
+	            INVALID_EMAIL,
+	            "Expected invalid email error message for malformed email"
+	    );
+	}
+
 	@Test(priority = 5,groups = {"regression"})
 	public void TestVerifyUser_InvalidPhoneFormat() {
 
@@ -222,20 +249,223 @@ public class Test001_VerifyUser extends BaseAPITest{
 
 	    //assertEquals(response.getStatusCode(), 401);
 	}
+	//-------------------------------
+	
+	@Test(priority = 8, groups = {"regression"})
+	public void TestVerifyUser_MissingCountryCode() {
 
-	private VerifyUserRequestData validUser() {
-	    return new VerifyUserRequestData(
-	        "Tester",
-	        "LastName",
-	        "tester@gmail.com",
-	        "IN",
-	        "+91",
-	        "9876543211",
-	        "253"
-	    );
+	    VerifyUserRequestData data = validUser();
+	    data.setCountryCode(null);
+
+	    logger.info("STEP 1 :Created UserRequestData: " + data);
+
+	    logger.info("STEP 2 :Sending 'verifyUser' request with data");
+	    Response response = adminService.verifyUser(data);
+
+	    VerifyUserResponseData res = response.as(VerifyUserResponseData.class);
+	    logger.info("STEP 3 :Recieved response verifyUserResponseData: " + res);
+
+	    logger.info("STEP 4 :Verify Response Status code: " + response.getStatusCode());
+	    assertEquals(response.getStatusCode(), 400);
+	    assertNegativeSchema(response);
+
+	    logger.info("STEP 5 :Verify Response Status: " + res.isStatus());
+	    assertFalse(res.isStatus());
+
+	    logger.info("STEP 6 :Verify Response Message: " + res.getMessage());
+	    assertEquals(res.getMessage(), MISSING_COUNTRY_CODE);
 	}
 
+	@Test(priority = 9, groups = {"regression"})
+	public void TestVerifyUser_EmptyBody() {
 
+	    VerifyUserRequestData data = new VerifyUserRequestData(
+	        null, null, null, null, null, null, null
+	    );
 
+	    logger.info("STEP 1 :Created UserRequestData: " + data);
+
+	    logger.info("STEP 2 :Sending 'verifyUser' request with empty body");
+	    Response response = adminService.verifyUser(data);
+
+	    VerifyUserResponseData res = response.as(VerifyUserResponseData.class);
+	    logger.info("STEP 3 :Recieved response verifyUserResponseData: " + res);
+
+	    logger.info("STEP 4 :Verify Response Status code: " + response.getStatusCode());
+	    assertEquals(response.getStatusCode(), 400);
+	    assertNegativeSchema(response);
+
+	    logger.info("STEP 5 :Verify Response Status: " + res.isStatus());
+	    assertFalse(res.isStatus());
+
+	    logger.info("STEP 6 :Verify Response Message: " + res.getMessage());
+	    assertNotNull(res.getMessage());
+	}
 	
+	
+
+	@Test(priority = 10, groups = {"regression"})
+	public void TestVerifyUser_InvalidFirstNameCharacters() {
+
+	    VerifyUserRequestData data = validUser();
+	    data.setFirstName("T@ster");
+
+	    logger.info("STEP 1 :Created UserRequestData: " + data);
+
+	    logger.info("STEP 2 :Sending 'verifyUser' request with invalid first name");
+	    Response response = adminService.verifyUser(data);
+
+	    VerifyUserResponseData res = response.as(VerifyUserResponseData.class);
+	    logger.info("STEP 3 :Recieved response verifyUserResponseData: " + res);
+
+	    logger.info("STEP 4 :Verify Response Status code: " + response.getStatusCode());
+	    assertEquals(response.getStatusCode(), 400);
+	    assertNegativeSchema(response);
+
+	    logger.info("STEP 5 :Verify Response Status: " + res.isStatus());
+	    assertFalse(res.isStatus());
+
+	    logger.info("STEP 6 :Verify Response Message: " + res.getMessage());
+	    assertEquals(res.getMessage(), INVALID_CHARACTERS);
+	}
+
+	@Test(priority = 11, groups = {"regression"})
+	public void TestVerifyUser_EmailAlreadyExists() {
+
+	    VerifyUserRequestData data = validUser();
+	    data.setEmail("existing@gmail.com");
+
+	    logger.info("STEP 1 :Created UserRequestData: " + data);
+
+	    logger.info("STEP 2 :Sending 'verifyUser' request with existing email");
+	    Response response = adminService.verifyUser(data);
+
+	    VerifyUserResponseData res = response.as(VerifyUserResponseData.class);
+	    logger.info("STEP 3 :Recieved response verifyUserResponseData: " + res);
+
+	    logger.info("STEP 4 :Verify Response Status code: " + response.getStatusCode());
+	    assertEquals(response.getStatusCode(), 409);
+	    assertNegativeSchema(response);
+
+	    logger.info("STEP 5 :Verify Response Status: " + res.isStatus());
+	    assertFalse(res.isStatus());
+	}
+	@Test(priority = 12, groups = {"regression"})
+	public void TestVerifyUser_PhoneAlreadyExists() {
+
+	    VerifyUserRequestData data = validUser();
+	    data.setPhone("9999999999");
+
+	    logger.info("STEP 1 :Created UserRequestData: " + data);
+
+	    logger.info("STEP 2 :Sending 'verifyUser' request with existing phone");
+	    Response response = adminService.verifyUser(data);
+
+	    VerifyUserResponseData res = response.as(VerifyUserResponseData.class);
+	    logger.info("STEP 3 :Recieved response verifyUserResponseData: " + res);
+
+	    logger.info("STEP 4 :Verify Response Status code: " + response.getStatusCode());
+	    assertEquals(response.getStatusCode(), 409);
+	    assertNegativeSchema(response);
+
+	    logger.info("STEP 5 :Verify Response Status: " + res.isStatus());
+	    assertFalse(res.isStatus());
+	}
+	/*
+	@Test(priority = 13, groups = {"regression"})
+	public void TestVerifyUser_WithOptionalFields() {
+
+	    VerifyUserRequestData data = validUser();
+	    data.setCountry("IN");
+	    data.setOtp("123");
+
+	    logger.info("STEP 1 :Created UserRequestData: " + data);
+
+	    logger.info("STEP 2 :Sending 'verifyUser' request with optional fields");
+	    Response response = adminService.verifyUser(data);
+
+	    VerifyUserResponseData res = response.as(VerifyUserResponseData.class);
+	    logger.info("STEP 3 :Recieved response verifyUserResponseData: " + res);
+
+	    logger.info("STEP 4 :Verify Response Status code: " + response.getStatusCode());
+	    assertEquals(response.getStatusCode(), 200);
+
+	    logger.info("STEP 5 :Verify Response Status: " + res.isStatus());
+	    assertTrue(res.isStatus());
+	}
+	*/
+	@Test(priority = 14, groups = {"regression"})
+	public void TestVerifyUser_MinimumRequiredFields() {
+
+	    VerifyUserRequestData data = new VerifyUserRequestData(
+	        "Tester",
+	        "User",
+	        "tester@gmail.com",
+	        null,
+	        "+91",
+	        "9876543211",
+	        null
+	    );
+
+	    logger.info("STEP 1 :Created UserRequestData: " + data);
+
+	    logger.info("STEP 2 :Sending 'verifyUser' request with minimum required fields");
+	    Response response = adminService.verifyUser(data);
+
+	    VerifyUserResponseData res = response.as(VerifyUserResponseData.class);
+	    logger.info("STEP 3 :Recieved response verifyUserResponseData: " + res);
+
+	    logger.info("STEP 4 :Verify Response Status code: " + response.getStatusCode());
+	    assertEquals(response.getStatusCode(), 200);
+
+	    logger.info("STEP 5 :Verify Response Status: " + res.isStatus());
+	    assertTrue(res.isStatus());
+	}
+//=============================helper methods========================================
+		//Test data
+		private VerifyUserRequestData validUser() {
+		    return new VerifyUserRequestData(
+		        "Tester",
+		        "LastName",
+		        "tester@gmail.com",
+		        "IN",
+		        "+91",
+		        "9876543211",
+		        "253"
+		    );
+		}
+		
+		//Negative Schema
+		private void assertNegativeSchema(Response response) {
+		    response.then().body(
+		        matchesJsonSchemaInClasspath(
+		            "schemas/verify-user-error-response-schema.json"
+		        )
+		    );
+		}
+		
+		//BadRequest
+		private void assertBadRequest(Response response,
+                VerifyUserResponseData responseBody) {
+
+							assertEquals(response.getStatusCode(),400,
+									"Expected HTTP 400 Bad Request"
+									);
+
+							assertFalse(
+									responseBody.isStatus(),
+									"Expected status=false for validation failure"
+									);
+
+							assertNotNull(
+									responseBody.getMessage(),
+									"Error message should not be null for validation failure"
+									);
+
+							assertNegativeSchema(response);
+						}
+
+		
+		
+
 }

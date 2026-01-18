@@ -3,17 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="api_tests.Test001_VerifyUser">
+      <class name="ui_tests.TC003_Driver_AddDriver">
         <methods>
+          <include name="tearDown"/>
           <include name="setup"/>
-          <include name="TestVerifyUser_MissingEmail"/>
-          <include name="TestVerifyUser_MinPhoneLength"/>
-          <include name="TestVerifyUser_MissingPhone"/>
-          <include name="TestVerifyUser_successSchemaValidation"/>
-          <include name="TestVerifyUser_InvalidEmailFormat"/>
-          <include name="TestVerifyUser_InvalidPhoneFormat"/>
+          <include name="beforeSuite"/>
+          <include name="TestAddDriver"/>
         </methods>
-      </class> <!-- api_tests.Test001_VerifyUser -->
+      </class> <!-- ui_tests.TC003_Driver_AddDriver -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
