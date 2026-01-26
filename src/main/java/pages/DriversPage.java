@@ -5,41 +5,50 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import utilities.MuiActionsUtil;
+import utilities.ReactUtility;
+import utilities.UIActions;
 import utilities.WebDriverUtility;
 
 public class DriversPage extends BasePage {
 	WebDriverUtility util;
 	MuiActionsUtil util2;
+	UIActions uiActions;
 	public DriversPage(WebDriver driver) {
 		super(driver);
 		util=new WebDriverUtility(driver);
 		util2=new MuiActionsUtil(driver); 
+		uiActions=new UIActions(driver);
 	}
 
-	//-------------------------Locators---------------------------------------------
+	
+	//====================================================================================================
+	//                                       Locators
+	//====================================================================================================
+	
+	//Button Locators
 	@FindBy(xpath = "//button[text()='Add Driver']") private WebElement addDriverButton;
 	@FindBy(xpath = "(//i[contains(@class,'file-circle-plus')])[1]") private WebElement uploadDLButton;
+	@FindBy(xpath = "//button[@type='submit']") private WebElement submitButton;
+	
+	//Upload file Input
 	@FindBy(xpath = "(//input[@type='file'])[1]") private WebElement uploadDLfileInput;
 	@FindBy(xpath = "(//input[@type='file'])[2]") private WebElement uploadSSNfileInput;
 	@FindBy(xpath = "(//input[@type='file'])[3]") private WebElement uploadPhotofileInput;
 	@FindBy(xpath = "(//input[@type='file'])[4]") private WebElement uploadTWICfileInput;
 	
+	//Input text
 	@FindBy(xpath = "(//input[contains(@name,'drivingLicense')])[1]") private WebElement DriverLicenseText;
-	@FindBy(xpath = "//input[contains(@name,'CDLExpDate')]") private WebElement CDLExpiryDate;
 	@FindBy(xpath = "//input[contains(@name,'DOB')]") private WebElement DateOfBirthText;
 	@FindBy(xpath = "//input[contains(@name,'JoiningDate')]") private WebElement JoiningDateText;
 	@FindBy(xpath = "//input[contains(@placeholder,'First')]") private WebElement FirstNameText;
-	
 	@FindBy(xpath = "//input[contains(@placeholder,'Last')]") private WebElement LastNameText;
 	@FindBy(xpath = "//input[contains(@placeholder,'Email')]") private WebElement EmailText;
 	@FindBy(xpath = "//input[contains(@placeholder,'State')]") private WebElement StateText;
@@ -49,28 +58,30 @@ public class DriversPage extends BasePage {
 	@FindBy(xpath = "//input[contains(@placeholder,'Phone')]") private WebElement PhoneText;
 	@FindBy(xpath = "//input[@name='SSN']") private WebElement SSNText;
 	@FindBy(xpath = "//input[@name='twicCardNo']") private WebElement TwicCardNoText;
-	@FindBy(xpath = "//button[@type='submit']") private WebElement submitButton;
 	
+	//Dropdown locators
 	@FindBy(id = "country-select") private WebElement CountrySelectDropDown;
 	@FindBy(xpath = "//input[contains(@name,'addressDetails.country')]") private WebElement AddressCountryDropDown;
-	@FindBy(xpath = "//div[@id='mui-component-select-licenseClass']") private WebElement licenseClassDropDown;
-	
+	@FindBy(xpath = "//div[@id='mui-component-select-licenseClass']") private WebElement licenseClassDropDown;	
 	@FindBy(xpath = "//div[@id='mui-component-select-yearsOfComExp']") private WebElement yearsOfComExpDropDown;
 	@FindBy(xpath = "//div[@id='mui-component-select-jobType']") private WebElement jobTypeDropDown;
 	@FindBy(xpath = "//div[@id='mui-component-select-driverType']") private WebElement driverTypeDropDown;
 	@FindBy(xpath = "//div[@id='mui-component-select-interests']") private WebElement interestsDropDown;
 	@FindBy(xpath = "//div[@id='mui-component-select-leadSource']") private WebElement leadSourceDropDown;
 	
+	//Calendar locators
+	@FindBy(xpath = "//input[contains(@name,'CDLExpDate')]") private WebElement CDLExpiryDate;
 	@FindBy(xpath = "(//*[name()='svg' and @data-testid='CalendarIcon'])[1]") private WebElement CDLExpCalendarIcon;
 	@FindBy(xpath = "(//*[name()='svg' and @data-testid='CalendarIcon'])[2]") private WebElement DOBCalendarIcon;
 	@FindBy(xpath = "(//*[name()='svg' and @data-testid='CalendarIcon'])[3]") private WebElement JoiningDateCalendarIcon;
 	@FindBy(xpath = "(//*[name()='svg' and @data-testid='CalendarIcon'])[4]") private WebElement TwicExpDateCalendarIcon;
 	
-	@FindBy(xpath = "//input[@name='readyForTeamUp' and @value='true']") private WebElement TeamUpYesRadioButton;
-	@FindBy(xpath = "//input[@name='readyForTeamUp' and @value='false']") private WebElement TeamUpNoRadioButton;
-
 	@FindBy(xpath = "//*[name()='svg' and @data-testid='ArrowDropDownIcon' and contains(@class,'CalendarHeader')]") 
 	private WebElement ArrowDownIconInCalender;
+	
+	//Radio button
+	@FindBy(xpath = "//input[@name='readyForTeamUp' and @value='true']") private WebElement TeamUpYesRadioButton;
+	@FindBy(xpath = "//input[@name='readyForTeamUp' and @value='false']") private WebElement TeamUpNoRadioButton;
 
 	//verify upload file
 	By uploadedDLFileIcon = By.xpath("//button//i[contains(@class,'fa-file-image')]");
@@ -80,7 +91,8 @@ public class DriversPage extends BasePage {
 	}
 	
 	
-	//------------------------------Dynamic xpath locator---------------------------------------
+	//=================================Dynamic xpath locator=====================================
+	
 	public WebElement getYearButton(int year) {
 	    return driver.findElement(
 	        By.xpath("//button[contains(@class,'yearButton') and normalize-space()='" + year + "']")
@@ -101,63 +113,40 @@ public class DriversPage extends BasePage {
 	
 	
 	
-	//-------------------------Methods-----------------------------------------------
+	//==============================================================================================
+	//                                         Methods
+	//==============================================================================================
+	
+	//Button actions
 	public void clickAddDriverButton() {
 		util2.muiClick(addDriverButton);
 		//addDriverButton.click();
 		//util.click(addDriverButton);
 	}
-	
 	public void clickUploadDLButton() {
 		//uploadDLButton.click();
-
-		util.safeClick(uploadDLButton);
-		
+		util.safeClick(uploadDLButton);	
+	}
+	public void clickSubmitButton() {
+		submitButton.click();
 	}
 	
+	//File input actions
 	public void UploadDLfile(String filePath) {
 		//util.safeType(uploadDLfileInput, filePath);
 		uploadDLfileInput.sendKeys(filePath);
 	}
-/*
-	public void enterDriverLicense(String licenseNo) {
-		util.waitForWebElementToBeClickable(DriverLicenseText);
-	    //DriverLicenseText.click();
-
-	    DriverLicenseText.sendKeys(Keys.chord(Keys.CONTROL, "a"));
-	    DriverLicenseText.sendKeys(Keys.DELETE);
-
-	    DriverLicenseText.sendKeys(licenseNo);
-
-	    // Trigger React onChange
-	    DriverLicenseText.sendKeys(Keys.TAB);
-	    
-	    DriverLicenseText.sendKeys(Keys.chord(Keys.CONTROL, "a"));
-	    DriverLicenseText.sendKeys(Keys.DELETE);
-	    DriverLicenseText.sendKeys(licenseNo);
-	    DriverLicenseText.sendKeys(Keys.TAB);
+	public void UploadSSNfile(String filePath) {
+		uploadSSNfileInput.sendKeys(filePath);
+	}
+	public void UploadPhotofile(String filePath) {
+		uploadPhotofileInput.sendKeys(filePath);
+	}
+	public void UploadTWICfile(String filePath) {
+		uploadTWICfileInput.sendKeys(filePath);
 	}
 	
-	public void enterDriverLicense(String licenseNo) {
-
-	    JavascriptExecutor js = (JavascriptExecutor) driver;
-
-	    js.executeScript(
-	        "const input = arguments[0];" +
-	        "input.value = '';" +
-	        "input.dispatchEvent(new Event('input', { bubbles: true }));" +
-	        "input.dispatchEvent(new Event('change', { bubbles: true }));",
-	        DriverLicenseText
-	    );
-
-	    js.executeScript(
-	        "arguments[0].value = arguments[1];" +
-	        "arguments[0].dispatchEvent(new Event('input', { bubbles: true }));" +
-	        "arguments[0].dispatchEvent(new Event('change', { bubbles: true }));",
-	        DriverLicenseText, licenseNo
-	    );
-	}
-*/
+	//====================React safe type=====================
 	public void enterDriverLicenseReactSafe(String licenseNo) {
 
 	    JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -202,27 +191,21 @@ public class DriversPage extends BasePage {
 	        ssnNo
 	    );
 	}
-	
-	public void enterCDLExpiryDate(String expiryDate) {
-		CDLExpiryDate.sendKeys(expiryDate);
-	}
-	
+
+	//Input text actions
 	public void enterDateOfBirth(String DateOfBirth) {
 		DateOfBirthText.sendKeys(DateOfBirth);
 	}
-	
 	public void enterJoiningDate(String JoiningDate) {
 		JoiningDateText.sendKeys(JoiningDate);
 	}
-	
 	public void enterFirstNameText(String FirstName) {
-		FirstNameText.sendKeys(FirstName);
+		//FirstNameText.sendKeys(FirstName);
+		uiActions.type(FirstNameText, FirstName);
 	}
-	
 	public void enterLastNameText(String LastName) {
 		LastNameText.sendKeys(LastName);
 	}
-	
 	public void enterEmail(String Email) {
 		EmailText.sendKeys(Email);
 	}
@@ -244,168 +227,18 @@ public class DriversPage extends BasePage {
 		PhoneText.sendKeys(Phone);
 	}
 	public void enterSSN(String SSN) {
-		SSNText.sendKeys(SSN);
+		//SSNText.sendKeys(SSN);
+		uiActions.type(SSNText, SSN);
+		//enterSSNnumberReactSafe(SSN);
 	}
 	
+	
+	
+	
+	//Dropdown actions
 	public void selectCountryCode(String countryCode ) {
-		//Select select=new Select(CountrySelectDropDown);
-		//select.selectByContainsVisibleText(countryCode);
 		util2.muiSelectByText(CountrySelectDropDown, "+91");
-		
 	}
-	
-	public void clickCDLExpCalendarIcon() {
-		CDLExpCalendarIcon.click();
-	}
-	
-	public void clickArrowDownIconInCalender() {
-		ArrowDownIconInCalender.click();
-	}
-	
-	public void selectYearInCalendar(int year) {
-		getYearButton(year).click();
-	}
-	
-	public void selectMonthInCalendar(String Month) {
-		getMonthButton(Month).click();		
-	}
-
-	public void selectDayInCalendar(int Day) {
-		getDayButton(Day).click();		
-	}
-	
-	public void selectDateInCalender(int Year, String Month ,int Day) {
-		clickArrowDownIconInCalender();
-		WebDriverUtility webDriverUtility=new WebDriverUtility(driver);
-		webDriverUtility.waitForVisible(getYearButton(Year));
-		getYearButton(Year).click();
-		getMonthButton(Month).click();
-		getDayButton(Day).click();
-		
-	}
-	
-	public void clickDOBCalendarIcon() {
-		DOBCalendarIcon.click();
-	}
-	
-	public void UploadSSNfile(String filePath) {
-		uploadSSNfileInput.sendKeys(filePath);
-	}
-	/*
-	public void selectAddressCountry(String countryName ) {
-		Select select=new Select(AddressCountryDropDown);
-		select.selectByContainsVisibleText(countryName);
-		
-	}
-	
-	public void selectAddressCountry(String countryName ) {
-	    // Click the dropdown to open it
-	    licenseClassDropDown.click();
-	    
-	    // Wait for options to appear and select the one matching 'licenseClass'
-	    WebDriverUtility webDriverUtility = new WebDriverUtility(driver);
-	    
-	    // Assuming options are <li role="option"> elements inside the dropdown menu
-	    WebElement option = driver.findElement(
-	        By.xpath("//li[@role='option' and normalize-space()='" + countryName + "']")
-	    );
-	    
-	    webDriverUtility.waitForVisibilityOfWebelement(option);
-	    option.click();
-	}
-	
-	
-	public void selectAddressCountry(String countryName) {
-
-	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-
-	    // 1️⃣ Wait & click country input
-	    wait.until(ExpectedConditions.elementToBeClickable(AddressCountryDropDown));
-	    AddressCountryDropDown.click();
-
-	    // 2️⃣ Clear & type (important for MUI)
-	    AddressCountryDropDown.sendKeys(Keys.chord(Keys.CONTROL, "a"));
-	    AddressCountryDropDown.sendKeys(Keys.DELETE);
-	    AddressCountryDropDown.sendKeys(countryName.substring(0, 3)); // "Ind"
-
-	    // 3️⃣ Wait for option to appear
-	    By optionLocator = By.xpath(
-	        "//li[@role='option' and normalize-space()='" + countryName + "']"
-	    );
-
-	    WebElement option = wait.until(
-	        ExpectedConditions.visibilityOfElementLocated(optionLocator)
-	    );
-
-	    // 4️⃣ JS click (most stable for MUI)
-	    ((JavascriptExecutor) driver)
-	            .executeScript("arguments[0].click();", option);
-	}
-	
-	
-	public void selectAddressCountry(String countryName) {
-
-	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-
-	    // 1️⃣ Wait until input is enabled (NOT clickable)
-	    wait.until(d -> AddressCountryDropDown.isEnabled());
-
-	    // 2️⃣ Scroll into view
-	    ((JavascriptExecutor) driver)
-	            .executeScript("arguments[0].scrollIntoView({block:'center'});",
-	                    AddressCountryDropDown);
-
-	    // 3️⃣ Focus + click via JS (stable for MUI)
-	    ((JavascriptExecutor) driver)
-	            .executeScript("arguments[0].focus(); arguments[0].click();",
-	                    AddressCountryDropDown);
-
-	    // 4️⃣ Clear & type
-	    AddressCountryDropDown.sendKeys(Keys.chord(Keys.CONTROL, "a"));
-	    AddressCountryDropDown.sendKeys(Keys.DELETE);
-	    AddressCountryDropDown.sendKeys(countryName.substring(0, 3)); // Ind
-
-	    // 5️⃣ Select option
-	    By optionLocator = By.xpath(
-	        "//li[@role='option' and normalize-space()='" + countryName + "']"
-	    );
-
-	    WebElement option = wait.until(
-	        ExpectedConditions.visibilityOfElementLocated(optionLocator)
-	    );
-
-	    ((JavascriptExecutor) driver)
-	            .executeScript("arguments[0].click();", option);
-	}
-	public void selectAddressCountry(String countryName) {
-
-	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-
-	    // 1️⃣ Wait until enabled
-	    wait.until(d -> AddressCountryDropDown.isEnabled());
-
-	    // 2️⃣ Scroll + focus via JS
-	    ((JavascriptExecutor) driver).executeScript(
-	        "arguments[0].scrollIntoView({block:'center'});" +
-	        "arguments[0].focus();" +
-	        "arguments[0].click();",
-	        AddressCountryDropDown
-	    );
-
-	    // 3️⃣ Clear and type
-	    AddressCountryDropDown.sendKeys(Keys.chord(Keys.CONTROL, "a"));
-	    AddressCountryDropDown.sendKeys(Keys.DELETE);
-	    AddressCountryDropDown.sendKeys(countryName.substring(0, 3)); // "Ind"
-
-	    // 4️⃣ Wait for listbox to appear (NOT specific option)
-	    wait.until(ExpectedConditions.presenceOfElementLocated(
-	        By.xpath("//ul[@role='listbox']")
-	    ));
-
-	    // 5️⃣ Select first match
-	    AddressCountryDropDown.sendKeys(Keys.ARROW_DOWN);
-	    AddressCountryDropDown.sendKeys(Keys.ENTER);
-	}*/
 	public void selectAddressCountry(String countryName) {
 
 	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
@@ -435,11 +268,6 @@ public class DriversPage extends BasePage {
 	    );
 	}
 
-
-
-	public void UploadPhotofile(String filePath) {
-		uploadPhotofileInput.sendKeys(filePath);
-	}
 	/*
 	public void selectLicenseClassDropDown(String licenseClass ) {
 		Select select=new Select(licenseClassDropDown);
@@ -462,13 +290,6 @@ public class DriversPage extends BasePage {
 	    webDriverUtility.waitForVisible(option);
 	    option.click();
 	}
-/*
-	public void selectYearsOfComExpDropDown(String yearsOfComExp ) {
-		Select select=new Select(yearsOfComExpDropDown);
-		select.selectByContainsVisibleText(yearsOfComExp);
-		
-	}
-	*/
 	
 	public void selectYearsOfComExpDropDown(String yearsOfComExp) {
 	    yearsOfComExpDropDown.click();
@@ -482,12 +303,7 @@ public class DriversPage extends BasePage {
 	    webDriverUtility.waitForVisible(option);
 	    option.click();
 	}
-
-	
-	public void clickJoiningDateCalendarIcon() {
-		JoiningDateCalendarIcon.click();
-	}
-/*
+	/*
 	public void selectJobTypeDropDown(String JobType ) {
 		Select select=new Select(jobTypeDropDown);
 		select.selectByContainsVisibleText(JobType);
@@ -507,108 +323,11 @@ public class DriversPage extends BasePage {
 	    webDriverUtility.waitForVisible(option);
 	    option.click();
 	}
-
-	
-	public void UploadTWICfile(String filePath) {
-		uploadTWICfileInput.sendKeys(filePath);
-	}
-	/*
-	public void enterTwicCardNo(String TwicCardNo) {
-		TwicCardNoText.sendKeys(TwicCardNo);
-	}
-	
-	
-	public void enterTwicCardNo(String twic) {
-
-	    WebDriverUtility webDriverUtility = new WebDriverUtility(driver);
-
-	    webDriverUtility.waitForWebElementToBeClickable(TwicCardNoText);
-
-	    TwicCardNoText.clear();
-	    TwicCardNoText.sendKeys(twic);
-	}*/
-	
-	public void enterTwicCardNo(String twic) {
-
-	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-
-	    WebElement twicInput = wait.until(driver -> {
-	        WebElement el = driver.findElement(By.xpath("//input[@name='twicCardNo']"));
-	        return (el.isDisplayed() && el.isEnabled()) ? el : null;
-	    });
-
-	    // Scroll into view (important for MUI)
-	    ((JavascriptExecutor) driver)
-	            .executeScript("arguments[0].scrollIntoView({block:'center'});", twicInput);
-
-	    // Use JS to remove readonly/disabled if UI is buggy
-	    ((JavascriptExecutor) driver)
-	            .executeScript("arguments[0].removeAttribute('readonly'); arguments[0].removeAttribute('disabled');", twicInput);
-
-	    twicInput.clear();
-	    twicInput.sendKeys(twic);
-	}
-	public void enterTwicCardNoJS(String twic) {
-	    JavascriptExecutor js = (JavascriptExecutor) driver;
-	    js.executeScript(
-	        "document.querySelector(\"input[name='twicCardNo']\").value=arguments[0];",
-	        twic
-	    );
-	}
-
-
-	/*
-	public void clickTwicExpDateCalendarIcon() {
-		TwicExpDateCalendarIcon.click();
-	}
-	*/
 	public void selectdriverTypeDropDown(String driverType ) {
-		//Select select=new Select(driverTypeDropDown);
-		//select.selectByContainsVisibleText(driverType);
-		//util2.muiSelectByText(driverTypeDropDown, driverType);
-		/*
-	    driverTypeDropdown.click();
-
-	    WebDriverUtility webDriverUtility = new WebDriverUtility(driver);
-
-	    WebElement option = driver.findElement(
-	        By.xpath("//li[@role='option' and normalize-space()='" + driverType + "']")
-	    );
-
-	    webDriverUtility.waitForVisible(option);
-	    option.click();*/
 		util.safeClick2(jobTypeDropDown);
 	    selectMuiDropdownValue(jobTypeDropDown, driverType);
 	}
-	/*
-	public void selectMuiDropdownValue(WebElement dropdown, String optionText) {
 
-	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-	    JavascriptExecutor js = (JavascriptExecutor) driver;
-
-	    // 1️⃣ Scroll into view (CRITICAL)
-	    js.executeScript(
-	        "arguments[0].scrollIntoView({block:'center'});", dropdown);
-
-	    // 2️⃣ Force focus (CRITICAL for MUI)
-	    js.executeScript("arguments[0].focus();", dropdown);
-
-	    // 3️⃣ Click via JS (bypass overlay issues)
-	    js.executeScript("arguments[0].click();", dropdown);
-
-	    // 4️⃣ Wait for MUI listbox (portal attached to body)
-	    WebElement listbox = wait.until(ExpectedConditions.presenceOfElementLocated(
-	        By.xpath("//ul[contains(@class,'MuiList-root') and @role='listbox']")
-	    ));
-
-	    // 5️⃣ Find option INSIDE listbox
-	    WebElement option = wait.until(ExpectedConditions.elementToBeClickable(
-	        listbox.findElement(By.xpath(".//li[normalize-space()='" + optionText + "']"))
-	    ));
-
-	    js.executeScript("arguments[0].click();", option);
-	}
-*/
 	public void selectMuiDropdownValue(WebElement dropdown, String optionText) {
 
 	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
@@ -638,217 +357,29 @@ public class DriversPage extends BasePage {
 
 	
 	public void selectinterestsDropDown(String interests ) {
-		//Select select=new Select(interestsDropDown);
-		//select.selectByContainsVisibleText(interests);
-		//util2.muiSelectByText(interestsDropDown, interests);
-		/*
-	    interestsDropdown.click();
-
-	    WebDriverUtility webDriverUtility = new WebDriverUtility(driver);
-
-	    WebElement option = driver.findElement(
-	        By.xpath("//li[@role='option' and normalize-space()='" +interests + "']")
-	    );
-
-	    webDriverUtility.waitForVisible(option);
-	    option.click();*/
-		
 		util.safeClick2(interestsDropDown);
 		selectMuiDropdownValue(interestsDropDown, interests);
 		
 	}
-	
-	public void clickTeamUpYesRadioButton() {
-		TeamUpYesRadioButton.click();
-	}
-	
-	public void clickTeamUpNoRadioButton() {
-		TeamUpNoRadioButton.click();
-	}
-	
 	public void selectleadSourceDropDown(String leadSource ) {
-		//Select select=new Select(leadSourceDropDown);
-		//select.selectByContainsVisibleText(leadSource);
-		//util2.muiSelectByText(leadSourceDropDown, leadSource);
 		util.safeClick2(leadSourceDropDown);
 		selectMuiDropdownValue(leadSourceDropDown, leadSource);
 		
 		
 	}
 	
-	public void clickSubmitButton() {
-		submitButton.click();
-	}
-
 	public void closeOpenDropdown() {
 	    Actions actions = new Actions(driver);
 	    actions.sendKeys(Keys.ESCAPE).perform();
 	}
-	@FindBy(xpath = "//input[@name='twicExpDate']")
-	private WebElement TwicExpDateInput;
-
 	
-	public void clickTwicExpDateCalendarIcon() {
-	    WebDriverUtility util = new WebDriverUtility(driver);
-
-	    util.waitForVisible(TwicExpDateInput);
-
-	    ((JavascriptExecutor) driver)
-	            .executeScript("arguments[0].scrollIntoView({block:'center'});", TwicExpDateInput);
-
-	    TwicExpDateInput.click();
-	}
-//----------------------------------------------------------------------------
+	//----------------------------------------------------------------------------
     @FindBy(id = "mui-component-select-driverType")
     private WebElement driverTypeDropdown;
 	
     @FindBy(id = "mui-component-select-interests")
     private WebElement interestsDropdown;
-    /*
-    public void selectMuiDropdown(WebElement dropdown, String optionText) {
-
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-        // Scroll into view FIRST
-        ((JavascriptExecutor) driver).executeScript(
-            "arguments[0].scrollIntoView({block:'center'});", dropdown
-        );
-
-        // Wait until visible (not clickable)
-        wait.until(ExpectedConditions.visibilityOf(dropdown));
-
-        // JS click to bypass label overlay
-        ((JavascriptExecutor) driver).executeScript(
-            "arguments[0].click();", dropdown
-        );
-    }
-        public void selectDriverType(String value) {
-        selectMuiDropdown(driverTypeDropdown, value);
-    }
-    public void selectInterests(String value) {
-        selectMuiDropdown(interestsDropdown, value);
-    }
-    */
-    /*
-    public void selectMuiDropdownValue(WebElement dropdown, String optionText) {
-
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-
-        // Scroll into view
-        ((JavascriptExecutor) driver).executeScript(
-            "arguments[0].scrollIntoView({block:'center'});", dropdown
-        );
-
-        // Open dropdown using JS (avoids label overlay issues)
-        ((JavascriptExecutor) driver).executeScript(
-            "arguments[0].click();", dropdown
-        );
-
-        // Locate option
-        By optionLocator = By.xpath(
-            "//li[@role='option' and normalize-space()='" + optionText + "']"
-        );
-
-        WebElement option = wait.until(
-            ExpectedConditions.visibilityOfElementLocated(optionLocator)
-        );
-
-        // Click option via JS (most reliable for MUI)
-        ((JavascriptExecutor) driver).executeScript(
-            "arguments[0].click();", option
-        );
-
-        // ✅ Verify value is selected (IMPORTANT)
-        wait.until(d ->
-            dropdown.getText().trim().equals(optionText)
-        );
-    }
-    */
-    
-    /*
-    public void selectMuiDropdownValue(WebElement dropdown, String optionText) {
-
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        Actions actions = new Actions(driver);
-
-        // 1️⃣ Close any previously open MUI menu (CRITICAL)
-        actions.sendKeys(Keys.ESCAPE).perform();
-
-        // 2️⃣ Scroll + open dropdown
-        js.executeScript(
-            "arguments[0].scrollIntoView({block:'center'});" +
-            "arguments[0].click();",
-            dropdown
-        );
-
-        // 3️⃣ Wait for MUI listbox (PORTAL!)
-        By listBoxLocator = By.xpath("//ul[@role='listbox']");
-        WebElement listBox = wait.until(
-            ExpectedConditions.visibilityOfElementLocated(listBoxLocator)
-        );
-
-        // 4️⃣ Find option INSIDE listbox only
-        By optionLocator = By.xpath(
-            ".//li[@role='option' and normalize-space()='" + optionText + "']"
-        );
-
-        WebElement option = listBox.findElement(optionLocator);
-
-        // 5️⃣ Click option (JS is safest)
-        js.executeScript("arguments[0].click();", option);
-
-        // 6️⃣ Verify React state updated
-        wait.until(d ->
-            dropdown.getText().trim().equals(optionText)
-        );
-    }
-*/
-    /*
-    public void selectMuiDropdownValue(WebElement dropdown, String optionText) {
-
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        Actions actions = new Actions(driver);
-
-        // 1️⃣ Close any open menu
-        actions.sendKeys(Keys.ESCAPE).perform();
-
-        // 2️⃣ Scroll & open dropdown (JS avoids overlay issues)
-        js.executeScript(
-            "arguments[0].scrollIntoView({block:'center'});" +
-            "arguments[0].click();",
-            dropdown
-        );
-
-        // 3️⃣ Wait for listbox (DO NOT STORE IT)
-        wait.until(ExpectedConditions.presenceOfElementLocated(
-            By.xpath("//ul[@role='listbox']")
-        ));
-
-        By optionLocator = By.xpath(
-            "//li[@role='option' and normalize-space()='" + optionText + "']"
-        );
-
-        // 4️⃣ Retry-safe option click (handles React re-render)
-        for (int i = 0; i < 2; i++) {
-            try {
-                WebElement option = wait.until(
-                    ExpectedConditions.elementToBeClickable(optionLocator)
-                );
-                js.executeScript("arguments[0].click();", option);
-                break;
-            } catch (StaleElementReferenceException e) {
-                // React recreated DOM → retry
-            }
-        }
-
-        // 5️⃣ Verify React state updated
-        wait.until(d ->
-            dropdown.getText().trim().equals(optionText)
-        );
-    }
-*/
+   
     public void selectDriverType(String value) {
     	util.safeClick2(driverTypeDropDown);
         selectMuiDropdownValue(driverTypeDropdown, value);
@@ -888,6 +419,107 @@ public class DriversPage extends BasePage {
         // 5. Wait for dropdown to close (important)
         wait.until(ExpectedConditions.invisibilityOfElementLocated(listBox));
     }
+
+
+
+	//Calendar actions
+	public void enterCDLExpiryDate(String expiryDate) {
+		CDLExpiryDate.sendKeys(expiryDate);
+	}
+	public void clickArrowDownIconInCalender() {
+		ArrowDownIconInCalender.click();
+	}
+	public void selectYearInCalendar(int year) {
+		getYearButton(year).click();
+	}
+	public void selectMonthInCalendar(String Month) {
+		getMonthButton(Month).click();		
+	}
+	public void selectDayInCalendar(int Day) {
+		getDayButton(Day).click();		
+	}
+	public void selectDateInCalender(int Year, String Month ,int Day) {
+		clickArrowDownIconInCalender();
+		WebDriverUtility webDriverUtility=new WebDriverUtility(driver);
+		webDriverUtility.waitForVisible(getYearButton(Year));
+		getYearButton(Year).click();
+		getMonthButton(Month).click();
+		getDayButton(Day).click();
+		
+	}
+	public void clickDOBCalendarIcon() {
+		DOBCalendarIcon.click();
+	}
+	public void clickJoiningDateCalendarIcon() {
+		JoiningDateCalendarIcon.click();
+	}
+	public void clickCDLExpCalendarIcon() {
+		CDLExpCalendarIcon.click();
+	}
+	
+	
+	public void enterTwicCardNo(String twic) {
+
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+
+	    WebElement twicInput = wait.until(driver -> {
+	        WebElement el = driver.findElement(By.xpath("//input[@name='twicCardNo']"));
+	        return (el.isDisplayed() && el.isEnabled()) ? el : null;
+	    });
+
+	    // Scroll into view (important for MUI)
+	    ((JavascriptExecutor) driver)
+	            .executeScript("arguments[0].scrollIntoView({block:'center'});", twicInput);
+
+	    // Use JS to remove readonly/disabled if UI is buggy
+	    ((JavascriptExecutor) driver)
+	            .executeScript("arguments[0].removeAttribute('readonly'); arguments[0].removeAttribute('disabled');", twicInput);
+
+	    twicInput.clear();
+	    twicInput.sendKeys(twic);
+	}
+	public void enterTwicCardNoJS(String twic) {
+	    JavascriptExecutor js = (JavascriptExecutor) driver;
+	    js.executeScript(
+	        "document.querySelector(\"input[name='twicCardNo']\").value=arguments[0];",
+	        twic
+	    );
+	}
+
+
+	/*
+	public void clickTwicExpDateCalendarIcon() {
+		TwicExpDateCalendarIcon.click();
+	}
+	*/
+	@FindBy(xpath = "//input[@name='twicExpDate']")
+	private WebElement TwicExpDateInput;
+
+	
+	public void clickTwicExpDateCalendarIcon() {
+	   /* WebDriverUtility util = new WebDriverUtility(driver);
+
+	    util.waitForVisible(TwicExpDateInput);
+
+	    ((JavascriptExecutor) driver)
+	            .executeScript("arguments[0].scrollIntoView({block:'center'});", TwicExpDateInput);
+
+	    TwicExpDateInput.click();*/
+		uiActions.click(TwicExpDateCalendarIcon);
+	}
+	
+	
+	
+	
+	//Radio Button actions
+	public void clickTeamUpYesRadioButton() {
+		TeamUpYesRadioButton.click();
+	}
+	public void clickTeamUpNoRadioButton() {
+		TeamUpNoRadioButton.click();
+	}
+	
+
 
 
 

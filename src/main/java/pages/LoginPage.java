@@ -4,17 +4,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import utilities.MuiActionsUtil;
 import utilities.WebDriverUtility;
 
 public class LoginPage extends BasePage {
 	private WebDriverUtility util;
-	private MuiActionsUtil util2;
 	
 	public LoginPage(WebDriver driver) {
 		super(driver);
 		util=new WebDriverUtility(driver);
-		util2=new MuiActionsUtil(driver);
 	}
 	
 	//-------------------------Locators--------------------------------------------------------------------
@@ -29,44 +26,35 @@ public class LoginPage extends BasePage {
 
 	//---------------------------------------------Methods for Locators------------------------------------
 	public void clickSignupLink() {
-		util.click(SignupLink);
-		//util2.muiClick(SignupLink);
-		//SignupLink.click();
+		SignupLink.click();
 	}
 
 	public void enterEmail(String email) {
-		util.type(emailText,email);
-		//emailText.sendKeys(email);
-		//util2.muiType(emailText,email);
+		emailText.sendKeys(email);
 	}
 	public void enterPassword(String password) {
-		util.type(passwordText,password);
-		//passwordText.sendKeys(password);
-		//util2.muiType(passwordText,password);
+		passwordText.sendKeys(password);
 	}
 	
 	public void clickSubmitButton() {
-		util.click(submitButton);
-		//submitButton.click();
-		//util2.muiClick(submitButton);
+		submitButton.click();
 	}
 	
 	public boolean isAccountActiveOnOtherDeviceMessage() {
 		try {
-			return util.waitForVisible(AccountActiveOnOtherDeviceMessage).isDisplayed();
-			//return AccountActiveOnOtherDeviceMessage.isDisplayed();
+			util.waitForVisible(AccountActiveOnOtherDeviceMessage);
+			return AccountActiveOnOtherDeviceMessage.isDisplayed();
 		} catch (Exception e) {
 			return false;
 		}
 
 	}
 	public void clickConfirmToLoginOnCurrentDevice() {
-		//util.waitForVisible(confirmButtonLoginOnDevice);
-		//util.waitForClickable(confirmButtonLoginOnDevice);
-		//confirmButtonLoginOnDevice.click();
-		//util2.muiClick(confirmButtonLoginOnDevice);
+		util.waitForVisible(confirmButtonLoginOnDevice);
+		util.waitForClickable(confirmButtonLoginOnDevice);
+		confirmButtonLoginOnDevice.click();
 		
-		util.safeClick(confirmButtonLoginOnDevice);
+		//util.safeClick(confirmButtonLoginOnDevice);
 		
 	}
 	

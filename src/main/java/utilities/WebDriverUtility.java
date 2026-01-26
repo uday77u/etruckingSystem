@@ -18,7 +18,7 @@ public class WebDriverUtility {
     private static final Logger logger =
             LogManager.getLogger(WebDriverUtility.class);
 
-    private static final int DEFAULT_TIMEOUT = 20;
+    private static final int DEFAULT_TIMEOUT = 40;
 
     // =============================
     // Constructor

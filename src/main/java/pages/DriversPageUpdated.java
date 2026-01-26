@@ -231,7 +231,7 @@ public class DriversPageUpdated extends BasePage {
 
     public void selectCountry(String country) {
         countryInput.sendKeys(country);
-        util.waitForClickable(dropdownOption(country));
+        util.waitForVisible(dropdownOption(country));
         dropdownOption(country).click();
     }
 

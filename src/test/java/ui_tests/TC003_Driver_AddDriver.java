@@ -2,26 +2,22 @@ package ui_tests;
 
 import static org.testng.Assert.assertTrue;
 
-import org.openqa.selenium.By;
+import java.io.File;
 import org.testng.annotations.Test;
-
 import actions.LoginActions;
 import actions.NavigationActions;
 import base.BaseUITest;
 import pages.DashBoardPage;
 import pages.DriversPage;
-import pages.HomePage;
-import pages.LoginPage;
-import utilities.RetryAnalyzer;
 
 public class TC003_Driver_AddDriver extends BaseUITest{
 
-	@Test(retryAnalyzer = RetryAnalyzer.class)
+	@Test//(retryAnalyzer = RetryAnalyzer.class)
 	public void TestAddDriver() throws Exception{
-		String DLpath=System.getProperty("user.dir")+"/Photos/DlTesting.jpeg";
-		String SSNpath=System.getProperty("user.dir")+"/Photos/Dl_ssn_test.jpeg";
-		String photopath=System.getProperty("user.dir")+"/Photos/Dl_ssn_test.jpeg";
-		String TWICpath=System.getProperty("user.dir")+"/Photos/Dl_ssn_test.jpeg";
+		String DLpath=System.getProperty("user.dir")+File.separator+"Photos"+File.separator+"DlTesting.jpeg";
+		String SSNpath=System.getProperty("user.dir")+File.separator+"Photos"+File.separator+"Dl_ssn_test.jpeg";
+		String photopath=System.getProperty("user.dir")+File.separator+"Photos"+File.separator+"Dl_ssn_test.jpeg";
+		String TWICpath=System.getProperty("user.dir")+File.separator+"Photos"+File.separator+"Dl_ssn_test.jpeg";
 		
 
 		try {
@@ -32,7 +28,7 @@ public class TC003_Driver_AddDriver extends BaseUITest{
 		    
 		    
 		logger.debug("logging started");
-	    logger.info("starting TC001_RegisterUser");
+	    logger.info("starting TC003_Driver_AddDriver");
 
 	    logger.info("STEP 1: Navigate to Admin Login Page");
 		navigationActions.NavigateAuthToLoginAdmin();
@@ -96,8 +92,8 @@ public class TC003_Driver_AddDriver extends BaseUITest{
 	    driversPage.UploadSSNfile(SSNpath);
 	    
 	    logger.info("STEP 18: enter SSN"); 
-	    //driversPage.enterSSN("987754321"); //edit ssn 
-	    driversPage.enterSSNnumberReactSafe("987754321");
+	    driversPage.enterSSN("987754321"); //edit ssn 
+	    //driversPage.enterSSNnumberReactSafe("987754321");
 
 	    logger.info("STEP 19: enter country"); 
 	    driversPage.selectAddressCountry("India");
@@ -135,39 +131,37 @@ public class TC003_Driver_AddDriver extends BaseUITest{
 	    logger.info("STEP 29: Select jobtype");
 	    driversPage.selectJobTypeDropDown("Tanker hauler");
 	    driversPage.closeOpenDropdown();
-	    /*
-	    logger.info("STEP 24: upload TWICCardNo");
+	    
+	    logger.info("STEP 30: upload TWICCardNo");
 	    driversPage.UploadTWICfile(TWICpath);
 	    
-	    logger.info("STEP 25: Enter TWICCardNo");
-	   // driversPage.enterTwicCardNo("4578512");
-	    driversPage.enterTwicCardNoJS("4578512");
+	    logger.info("STEP 31: Enter TWICCardNo");
+	    driversPage.enterTwicCardNo("4578512");
+	    //driversPage.enterTwicCardNoJS("4578512");
 	    
-	    logger.info("STEP 26: click TwicExpDateCalendarIcon");
+	    logger.info("STEP 32: click TwicExpDateCalendarIcon");
 	    driversPage.clickTwicExpDateCalendarIcon();
 	    Thread.sleep(5000);
 	    
-	    logger.info("STEP 27: select Twic Expiry date in calendar");
+	    logger.info("STEP 33: select Twic Expiry date in calendar");
 	    driversPage.selectDateInCalender(2029, "Feb", 19);
-	   */
-	    logger.info("STEP 28: Select DriverType");
-	    //driversPage.selectJobTypeDropDown("Solo");
+	   
+	    logger.info("STEP 34: Select DriverType");
 	    driversPage.selectDriverType("Solo");
 	    
-	    logger.info("STEP 29: Select Interestedin");
-	    //driversPage.selectJobTypeDropDown("Local");
+	    logger.info("STEP 35: Select Interestedin");
 	    driversPage.selectInterests("Local");
 
-	    logger.info("STEP 30: enter teamupwithRadioButton");
+	    logger.info("STEP 36: enter teamupwithRadioButton");
 	    driversPage.clickTeamUpYesRadioButton();
 	    
-	    logger.info("STEP 31: Select LeadSource ");
+	    logger.info("STEP 37: Select LeadSource ");
 	    driversPage.selectleadSourceDropDown("Facebook");
 
 	    
-	    logger.info("STEP 32: Click on save and next button");
+	    logger.info("STEP 38: Click on save and next button");
 	    driversPage.clickSubmitButton();
-	    Thread.sleep(10000);
+	    Thread.sleep(60000);
 	    
 	    
 	    

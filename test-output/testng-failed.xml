@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ui_tests.TC003_Driver_AddDriver">
+      <class name="ui_tests.TC004_Vehicle_AddTruck">
         <methods>
           <include name="tearDown"/>
+          <include name="TestAddVehicle_truck"/>
           <include name="setup"/>
           <include name="beforeSuite"/>
-          <include name="TestAddDriver"/>
         </methods>
-      </class> <!-- ui_tests.TC003_Driver_AddDriver -->
+      </class> <!-- ui_tests.TC004_Vehicle_AddTruck -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -3,6 +3,7 @@ package services;
 
 import io.restassured.response.Response;
 import modelsRequest.VerifyUserRequestData;
+import modelsRequest.VerifyUserRequestDataRemoveNullFields;
 
 public class AdminService extends BaseService {
 	private final static String AdminPath="/admin/";
@@ -10,6 +11,11 @@ public class AdminService extends BaseService {
 	public Response verifyUser(VerifyUserRequestData data) {
 		return postRequest(data, AdminPath+"verifyUser");
 	}
+	
+	public Response verifyUser(VerifyUserRequestDataRemoveNullFields data) {
+		return postRequest(data, AdminPath+"verifyUser");
+	}
+	
 	
 	public Response adminRegister(Object payload) {
 		return postRequest(payload, AdminPath);

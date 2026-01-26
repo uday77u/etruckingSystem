@@ -153,13 +153,36 @@ String     INVALID_CREDENTIALS= "Invalid email or password";
      String END_REQUEST_NOT_MATCH =" End Trip Location is not as per requested Location";
      
      //=================Added error messages=============================================
-    String PHONE_LENGTH_LEAST7="Phone number length must be at least 7 characters long";
+    String PHONE_LENGTH_LEAST7="phone: phone length must be at least 7 characters long";
     String PHONE_LENGTH_MOST10="phone: phone length must be less than or equal to 15 characters long";
-    String MISSING_PHONE_NUMBER= "Phone Number is missing";
-    String MISSING_FIRST_NAME="First name is missing";
-    String MISSING_LAST_NAME="Last name is missing";
-    String MISSING_COUNTRY_CODE="Country code is missing";
+    
+    String MISSING_PHONE_NUMBER= "phone: phone is required";
+    String MISSING_FIRST_NAME="firstName: firstName is required";
+    String MISSING_LAST_NAME="lastName: lastName is required";
+    String MISSING_COUNTRY_CODE="countryCode: countryCode is required";
+    String MISSING_DOT_NUMBER="DOTNumber: DOTNumber is required";
+    String MISSING_COUNTRY_ENCODE="countryENCode: countryENCode is required";
+    
     String INVALID_CHARACTERS="Invalid charecters";
+    
+    String NULL_PHONE_NUMBER= "phone: phone must be a string";
+    String NULL_FIRST_NAME="firstName: firstName must be a string";
+    String NULL_LAST_NAME="lastName: lastName must be a string";
+    String NULL_COUNTRY_CODE="countryCode: countryCode must be a string";
+    String NULL_DOT_NUMBER="DOTNumber: DOTNumber must be a string";
+    String NULL_COUNTRY_ENCODE="countryENCode: countryENCode must be a string";
+    String NULL_EMAIL="email: email must be a string";
+    
+    String INVALID_PHONE_NUMBER= "phone: phone must be a valid phone";
+    String INVALID_FIRST_NAME="firstName: firstName must be a valid firstName";
+    String INVALID_LAST_NAME="lastName: lastName must be a valid lastName";
+    String INVALID_COUNTRY_CODE="countryCode: countryCode must be a valid countryCode";
+    String INVALID_DOT_NUMBER="DOTNumber: DOTNumber must be a valid DOTNumber";
+    String INVALID_COUNTRY_ENCODE="countryENCode: countryENCode must be a valid countryENCode";
+    String INVALID_EMAIL_updated="email: email must be a valid email";
+    
+    
+    
 	
 
 }

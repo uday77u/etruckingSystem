@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results retried="2" ignored="0" total="3" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-18T23:30:28 IST" name="Default suite" finished-at="2026-01-18T23:38:43 IST" duration-ms="495369">
+  <suite started-at="2026-01-26T15:40:09 IST" name="Default suite" finished-at="2026-01-26T15:42:11 IST" duration-ms="121536">
     <groups>
     </groups>
-    <test started-at="2026-01-18T23:30:28 IST" name="Default test" finished-at="2026-01-18T23:38:43 IST" duration-ms="495369">
-      <class name="ui_tests.TC003_Driver_AddDriver">
-        <test-method is-config="true" signature="beforeSuite(java.lang.String)[pri:0, instance:ui_tests.TC003_Driver_AddDriver@5b7a7f33]" started-at="2026-01-18T23:30:28 IST" name="beforeSuite" finished-at="2026-01-18T23:30:28 IST" duration-ms="40" status="PASS">
+    <test started-at="2026-01-26T15:40:09 IST" name="Default test" finished-at="2026-01-26T15:42:11 IST" duration-ms="121536">
+      <class name="ui_tests.TC004_Vehicle_AddTruck">
+        <test-method is-config="true" signature="beforeSuite(java.lang.String)[pri:0, instance:ui_tests.TC004_Vehicle_AddTruck@5b7a7f33]" started-at="2026-01-26T15:40:09 IST" name="beforeSuite" finished-at="2026-01-26T15:40:09 IST" duration-ms="54" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:ui_tests.TC003_Driver_AddDriver@5b7a7f33]" started-at="2026-01-18T23:30:28 IST" name="setup" finished-at="2026-01-18T23:33:00 IST" duration-ms="152463" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:ui_tests.TC004_Vehicle_AddTruck@5b7a7f33]" started-at="2026-01-26T15:40:09 IST" name="setup" finished-at="2026-01-26T15:42:08 IST" duration-ms="119167" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -26,32 +26,28 @@
               </value>
             </param>
           </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method retried="true" signature="TestAddDriver()[pri:0, instance:ui_tests.TC003_Driver_AddDriver@5b7a7f33]" started-at="2026-01-18T23:33:00 IST" name="TestAddDriver" finished-at="2026-01-18T23:33:01 IST" duration-ms="633" status="SKIP">
           <exception class="org.openqa.selenium.NoSuchWindowException">
             <message>
               <![CDATA[no such window: target window already closed
 from unknown error: web view not found
-  (Session info: chrome=143.0.7499.194)
+  (Session info: chrome=144.0.7559.60)
 Build info: version: '4.39.0', revision: '126f156aee'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1a81d121f1d5198fc0e94846a59957f4, findElement {value=(//div[text()='Yes'])[1], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.194, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\UDAYAS~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58190}, goog:processID: 13124, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58190/devtoo..., se:cdpVersion: 143.0.7499.194, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1a81d121f1d5198fc0e94846a59957f4]]>
+Command: [de7d6ab1a8db99b72db2ebbb3878523e, get {url=http://dev.etruckingsystem.com/auth}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.60, chrome: {chromedriverVersion: 144.0.7559.96 (d7b80622cfab..., userDataDir: C:\Users\UDAYAS~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50148}, goog:processID: 3408, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50148/devtoo..., se:cdpVersion: 144.0.7559.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: de7d6ab1a8db99b72db2ebbb3878523e]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
 from unknown error: web view not found
-  (Session info: chrome=143.0.7499.194)
+  (Session info: chrome=144.0.7559.60)
 Build info: version: '4.39.0', revision: '126f156aee'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1a81d121f1d5198fc0e94846a59957f4, findElement {value=(//div[text()='Yes'])[1], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.194, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\UDAYAS~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58190}, goog:processID: 13124, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58190/devtoo..., se:cdpVersion: 143.0.7499.194, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1a81d121f1d5198fc0e94846a59957f4
+Command: [de7d6ab1a8db99b72db2ebbb3878523e, get {url=http://dev.etruckingsystem.com/auth}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.60, chrome: {chromedriverVersion: 144.0.7559.96 (d7b80622cfab..., userDataDir: C:\Users\UDAYAS~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50148}, goog:processID: 3408, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50148/devtoo..., se:cdpVersion: 144.0.7559.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: de7d6ab1a8db99b72db2ebbb3878523e
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -62,20 +58,16 @@ at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.ja
 at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:384)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:378)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy31.click(Unknown Source)
-at pages.HomePage.clickAdminYesTextLink(HomePage.java:25)
-at actions.NavigationActions.NavigateAuthToLoginAdmin(NavigationActions.java:42)
-at ui_tests.TC003_Driver_AddDriver.TestAddDriver(TC003_Driver_AddDriver.java:38)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:329)
+at base.BaseUITest.setup(BaseUITest.java:69)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
 at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
 at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
@@ -103,45 +95,30 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestAddDriver -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui_tests.TC003_Driver_AddDriver@5b7a7f33]" started-at="2026-01-18T23:33:01 IST" name="tearDown" finished-at="2026-01-18T23:33:02 IST" duration-ms="1009" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:ui_tests.TC003_Driver_AddDriver@5b7a7f33]" started-at="2026-01-18T23:33:02 IST" name="setup" finished-at="2026-01-18T23:33:12 IST" duration-ms="10171" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
         </test-method> <!-- setup -->
-        <test-method retried="true" signature="TestAddDriver()[pri:0, instance:ui_tests.TC003_Driver_AddDriver@5b7a7f33]" started-at="2026-01-18T23:33:12 IST" name="TestAddDriver" finished-at="2026-01-18T23:35:26 IST" duration-ms="133883" status="SKIP">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method signature="TestAddVehicle_truck()[pri:0, instance:ui_tests.TC004_Vehicle_AddTruck@5b7a7f33]" started-at="2026-01-26T15:42:08 IST" name="TestAddVehicle_truck" finished-at="2026-01-26T15:42:08 IST" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.NoSuchWindowException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//button[text()='Add Driver']"}
-  (Session info: chrome=143.0.7499.194)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+              <![CDATA[no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=144.0.7559.60)
 Build info: version: '4.39.0', revision: '126f156aee'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [fc2f2c243eb9b0242bd7db676b04b4e2, findElement {value=//button[text()='Add Driver'], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.194, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\UDAYAS~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58275}, goog:processID: 3448, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58275/devtoo..., se:cdpVersion: 143.0.7499.194, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: fc2f2c243eb9b0242bd7db676b04b4e2]]>
+Command: [de7d6ab1a8db99b72db2ebbb3878523e, get {url=http://dev.etruckingsystem.com/auth}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.60, chrome: {chromedriverVersion: 144.0.7559.96 (d7b80622cfab..., userDataDir: C:\Users\UDAYAS~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50148}, goog:processID: 3408, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50148/devtoo..., se:cdpVersion: 144.0.7559.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: de7d6ab1a8db99b72db2ebbb3878523e]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[text()='Add Driver']"}
-  (Session info: chrome=143.0.7499.194)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=144.0.7559.60)
 Build info: version: '4.39.0', revision: '126f156aee'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [fc2f2c243eb9b0242bd7db676b04b4e2, findElement {value=//button[text()='Add Driver'], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.194, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: C:\Users\UDAYAS~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58275}, goog:processID: 3448, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58275/devtoo..., se:cdpVersion: 143.0.7499.194, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: fc2f2c243eb9b0242bd7db676b04b4e2
+Command: [de7d6ab1a8db99b72db2ebbb3878523e, get {url=http://dev.etruckingsystem.com/auth}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.60, chrome: {chromedriverVersion: 144.0.7559.96 (d7b80622cfab..., userDataDir: C:\Users\UDAYAS~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50148}, goog:processID: 3408, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50148/devtoo..., se:cdpVersion: 144.0.7559.60, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: de7d6ab1a8db99b72db2ebbb3878523e
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -152,32 +129,18 @@ at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.ja
 at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:384)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:378)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy31.getWrappedElement(Unknown Source)
-at org.openqa.selenium.remote.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:48)
-at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
-at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
-at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
-at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:490)
-at utilities.MuiActionsUtil.jsClick(MuiActionsUtil.java:91)
-at utilities.MuiActionsUtil.muiClick(MuiActionsUtil.java:86)
-at pages.DriversPage.clickAddDriverButton(DriversPage.java:106)
-at ui_tests.TC003_Driver_AddDriver.TestAddDriver(TC003_Driver_AddDriver.java:57)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:329)
+at base.BaseUITest.setup(BaseUITest.java:69)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:836)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:601)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
 at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
@@ -200,34 +163,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestAddDriver -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui_tests.TC003_Driver_AddDriver@5b7a7f33]" started-at="2026-01-18T23:35:26 IST" name="tearDown" finished-at="2026-01-18T23:35:27 IST" duration-ms="1357" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:ui_tests.TC003_Driver_AddDriver@5b7a7f33]" started-at="2026-01-18T23:35:27 IST" name="setup" finished-at="2026-01-18T23:36:35 IST" duration-ms="67714" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="TestAddDriver()[pri:0, instance:ui_tests.TC003_Driver_AddDriver@5b7a7f33]" started-at="2026-01-18T23:36:35 IST" name="TestAddDriver" finished-at="2026-01-18T23:38:42 IST" duration-ms="126551" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestAddDriver -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui_tests.TC003_Driver_AddDriver@5b7a7f33]" started-at="2026-01-18T23:38:42 IST" name="tearDown" finished-at="2026-01-18T23:38:43 IST" duration-ms="1405" status="PASS">
+        </test-method> <!-- TestAddVehicle_truck -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ui_tests.TC004_Vehicle_AddTruck@5b7a7f33]" started-at="2026-01-26T15:42:08 IST" name="tearDown" finished-at="2026-01-26T15:42:11 IST" duration-ms="2233" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- ui_tests.TC003_Driver_AddDriver -->
+      </class> <!-- ui_tests.TC004_Vehicle_AddTruck -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

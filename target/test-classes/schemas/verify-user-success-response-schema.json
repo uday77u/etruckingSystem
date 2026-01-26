@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["status", "message", "data"],
+  "additionalProperties": false,
+  "properties": {
+    "status": {
+      "type": "boolean",
+      "enum": [true]
+    },
+    "message": {
+      "type": "string",
+      "minLength": 1
+    },
+    "code": {
+      "type": ["integer", "null"]
+    },
+    "error": {
+      "type": ["string", "null"]
+    },
+    "description": {
+      "type": ["string", "null"]
+    },
+    "data": {
+      "type": ["string", "object", "array"]
+    }
+  }
+}

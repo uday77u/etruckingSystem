@@ -11,10 +11,11 @@ import pages.DashBoardPage;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.ProfilePage;
+import utilities.RetryAnalyzer;
 
 public class TC002_AdminLogin extends BaseUITest{
 
-	@Test
+	@Test//(retryAnalyzer = RetryAnalyzer.class)
 	public void TestAdminLogin() throws Exception{
 		String uploadPhotoPath=System.getProperty("user.dir")+"/Photos/companyProfilePhoto.jpeg";
 		try {
@@ -41,6 +42,14 @@ public class TC002_AdminLogin extends BaseUITest{
 	    
 	    logger.info("STEP 5: Click on the submit button");
 	    loginPage.clickSubmitButton();
+	    
+		logger.info("Account is active on other device Message displayed. Status: "+loginPage.isAccountActiveOnOtherDeviceMessage());
+	    if(loginPage.isAccountActiveOnOtherDeviceMessage()) {
+	    	loginPage.clickConfirmToLoginOnCurrentDevice();
+	    	logger.info("Clicked on the 'confirm' button to end session in other device");
+	    	
+	    }
+ 	    
 	    
 	    logger.info("STEP 6: Verify 'dashboard' page is visible");
 	    assertTrue(isCurrentUrlWithSegment("dashboard"),"Unable to navigate 'dashboard' page,current page url: "+driver.getCurrentUrl());

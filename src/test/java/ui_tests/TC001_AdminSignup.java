@@ -12,15 +12,16 @@ import pages.LoginPage;
 import pages.PasswordPage;
 import pages.RegisterPage;
 import pages.VerifyPhonePage;
+import utilities.RetryAnalyzer;
 
 //@Listeners(ExtentNew.class)
 public class TC001_AdminSignup extends BaseUITest {
 	
 
-	@Test
+	@Test//(retryAnalyzer = RetryAnalyzer.class)
 	public void verifySignupRegistration() {
 		String email="User."+System.currentTimeMillis()+"@gmail.com";
-		String phone="9876543210";
+		String phone="9876547701";
 		
 		try {
 			HomePage homePage = new HomePage(driver);
