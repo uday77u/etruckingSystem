@@ -8,7 +8,7 @@ public interface FrameWorkConstants {
        URLs
        ========================= */
 
-    String BASE_URL = ConfigManager.getBaseUrl();
+    String BASE_URL ="http://dev.etruckingsystem.com/auth"; //ConfigManager.getBaseUrl();
     String AUTH_PATH = ConfigManager.getAuthPath();
 
     /* =========================

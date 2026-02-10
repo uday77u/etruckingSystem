@@ -59,7 +59,7 @@ public class TC001_AdminSignup extends BaseUITest {
 	    registerPage.enterphoneText(phone);
 	    
 	    logger.info("STEP 9: Enter DotNumber");
-	    registerPage.enterDOTNumberText("8695");
+	    registerPage.enterDOTNumberText("12345");
 
 	    logger.info("STEP 10: Click 'submitButton' button");
 	    registerPage.clicksubmitButton();

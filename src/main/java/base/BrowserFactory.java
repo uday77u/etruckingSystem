@@ -1,7 +1,10 @@
 package base;
 
 import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
 
+import org.openqa.selenium.Proxy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -24,6 +27,22 @@ public class BrowserFactory {
             case "chrome":
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions chromeOptions = new ChromeOptions();
+                
+                Map<String, Object> prefs = new HashMap<>();
+                prefs.put("profile.default_content_setting_values.geolocation", 1);
+
+                chromeOptions.setExperimentalOption("prefs", prefs);
+                chromeOptions.addArguments("--use-fake-ui-for-media-stream");
+                
+                //proxy
+                Proxy proxy = new Proxy();
+                proxy.setHttpProxy("us-proxy-ip:port");
+                proxy.setSslProxy("us-proxy-ip:port");
+
+                chromeOptions.setProxy(proxy);
+
+                
+                
                 //String filePath=System.getProperty("user.dir")+"\\Photos\\VPNUSAPlanet.crx";
                 //chromeOptions.addExtensions(new File(filePath));
 

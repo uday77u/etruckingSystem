@@ -8125,3 +8125,370 @@ Session ID: de7d6ab1a8db99b72db2ebbb3878523e
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
 15:42:11.066 [main] INFO  ui_tests.TC004_Vehicle_AddTruck - Browser is closed.
 
+23:16:05.881 [main] INFO  ui_tests.TC001_AdminSignup - chrome launched in NORMAL mode.
+23:16:06.307 [main] INFO  ui_tests.TC001_AdminSignup - Browser Window is maximized.
+23:16:06.682 [main] INFO  ui_tests.TC001_AdminSignup - * Launching the browser
+23:16:06.683 [main] INFO  ui_tests.TC001_AdminSignup - * Navigating to baseURL: http://dev.etruckingsystem.com/auth
+23:16:22.738 [main] DEBUG ui_tests.TC001_AdminSignup - 	logging started
+23:16:22.738 [main] INFO  ui_tests.TC001_AdminSignup - *** Starting TC001_RegisterUser ***
+23:16:25.732 [main] INFO  ui_tests.TC001_AdminSignup - STEP 1: Clicking on 'AdminYesTextLink'
+23:16:34.827 [main] INFO  ui_tests.TC001_AdminSignup - STEP 2: Verify login page is visible
+23:16:34.846 [main] INFO  ui_tests.TC001_AdminSignup - STEP 3: Clicked on signuplink
+23:16:39.260 [main] INFO  ui_tests.TC001_AdminSignup - STEP 4: Verify register page is visible
+23:16:39.277 [main] INFO  ui_tests.TC001_AdminSignup - STEP 5: Enter FirstName: Tester1
+23:16:41.942 [main] INFO  ui_tests.TC001_AdminSignup - STEP 6: Enter LastName
+23:16:46.608 [main] INFO  ui_tests.TC001_AdminSignup - STEP 7: Enter email: User.1770745581624@gmail.com
+23:16:46.952 [main] INFO  ui_tests.TC001_AdminSignup - STEP 8: Enter phone
+23:16:47.276 [main] INFO  ui_tests.TC001_AdminSignup - STEP 9: Enter DotNumber
+23:16:47.459 [main] INFO  ui_tests.TC001_AdminSignup - STEP 10: Click 'submitButton' button
+23:16:50.528 [main] INFO  ui_tests.TC001_AdminSignup - STEP 11: Verify password page is visible
+23:17:05.094 [main] ERROR ui_tests.TC001_AdminSignup - ❌ Unexpected exception in verifySignupRegistration: unknown error: Call WaitForPendingNavigations only on the parent WebView
+  (Session info: chrome=144.0.7559.133)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [615b885c619b5d17b1cf6ae59b6ddbd8, getCurrentUrl {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\UDAYAS~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64133}, goog:processID: 10244, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64133/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 615b885c619b5d17b1cf6ae59b6ddbd8
+org.openqa.selenium.WebDriverException: unknown error: Call WaitForPendingNavigations only on the parent WebView
+  (Session info: chrome=144.0.7559.133)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [615b885c619b5d17b1cf6ae59b6ddbd8, getCurrentUrl {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\UDAYAS~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64133}, goog:processID: 10244, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64133/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 615b885c619b5d17b1cf6ae59b6ddbd8
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169) ~[selenium-remote-driver-4.40.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142) ~[selenium-remote-driver-4.40.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49) ~[selenium-remote-driver-4.40.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223) ~[selenium-remote-driver-4.40.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216) ~[selenium-remote-driver-4.40.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174) ~[selenium-remote-driver-4.40.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601) ~[selenium-remote-driver-4.40.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678) ~[selenium-remote-driver-4.40.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:682) ~[selenium-remote-driver-4.40.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.getCurrentUrl(RemoteWebDriver.java:381) ~[selenium-remote-driver-4.40.0.jar:?]
+	at org.openqa.selenium.support.ui.ExpectedConditions$4.apply(ExpectedConditions.java:136) ~[selenium-support-4.40.0.jar:?]
+	at org.openqa.selenium.support.ui.ExpectedConditions$4.apply(ExpectedConditions.java:131) ~[selenium-support-4.40.0.jar:?]
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:207) ~[selenium-support-4.40.0.jar:?]
+	at base.BaseUITest.isCurrentUrlWithSegment(BaseUITest.java:122) ~[classes/:?]
+	at ui_tests.TC001_AdminSignup.verifySignupRegistration(TC001_AdminSignup.java:68) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.11.0.jar:7.11.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:741) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.11.0.jar:7.11.0]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
+23:17:12.077 [main] INFO  ui_tests.TC001_AdminSignup - Browser is closed.
+
+23:18:13.982 [main] INFO  ui_tests.TC001_AdminSignup - chrome launched in NORMAL mode.
+23:18:14.103 [main] INFO  ui_tests.TC001_AdminSignup - Browser Window is maximized.
+23:18:14.193 [main] INFO  ui_tests.TC001_AdminSignup - * Launching the browser
+23:18:14.193 [main] INFO  ui_tests.TC001_AdminSignup - * Navigating to baseURL: http://dev.etruckingsystem.com/auth
+23:18:43.236 [main] DEBUG ui_tests.TC001_AdminSignup - 	logging started
+23:18:43.237 [main] INFO  ui_tests.TC001_AdminSignup - *** Starting TC001_RegisterUser ***
+23:18:43.334 [main] INFO  ui_tests.TC001_AdminSignup - STEP 1: Clicking on 'AdminYesTextLink'
+23:18:44.441 [main] INFO  ui_tests.TC001_AdminSignup - STEP 2: Verify login page is visible
+23:18:44.490 [main] INFO  ui_tests.TC001_AdminSignup - STEP 3: Clicked on signuplink
+23:18:46.796 [main] INFO  ui_tests.TC001_AdminSignup - STEP 4: Verify register page is visible
+23:18:46.821 [main] INFO  ui_tests.TC001_AdminSignup - STEP 5: Enter FirstName: Tester1
+23:18:49.292 [main] INFO  ui_tests.TC001_AdminSignup - STEP 6: Enter LastName
+23:18:49.598 [main] INFO  ui_tests.TC001_AdminSignup - STEP 7: Enter email: User.1770745722771@gmail.com
+23:18:49.971 [main] INFO  ui_tests.TC001_AdminSignup - STEP 8: Enter phone
+23:18:50.275 [main] INFO  ui_tests.TC001_AdminSignup - STEP 9: Enter DotNumber
+23:18:50.442 [main] INFO  ui_tests.TC001_AdminSignup - STEP 10: Click 'submitButton' button
+23:18:50.789 [main] INFO  ui_tests.TC001_AdminSignup - STEP 11: Verify password page is visible
+23:19:11.037 [main] ERROR ui_tests.TC001_AdminSignup - ❌ Unexpected exception in verifySignupRegistration: Expected condition failed: waiting for url to contain "/password". Current url: "http://dev.etruckingsystem.com/auth/register"
+(tried for 20 seconds with 500 milliseconds interval)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\UDAYAS~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64233}, goog:processID: 12268, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64233/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 71087c3be043956d6e63e6277f62d791
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to contain "/password". Current url: "http://dev.etruckingsystem.com/auth/register"
+(tried for 20 seconds with 500 milliseconds interval)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\UDAYAS~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64233}, goog:processID: 12268, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64233/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 71087c3be043956d6e63e6277f62d791
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84) ~[selenium-support-4.40.0.jar:?]
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231) ~[selenium-support-4.40.0.jar:?]
+	at base.BaseUITest.isCurrentUrlWithSegment(BaseUITest.java:122) ~[classes/:?]
+	at ui_tests.TC001_AdminSignup.verifySignupRegistration(TC001_AdminSignup.java:68) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.11.0.jar:7.11.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:741) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.11.0.jar:7.11.0]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
+23:19:19.359 [main] INFO  ui_tests.TC001_AdminSignup - Browser is closed.
+
+23:25:00.242 [main] INFO  ui_tests.TC001_AdminSignup - chrome launched in NORMAL mode.
+23:25:00.519 [main] INFO  ui_tests.TC001_AdminSignup - Browser Window is maximized.
+23:25:00.710 [main] INFO  ui_tests.TC001_AdminSignup - * Launching the browser
+23:25:00.711 [main] INFO  ui_tests.TC001_AdminSignup - * Navigating to baseURL: http://dev.etruckingsystem.com/auth
+23:25:11.601 [main] DEBUG ui_tests.TC001_AdminSignup - 	logging started
+23:25:11.601 [main] INFO  ui_tests.TC001_AdminSignup - *** Starting TC001_RegisterUser ***
+23:25:13.332 [main] INFO  ui_tests.TC001_AdminSignup - STEP 1: Clicking on 'AdminYesTextLink'
+23:25:20.111 [main] INFO  ui_tests.TC001_AdminSignup - STEP 2: Verify login page is visible
+23:25:20.139 [main] INFO  ui_tests.TC001_AdminSignup - STEP 3: Clicked on signuplink
+23:25:29.533 [main] INFO  ui_tests.TC001_AdminSignup - STEP 4: Verify register page is visible
+23:25:29.548 [main] INFO  ui_tests.TC001_AdminSignup - STEP 5: Enter FirstName: Tester1
+23:25:33.709 [main] INFO  ui_tests.TC001_AdminSignup - STEP 6: Enter LastName
+23:25:33.994 [main] INFO  ui_tests.TC001_AdminSignup - STEP 7: Enter email: User.1770746111001@gmail.com
+23:25:34.494 [main] INFO  ui_tests.TC001_AdminSignup - STEP 8: Enter phone
+23:25:35.014 [main] INFO  ui_tests.TC001_AdminSignup - STEP 9: Enter DotNumber
+23:25:35.300 [main] INFO  ui_tests.TC001_AdminSignup - STEP 10: Click 'submitButton' button
+23:25:36.104 [main] INFO  ui_tests.TC001_AdminSignup - STEP 11: Verify password page is visible
+23:25:56.433 [main] ERROR ui_tests.TC001_AdminSignup - ❌ Unexpected exception in verifySignupRegistration: Expected condition failed: waiting for url to contain "/password". Current url: "http://dev.etruckingsystem.com/auth/register"
+(tried for 20 seconds with 500 milliseconds interval)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\UDAYAS~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64484}, goog:processID: 7232, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64484/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8b1c03b0b48875c74bbc1dd14020a7b8
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to contain "/password". Current url: "http://dev.etruckingsystem.com/auth/register"
+(tried for 20 seconds with 500 milliseconds interval)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\UDAYAS~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64484}, goog:processID: 7232, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64484/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8b1c03b0b48875c74bbc1dd14020a7b8
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84) ~[selenium-support-4.40.0.jar:?]
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231) ~[selenium-support-4.40.0.jar:?]
+	at base.BaseUITest.isCurrentUrlWithSegment(BaseUITest.java:122) ~[classes/:?]
+	at ui_tests.TC001_AdminSignup.verifySignupRegistration(TC001_AdminSignup.java:68) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.11.0.jar:7.11.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:741) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.11.0.jar:7.11.0]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
+23:26:03.419 [main] INFO  ui_tests.TC001_AdminSignup - Browser is closed.
+
+23:36:40.286 [main] INFO  ui_tests.TC001_AdminSignup - chrome launched in NORMAL mode.
+23:36:40.456 [main] INFO  ui_tests.TC001_AdminSignup - Browser Window is maximized.
+23:36:40.601 [main] INFO  ui_tests.TC001_AdminSignup - * Launching the browser
+23:36:40.601 [main] INFO  ui_tests.TC001_AdminSignup - * Navigating to baseURL: http://dev.etruckingsystem.com/auth
+23:37:02.237 [main] DEBUG ui_tests.TC001_AdminSignup - 	logging started
+23:37:02.237 [main] INFO  ui_tests.TC001_AdminSignup - *** Starting TC001_RegisterUser ***
+23:37:03.378 [main] INFO  ui_tests.TC001_AdminSignup - STEP 1: Clicking on 'AdminYesTextLink'
+23:37:03.657 [main] INFO  ui_tests.TC001_AdminSignup - STEP 2: Verify login page is visible
+23:37:03.679 [main] INFO  ui_tests.TC001_AdminSignup - STEP 3: Clicked on signuplink
+23:37:09.431 [main] ERROR ui_tests.TC001_AdminSignup - ❌ Unexpected exception in verifySignupRegistration: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='SIGN UP.']"}
+  (Session info: chrome=144.0.7559.133)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b27ff07bad27dfd532a7ab3947393e1b, findElement {using=xpath, value=//a[text()='SIGN UP.']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\UDAYAS~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64752}, goog:processID: 4400, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64752/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b27ff07bad27dfd532a7ab3947393e1b
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='SIGN UP.']"}
+  (Session info: chrome=144.0.7559.133)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b27ff07bad27dfd532a7ab3947393e1b, findElement {using=xpath, value=//a[text()='SIGN UP.']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\UDAYAS~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64752}, goog:processID: 4400, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64752/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b27ff07bad27dfd532a7ab3947393e1b
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169) ~[selenium-remote-driver-4.40.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142) ~[selenium-remote-driver-4.40.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49) ~[selenium-remote-driver-4.40.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223) ~[selenium-remote-driver-4.40.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216) ~[selenium-remote-driver-4.40.0.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174) ~[selenium-remote-driver-4.40.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601) ~[selenium-remote-driver-4.40.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166) ~[selenium-remote-driver-4.40.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60) ~[selenium-remote-driver-4.40.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:424) ~[selenium-remote-driver-4.40.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:418) ~[selenium-remote-driver-4.40.0.jar:?]
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68) ~[selenium-support-4.40.0.jar:?]
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38) ~[selenium-support-4.40.0.jar:?]
+	at jdk.proxy2.$Proxy31.click(Unknown Source) ~[?:?]
+	at pages.LoginPage.clickSignupLink(LoginPage.java:29) ~[classes/:?]
+	at ui_tests.TC001_AdminSignup.verifySignupRegistration(TC001_AdminSignup.java:44) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.11.0.jar:7.11.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:741) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.11.0.jar:7.11.0]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
+23:37:16.076 [main] INFO  ui_tests.TC001_AdminSignup - Browser is closed.
+
+23:37:32.194 [main] INFO  ui_tests.TC001_AdminSignup - chrome launched in NORMAL mode.
+23:37:32.300 [main] INFO  ui_tests.TC001_AdminSignup - Browser Window is maximized.
+23:37:32.442 [main] INFO  ui_tests.TC001_AdminSignup - * Launching the browser
+23:37:32.442 [main] INFO  ui_tests.TC001_AdminSignup - * Navigating to baseURL: http://dev.etruckingsystem.com/auth
+23:37:46.270 [main] DEBUG ui_tests.TC001_AdminSignup - 	logging started
+23:37:46.275 [main] INFO  ui_tests.TC001_AdminSignup - *** Starting TC001_RegisterUser ***
+23:37:47.503 [main] INFO  ui_tests.TC001_AdminSignup - STEP 1: Clicking on 'AdminYesTextLink'
+23:37:47.919 [main] INFO  ui_tests.TC001_AdminSignup - STEP 2: Verify login page is visible
+23:37:47.936 [main] INFO  ui_tests.TC001_AdminSignup - STEP 3: Clicked on signuplink
+23:37:50.377 [main] INFO  ui_tests.TC001_AdminSignup - STEP 4: Verify register page is visible
+23:37:50.391 [main] INFO  ui_tests.TC001_AdminSignup - STEP 5: Enter FirstName: Tester1
+23:37:52.466 [main] INFO  ui_tests.TC001_AdminSignup - STEP 6: Enter LastName
+23:37:52.950 [main] INFO  ui_tests.TC001_AdminSignup - STEP 7: Enter email: User.1770746866013@gmail.com
+23:37:53.358 [main] INFO  ui_tests.TC001_AdminSignup - STEP 8: Enter phone
+23:37:53.759 [main] INFO  ui_tests.TC001_AdminSignup - STEP 9: Enter DotNumber
+23:37:53.981 [main] INFO  ui_tests.TC001_AdminSignup - STEP 10: Click 'submitButton' button
+23:37:54.342 [main] INFO  ui_tests.TC001_AdminSignup - STEP 11: Verify password page is visible
+23:38:11.559 [main] INFO  ui_tests.TC001_AdminSignup - STEP 12: Enter Password
+23:38:12.511 [main] INFO  ui_tests.TC001_AdminSignup - STEP 13: Enter ConfirmPassword
+23:38:13.572 [main] INFO  ui_tests.TC001_AdminSignup - STEP 14: click SignupButton
+23:38:14.047 [main] INFO  ui_tests.TC001_AdminSignup - STEP 15: Verify 'verifyPhone' page is visible
+23:38:15.701 [main] INFO  ui_tests.TC001_AdminSignup - STEP 16:Verifying verification link Message contains email. Message: Verification link has been sent to user.1770746866013@gmail.com
+23:38:16.104 [main] INFO  ui_tests.TC001_AdminSignup - STEP 17:Verifying OTP request Message contains phone number. Message: OTP has sent to 9876547701
+23:38:16.284 [main] INFO  ui_tests.TC001_AdminSignup - OTP Message: Your OTP is 107330
+23:38:16.435 [main] INFO  ui_tests.TC001_AdminSignup - STEP 18: ExtractOTPcontainsMessage: 107330
+23:38:18.593 [main] INFO  ui_tests.TC001_AdminSignup - STEP 19: Clicked on 'verify' button
+23:38:18.916 [main] INFO  ui_tests.TC001_AdminSignup - STEP 20: Verify 'login' page is visible
+23:38:21.007 [main] DEBUG ui_tests.TC001_AdminSignup - application logs end.......
+23:38:21.007 [main] INFO  ui_tests.TC001_AdminSignup - **** finished TC001a_verifySignupRegistration  *****
+23:38:22.633 [main] INFO  ui_tests.TC001_AdminSignup - Browser is closed.
+
+23:44:52.089 [main] INFO  ui_tests.TC001_AdminSignup - chrome launched in NORMAL mode.
+23:44:52.391 [main] INFO  ui_tests.TC001_AdminSignup - Browser Window is maximized.
+23:44:52.938 [main] INFO  ui_tests.TC001_AdminSignup - * Launching the browser
+23:44:52.939 [main] INFO  ui_tests.TC001_AdminSignup - * Navigating to baseURL: http://dev.etruckingsystem.com/auth
+23:45:05.443 [main] DEBUG ui_tests.TC001_AdminSignup - 	logging started
+23:45:05.443 [main] INFO  ui_tests.TC001_AdminSignup - *** Starting TC001_RegisterUser ***
+23:45:06.311 [main] INFO  ui_tests.TC001_AdminSignup - STEP 1: Clicking on 'AdminYesTextLink'
+23:45:08.385 [main] INFO  ui_tests.TC001_AdminSignup - STEP 2: Verify login page is visible
+23:45:08.408 [main] INFO  ui_tests.TC001_AdminSignup - STEP 3: Clicked on signuplink
+23:45:09.918 [main] INFO  ui_tests.TC001_AdminSignup - STEP 4: Verify register page is visible
+23:45:10.021 [main] INFO  ui_tests.TC001_AdminSignup - STEP 5: Enter FirstName: Tester1
+23:45:11.285 [main] INFO  ui_tests.TC001_AdminSignup - STEP 6: Enter LastName
+23:45:11.597 [main] INFO  ui_tests.TC001_AdminSignup - STEP 7: Enter email: User.1770747304782@gmail.com
+23:45:12.021 [main] INFO  ui_tests.TC001_AdminSignup - STEP 8: Enter phone
+23:45:12.339 [main] INFO  ui_tests.TC001_AdminSignup - STEP 9: Enter DotNumber
+23:45:12.515 [main] INFO  ui_tests.TC001_AdminSignup - STEP 10: Click 'submitButton' button
+23:45:12.765 [main] INFO  ui_tests.TC001_AdminSignup - STEP 11: Verify password page is visible
+23:45:32.894 [main] ERROR ui_tests.TC001_AdminSignup - ❌ Unexpected exception in verifySignupRegistration: Expected condition failed: waiting for url to contain "/password". Current url: "http://dev.etruckingsystem.com/auth/register"
+(tried for 20 seconds with 500 milliseconds interval)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\UDAYAS~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64997}, goog:processID: 7216, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(manual, http=us-proxy..., se:cdp: ws://localhost:64997/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3c516c72d3f18d8d7af349aa8e8d571c
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for url to contain "/password". Current url: "http://dev.etruckingsystem.com/auth/register"
+(tried for 20 seconds with 500 milliseconds interval)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\UDAYAS~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64997}, goog:processID: 7216, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(manual, http=us-proxy..., se:cdp: ws://localhost:64997/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3c516c72d3f18d8d7af349aa8e8d571c
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84) ~[selenium-support-4.40.0.jar:?]
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231) ~[selenium-support-4.40.0.jar:?]
+	at base.BaseUITest.isCurrentUrlWithSegment(BaseUITest.java:123) ~[classes/:?]
+	at ui_tests.TC001_AdminSignup.verifySignupRegistration(TC001_AdminSignup.java:68) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.11.0.jar:7.11.0]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.11.0.jar:7.11.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:741) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestRunner.run(TestRunner.java:616) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.11.0.jar:7.11.0]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.11.0.jar:7.11.0]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.11.0.jar:7.11.0]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
+23:45:34.129 [main] INFO  ui_tests.TC001_AdminSignup - Browser is closed.
+

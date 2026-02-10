@@ -21,6 +21,7 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import utilities.ConfigManager;
+import utilities.geoLocatorUtil;
 
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
@@ -63,6 +64,10 @@ public class BaseUITest implements FrameWorkConstants{
 				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 				logger.info("Browser Window is maximized.");
 				//driver.get("https://etruckingsystem.com/auth");
+				
+				String country="USA";
+				geoLocatorUtil.setGeoLocation(driver, country);
+				driver.navigate().refresh();
 				
 			    logger.info("* Launching the browser");
 			    logger.info("* Navigating to baseURL: "+BASE_URL);
