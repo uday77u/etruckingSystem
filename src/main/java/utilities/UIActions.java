@@ -47,9 +47,12 @@ public class UIActions {
     public void select(WebElement element, String value) {
         retry("SELECT", element,
             () -> nativeSelect(element, value),
-            () -> customDropdownSelect(element, value),
-            () -> jsSelect(element, value)
+            () -> customDropdownSelect(element, value) //,// ⭐ use ONLY this
+           // () -> jsSelect(element, value)
         );
+
+
+        waitForMuiBackdropToDisappear();   // 🔥 CRITICAL
     }
 
     public void pickDate(WebElement input, String value) {
@@ -71,6 +74,7 @@ public class UIActions {
         log("Native click");
         waitUntilClickable(el);
         el.click();
+        waitForMuiBackdropToDisappear();   // 💎 stability boost
         waitForDomIdle();
         return true;
     }
@@ -95,12 +99,14 @@ public class UIActions {
         return true;
     }
 
+    
     /* =========================================================
        TYPE STRATEGIES
        ========================================================= */
 
     private boolean normalType(WebElement el, String value) {
         log("sendKeys typing");
+        waitForMuiBackdropToDisappear();  // ⭐ add here
         waitUntilVisible(el);
         el.clear();
         el.sendKeys(value);
@@ -165,7 +171,7 @@ public class UIActions {
         waitForDomIdle();
         return true;
     }
-
+/*
     private boolean customDropdownSelect(WebElement el, String value) {
         log("Custom dropdown");
         click(el);
@@ -173,7 +179,63 @@ public class UIActions {
         el.sendKeys(Keys.ENTER);
         waitForDomIdle();
         return true;
+    }*/
+    private boolean customDropdownSelect(WebElement el, String value) {
+
+        log("Custom dropdown");
+
+        click(el);
+
+        WebElement option = wait.until(ExpectedConditions.elementToBeClickable(
+            By.xpath("//li[@role='option' and normalize-space()='" + value + "']")
+        ));
+
+        option.click();
+
+        // 👇 FORCE DROPDOWN CLOSE
+       // new Actions(driver).sendKeys(Keys.ESCAPE).perform(); //closing entire form drawer
+        driver.switchTo().activeElement().sendKeys(Keys.TAB);
+
+        waitForMuiBackdropToDisappear();
+
+        return true;
     }
+    private boolean customDropdownSelectNew(WebElement el, String value) {
+
+        click(el);
+
+        // Wait dropdown portal open
+        WebElement option = wait.until(ExpectedConditions.elementToBeClickable(
+            By.xpath("//li[@role='option' and normalize-space()='" + value + "']")
+        ));
+
+        scrollIntoView(option);
+
+        option.click();
+
+        waitForMuiBackdropToDisappear();
+
+        return true;
+    }
+    private void scrollIntoView(WebElement el) {
+        js.executeScript("arguments[0].scrollIntoView({block:'center'});", el);
+    }
+
+/*
+    private boolean customDropdownSelectNew(WebElement el, String value) {
+
+        click(el);
+
+        WebElement option = wait.until(ExpectedConditions.elementToBeClickable(
+            By.xpath("//li[@role='option' and normalize-space()='" + value + "']")
+        ));
+
+        option.click();
+
+        waitForMuiBackdropToDisappear();
+
+        return true;
+    }*/
 
     private boolean jsSelect(WebElement el, String value) {
         log("JS dropdown select");
@@ -184,6 +246,38 @@ public class UIActions {
         );
         waitForDomIdle();
         return true;
+    }
+/*
+    private void waitForMuiBackdropToDisappear() {
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(5))
+                .until(ExpectedConditions.invisibilityOfElementLocated(
+                    By.cssSelector(".MuiBackdrop-root")
+                ));
+        } catch (TimeoutException ignored) {}
+    }*/
+    private void waitForMuiBackdropToDisappear() {
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(5))
+                .until(driver -> {
+
+                    List<WebElement> overlays = driver.findElements(
+                        By.cssSelector(".MuiBackdrop-root")
+                    );
+
+                    for (WebElement overlay : overlays) {
+
+                        String opacity = overlay.getCssValue("opacity");
+                        String hidden  = overlay.getAttribute("aria-hidden");
+
+                        if (!"0".equals(opacity) && !"true".equals(hidden)) {
+                            return false; // overlay still blocking
+                        }
+                    }
+                    return true;
+                });
+
+        } catch (TimeoutException ignored) {}
     }
 
     /* =========================================================
@@ -251,10 +345,17 @@ public class UIActions {
        ========================================================= */
 
     private boolean isReactControlled(WebElement el) {
-        return (Boolean) js.executeScript(
+       /* return (Boolean) js.executeScript(
             "return !!arguments[0]._valueTracker;",
-            el
-        );
+            el*/
+            return (Boolean) js.executeScript(
+            	    "const acc = arguments[0].closest('.MuiAccordion-root');" +
+            	    "if(!acc) return true;" +  // 🔥 prevents crash
+            	    "const details = acc.querySelector('.MuiAccordionDetails-root');" +
+            	    "return details && details.children.length > 0;",
+            	    el
+            	);
+
     }
 
     private boolean verifyValue(WebElement el, String expected) {

@@ -15,7 +15,7 @@ public class VerifyUserRequestData {
 	
 	
 	public VerifyUserRequestData(String firstName, String lastName, String email, String countryENCode,
-			String countryCode, String phone, String dotNumber) {
+			String countryCode, String phone, String DOTNumber) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -24,7 +24,7 @@ public class VerifyUserRequestData {
 		this.countryCode = countryCode;
 		this.phone = phone;
 		
-		this.dotNumber = dotNumber;
+		this.dotNumber = DOTNumber;
 	}
 	
 	public String getFirstName() {
@@ -75,11 +75,11 @@ public class VerifyUserRequestData {
 		this.phone = phone;
 	}
 
-	public String getDOTNumber() {
+	public String getDotNumber() {
 		return dotNumber;
 	}
 
-	public void setDOTNumber(String dotNumber) {
+	public void setDotNumber(String dotNumber) {
 		this.dotNumber = dotNumber;
 	}
 
@@ -89,6 +89,8 @@ public class VerifyUserRequestData {
 				+ ", countryENCode=" + countryENCode + ", countryCode=" + countryCode + ", phone=" + phone
 				+ ", dotNumber=" + dotNumber + "]";
 	}
+
+
 
 
 

@@ -1,6 +1,7 @@
 package base;
 
 import utilities.ConfigManager;
+import utilities.RandomDataGenerator;
 
 public interface FrameWorkConstants {
 
@@ -8,7 +9,7 @@ public interface FrameWorkConstants {
        URLs
        ========================= */
 
-    String BASE_URL ="http://dev.etruckingsystem.com/auth"; //ConfigManager.getBaseUrl();
+    String BASE_URL = ConfigManager.getBaseUrl();
     String AUTH_PATH = ConfigManager.getAuthPath();
 
     /* =========================
@@ -36,4 +37,15 @@ public interface FrameWorkConstants {
     String PRODUCTS_TITLE = "all products";
     
     int EXPLICIT_WAIT=20;
+    
+    /*
+	
+	//TestData files
+	String DLpath=System.getProperty("user.dir")+"/TestData/DlTesting.jpeg";
+	String SSNpath=System.getProperty("user.dir")+"/TestData/Dl_ssn_test.jpeg";
+	String photopath=System.getProperty("user.dir")+"/TestData/Dl_ssn_test.jpeg";
+	String TWICpath=System.getProperty("user.dir")+"/TestData/Dl_ssn_test.jpeg";
+
+*/
+	
 }

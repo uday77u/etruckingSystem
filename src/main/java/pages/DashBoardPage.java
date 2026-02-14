@@ -16,7 +16,7 @@ public class DashBoardPage extends BasePage {
 	
 	//menu locators
 	@FindBy(xpath = "//span[text()='Dashboard']/ancestor::a") private WebElement dashboardMenu;
-	@FindBy(xpath = "//span[text()='Vehicles']/ancestor::a") private WebElement dispatchBoardMenu;
+	@FindBy(xpath = "//span[text()='Dispatch Board']/ancestor::a") private WebElement dispatchBoardMenu;
 	@FindBy(xpath = "//span[text()='Vehicles']/ancestor::a") private WebElement VehiclesMenu;
 	@FindBy(xpath = "//span[text()='Drivers']/ancestor::a") private WebElement driversMenu;
 	@FindBy(xpath = "//span[text()='Asset Mapping']/ancestor::a") private WebElement AssetMappingMenu;

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="BigWings Test Suite">
+<listeners>
+		<listener class-name="utilities.UI_ExtentReportManager"></listener>
+		<listener class-name="utilities.RetryListener"></listener>
+</listeners>
+  <test thread-count="5" name="UI-Tests BigWings ">
+    <classes>
+  		<class name="ui_tests.Admin_TC001_Signup"/>
+		<class name="ui_tests.Admin_TC002_SignupWithRegisteredEmail"/>
+		<class name="ui_tests.Admin_TC003_SignupWithRegisteredNumber"/>
+		<class name="ui_tests.Admin_TC004_SignupWithRegisteredEmailAndNumber"/>
+		<class name="ui_tests.Admin_TC005_Login"/>
+		<class name="ui_tests.Admin_TC006_LoginVerifyProfilePhoto"/>
+		<class name="ui_tests.Dispatch_TC001_AddConsignee"/>
+		<class name="ui_tests.Drivers_TC001_AddDriver"/>
+		<class name="ui_tests.Drivers_TC002_AddDriverWithAllDocs"/>
+		<class name="ui_tests.ManageUsers_TC001_AddUser"/>
+		<class name="ui_tests.Vehicle_TC001_AddTruck"/>
+		<class name="ui_tests.Vehicle_TC002_AddTrailer"/>
+    </classes>
+  </test> 
+</suite> 

@@ -11,6 +11,7 @@ public class ProfilePage extends BasePage{
 	WebDriverUtility utility;
 	public ProfilePage(WebDriver driver) {
 		super(driver);
+		utility=new WebDriverUtility(driver);
 
 	}
 	
@@ -71,9 +72,14 @@ public class ProfilePage extends BasePage{
 		ProfileImage.click();
 	}
 	
-	public Boolean isProfilePhotoMaximizeDisplayed() {
-		WebDriverUtility driverUtility=new WebDriverUtility(driver);
-		driverUtility.waitForVisible(ProfilePhotoMaximizeDisplayed);
+	public Boolean isProfilePhotoMaximizeDisplayed() {	
+		try {
+			utility.waitForVisible(ProfilePhotoMaximizeDisplayed);
+			
+		} catch (Exception e) {
+			return false;
+		}
+		
 		return ProfilePhotoMaximizeDisplayed.isDisplayed();
 		
 	}

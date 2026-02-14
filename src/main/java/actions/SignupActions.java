@@ -73,7 +73,7 @@ public class SignupActions extends BaseAction{
         registerPage.enterDOTNumberText(dotNumber);
 
         logger.info("STEP 10: Clicking submit button");
-        registerPage.clicksubmitButton();
+        registerPage.clickNextButton();
         
         logger.info("STEP 11: Verifying password page");
         assertTrue(isCurrentUrlWithSegment(driver,"password"),
@@ -160,7 +160,7 @@ public class SignupActions extends BaseAction{
         registerPage.enterDOTNumberText(dotNumber);
 
 
-        registerPage.clicksubmitButton();
+        registerPage.clickNextButton();
         
 
         assertTrue(isCurrentUrlWithSegment(driver,"password"),

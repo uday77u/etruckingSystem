@@ -2,6 +2,7 @@ package utilities;
 
 import java.time.Duration;
 import java.util.Set;
+import java.util.function.BooleanSupplier;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -288,5 +289,23 @@ public class WebDriverUtility {
 
     public boolean isTitleContains(String segment) {
         return driver.getTitle().contains(segment);
+    }
+    
+
+    /**
+     * Wait until a custom condition becomes true
+     * (React / AJAX / Auto-fill safe)
+     */
+    public void waitUntil(BooleanSupplier condition, int timeoutInSeconds) {
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
+
+        try {
+            wait.until(d -> condition.getAsBoolean());
+        } catch (TimeoutException e) {
+            throw new TimeoutException(
+                "Condition not met within " + timeoutInSeconds + " seconds"
+            );
+        }
     }
 }

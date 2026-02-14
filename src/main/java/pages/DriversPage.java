@@ -3,6 +3,7 @@ package pages;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -13,7 +14,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import utilities.MuiActionsUtil;
-import utilities.ReactUtility;
 import utilities.UIActions;
 import utilities.WebDriverUtility;
 
@@ -36,13 +36,16 @@ public class DriversPage extends BasePage {
 	//Button Locators
 	@FindBy(xpath = "//button[text()='Add Driver']") private WebElement addDriverButton;
 	@FindBy(xpath = "(//i[contains(@class,'file-circle-plus')])[1]") private WebElement uploadDLButton;
-	@FindBy(xpath = "//button[@type='submit']") private WebElement submitButton;
+	@FindBy(xpath = "//button[@type='submit']") private WebElement saveAndNextButton;
+	@FindBy(xpath = "//button[text()='Save']") private WebElement saveButton;
 	
 	//Upload file Input
 	@FindBy(xpath = "(//input[@type='file'])[1]") private WebElement uploadDLfileInput;
 	@FindBy(xpath = "(//input[@type='file'])[2]") private WebElement uploadSSNfileInput;
 	@FindBy(xpath = "(//input[@type='file'])[3]") private WebElement uploadPhotofileInput;
 	@FindBy(xpath = "(//input[@type='file'])[4]") private WebElement uploadTWICfileInput;
+	@FindBy(xpath = "(//input[@type='file'])[5]") private WebElement uploadMedicalCardfileInput;
+	@FindBy(xpath = "(//input[@type='file'])[6]") private WebElement uploadCopyOfDMVfileInput;
 	
 	//Input text
 	@FindBy(xpath = "(//input[contains(@name,'drivingLicense')])[1]") private WebElement DriverLicenseText;
@@ -58,6 +61,22 @@ public class DriversPage extends BasePage {
 	@FindBy(xpath = "//input[contains(@placeholder,'Phone')]") private WebElement PhoneText;
 	@FindBy(xpath = "//input[@name='SSN']") private WebElement SSNText;
 	@FindBy(xpath = "//input[@name='twicCardNo']") private WebElement TwicCardNoText;
+	@FindBy(name = "rate") private WebElement rateText;
+	@FindBy(name="medicalCardDoc") private WebElement medicalCardDocInput;
+	@FindBy(name="dmvDoc") private WebElement dmvDocInput;
+	
+	@FindBy(name="payPerExtraStop") private WebElement payPerExtraStopInput;
+	@FindBy(name="startAfterPicks") private WebElement startAfterPicksInput;
+	@FindBy(name="startAfterDrops") private WebElement startAfterDropsInput;
+	@FindBy(name="waitTimePay") private WebElement waitTimePayInput;
+	@FindBy(name="startAfterHours") private WebElement startAfterHoursInput;
+	@FindBy(name="layoverPay") private WebElement layoverPayInput;
+	@FindBy(name="detentionPay") private WebElement detentionPayInput;
+	
+	
+	
+	
+	
 	
 	//Dropdown locators
 	@FindBy(id = "country-select") private WebElement CountrySelectDropDown;
@@ -85,10 +104,27 @@ public class DriversPage extends BasePage {
 
 	//verify upload file
 	By uploadedDLFileIcon = By.xpath("//button//i[contains(@class,'fa-file-image')]");
+	By SSNuploadedFileEyeIcon=By.xpath("//input[@name='SSN']   /ancestor::div[contains(@class,'MuiFormControl')]   /following-sibling::div   //i[contains(@class,'fa-eye')]");
+	By DLuploadedFileEyeIcon=By.xpath("//input[@name='drivingLicenseNo']   /ancestor::div[contains(@class,'MuiFormControl')]   /following-sibling::div   //i[contains(@class,'fa-eye')]");
 	
-	public void verifyDLFileUploaded() {
+	/*public void verifyDLFileUploaded() {
 	    util.waitForVisible(uploadedDLFileIcon);
+	}*/
+	public void verifySSNFileUploaded() {
+	    util.waitForVisible(SSNuploadedFileEyeIcon);
 	}
+	public void verifyDLFileUploaded() {
+	    util.waitForVisible(DLuploadedFileEyeIcon);
+	}
+	
+	//visibility of web elements
+	@FindBy(xpath = "//button[text()='Pay/Salary Details' and @aria-selected]")
+	private WebElement salaryDetailsTab;
+
+	public boolean isSalaryDetailsTabIsActive() {
+	    return salaryDetailsTab.getAttribute("aria-selected").equals("true");
+	}
+	
 	
 	
 	//=================================Dynamic xpath locator=====================================
@@ -110,28 +146,62 @@ public class DriversPage extends BasePage {
 	        By.xpath("//button[contains(@class,'PickersDay') and normalize-space()='" + day + "']")
 	    );
 	}
-	
-	
+	private By employmentTypeRadio(String value) {
+	    return By.xpath("//input[@name='employmentType' and @value='" + value + "']");
+	}
+
+	private By payTypeRadio(String value) {
+	    return By.xpath("//input[@name='payType' and @value='" + value + "']");
+	}
 	
 	//==============================================================================================
 	//                                         Methods
 	//==============================================================================================
 	
-	//Button actions
+	//======================================================Button actions=================================================
 	public void clickAddDriverButton() {
-		util2.muiClick(addDriverButton);
+		//util2.muiClick(addDriverButton);
 		//addDriverButton.click();
-		//util.click(addDriverButton);
+		util.click(addDriverButton);
 	}
 	public void clickUploadDLButton() {
 		//uploadDLButton.click();
 		util.safeClick(uploadDLButton);	
 	}
-	public void clickSubmitButton() {
-		submitButton.click();
+	/*public void clickSaveAndNextButton() {
+		//saveAndNextButton.click();
+		util.click(saveAndNextButton);
+	}*/
+	public void clickSaveButton() {
+		//saveButton.click();
+		util.click(saveButton);
 	}
 	
-	//File input actions
+	public void clickSaveAndNextButton() {
+
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+
+	    By muiOverlay = By.xpath("//div[contains(@class,'MuiStack-root')]");
+
+	    try {
+	        wait.until(ExpectedConditions.invisibilityOfElementLocated(muiOverlay));
+	    } catch (Exception ignored) {}
+
+	    wait.until(ExpectedConditions.elementToBeClickable(saveAndNextButton));
+
+	    ((JavascriptExecutor) driver)
+	            .executeScript("arguments[0].scrollIntoView({block:'center'});", saveAndNextButton);
+
+	    try {
+	        saveAndNextButton.click();
+	    } catch (ElementClickInterceptedException e) {
+
+	        ((JavascriptExecutor) driver)
+	                .executeScript("arguments[0].click();", saveAndNextButton);
+	    }
+	}
+
+	//====================================================File input actions=======================================================
 	public void UploadDLfile(String filePath) {
 		//util.safeType(uploadDLfileInput, filePath);
 		uploadDLfileInput.sendKeys(filePath);
@@ -145,7 +215,12 @@ public class DriversPage extends BasePage {
 	public void UploadTWICfile(String filePath) {
 		uploadTWICfileInput.sendKeys(filePath);
 	}
-	
+	public void uploadMedicalCard(String filePath) {
+		uploadMedicalCardfileInput.sendKeys(filePath);
+	}
+	public void uploadCopyOfDMVfile(String filePath) {
+		uploadCopyOfDMVfileInput.sendKeys(filePath);
+	}
 	//====================React safe type=====================
 	public void enterDriverLicenseReactSafe(String licenseNo) {
 
@@ -192,7 +267,7 @@ public class DriversPage extends BasePage {
 	    );
 	}
 
-	//Input text actions
+	//======================================================Input text actions============================================
 	public void enterDateOfBirth(String DateOfBirth) {
 		DateOfBirthText.sendKeys(DateOfBirth);
 	}
@@ -231,11 +306,50 @@ public class DriversPage extends BasePage {
 		uiActions.type(SSNText, SSN);
 		//enterSSNnumberReactSafe(SSN);
 	}
+	public void enterRate(String rate) {
+		rateText.sendKeys(rate);
+	}
+	public void enterMedicalCardDoc(String medicalCardDocNumb) {
+		//medicalCardDocInput.clear();
+		//medicalCardDocInput.sendKeys(medicalCardDocNumb);
+		//util.type(medicalCardDocInput, medicalCardDocNumb);
+		util2.muiType(medicalCardDocInput, medicalCardDocNumb);
+	}
+	public void enterDmvDoc(String dmvDocNumb) {
+		dmvDocInput.clear();
+		dmvDocInput.sendKeys(dmvDocNumb);
+	}      
+	public void enterpayPerExtraStop(String price) {
+		payPerExtraStopInput.clear();
+		payPerExtraStopInput.sendKeys(price);
+	}
+	public void enterStartAfterPicks(String price) {
+		startAfterPicksInput.clear();
+		startAfterPicksInput.sendKeys(price);
+	}
+	public void enterStartAfterDrops(String price) {
+		startAfterDropsInput.clear();
+		startAfterDropsInput.sendKeys(price);
+	}
+	public void enterWaitTimePay(String price) {
+		waitTimePayInput.clear();
+		waitTimePayInput.sendKeys(price);
+	}
+	public void enterStartAfterHours(String price) {
+		startAfterHoursInput.clear();
+		startAfterHoursInput.sendKeys(price);
+	}
+	public void enterLayoverPayInput(String price) {
+		layoverPayInput.clear();
+		layoverPayInput.sendKeys(price);
+	}
+	public void enterDetentionPayInput(String price) {
+		detentionPayInput.clear();
+		detentionPayInput.sendKeys(price);
+	}
 	
 	
-	
-	
-	//Dropdown actions
+	//===========================================================Dropdown actions=================================================================
 	public void selectCountryCode(String countryCode ) {
 		util2.muiSelectByText(CountrySelectDropDown, "+91");
 	}
@@ -422,7 +536,7 @@ public class DriversPage extends BasePage {
 
 
 
-	//Calendar actions
+	//======================================================================Calendar actions==================================================
 	public void enterCDLExpiryDate(String expiryDate) {
 		CDLExpiryDate.sendKeys(expiryDate);
 	}
@@ -511,14 +625,55 @@ public class DriversPage extends BasePage {
 	
 	
 	
-	//Radio Button actions
+	//===========================================================Radio Button actions===================================================
 	public void clickTeamUpYesRadioButton() {
 		TeamUpYesRadioButton.click();
 	}
 	public void clickTeamUpNoRadioButton() {
 		TeamUpNoRadioButton.click();
 	}
+	//Employment Radio button : Full-time or Part-time
+	public void selectEmploymentType(String employmentType) {
+
+	    By labelLocator = By.xpath(
+	        "//input[@name='employmentType' and @value='" + employmentType + "']" +
+	        "/ancestor::label"
+	    );
+
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	    WebElement label = wait.until(ExpectedConditions.elementToBeClickable(labelLocator));
+
+	    ((JavascriptExecutor) driver)
+	            .executeScript("arguments[0].scrollIntoView({block:'center'});", label);
+
+	    label.click();
+	}
+	public boolean isEmploymentTypeSelected(String employmentType) {
+	    WebElement radio = driver.findElement(employmentTypeRadio(employmentType));
+	    return radio.isSelected();
+	}
 	
+	//Pay type Radio button : Per Hours or Per Miles or By Percentage
+	public void selectPayType(String payType) {
+
+	    By labelLocator = By.xpath(
+	        "//input[@name='payType' and @value='" + payType + "']" +
+	        "/ancestor::label"
+	    );
+
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	    WebElement label = wait.until(ExpectedConditions.elementToBeClickable(labelLocator));
+
+	    ((JavascriptExecutor) driver)
+	            .executeScript("arguments[0].scrollIntoView({block:'center'});", label);
+
+	    label.click();
+	}
+	public boolean isPayTypeSelected(String payType) {
+	    WebElement radio = driver.findElement(payTypeRadio(payType));
+	    return radio.isSelected();
+	}
+	//input[@name='payType' and @value='Per Hours'] Per Miles By Percentage
 
 
 

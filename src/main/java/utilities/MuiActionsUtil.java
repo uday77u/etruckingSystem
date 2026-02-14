@@ -22,30 +22,16 @@ public class MuiActionsUtil {
     private static final int DEFAULT_TIMEOUT = 40;
     private static final int MAX_RETRIES = 3;
 
-    // =============================
     // Constructor
-    // =============================
     public MuiActionsUtil(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(DEFAULT_TIMEOUT));
     }
 
-    // =============================
-    // CORE MUI SYNCHRONIZATION
-    // =============================
 
-    /**
-     * Waits until MUI backdrops and transitions finish
-     */
-    public void waitForMuiIdle() {
-        wait.until(d -> (Boolean) ((JavascriptExecutor) d)
-                .executeScript(
-                        "return document.querySelectorAll('.MuiBackdrop-root').length === 0"));
-    }
 
-    /**
-     * Waits until element is visible and stable
-     */
+    
+    //Waits until element is visible and stable
     private WebElement waitForVisible(By locator) {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
@@ -68,45 +54,21 @@ public class MuiActionsUtil {
     }
     
     public void muiClick(By locator) {
-        muiClick1(waitForClickable(locator));
-    }
-
-
-    public void muiClick(WebElement element) {
-        int attempts = 0;
-
-        while (attempts < MAX_RETRIES) {
-            try {
-                waitForMuiIdle();
-                scrollIntoView(element);
-                wait.until(ExpectedConditions.elementToBeClickable(element));
-                element.click();
-                return;
-            } catch (Exception e) {
-                logger.warn("MUI click attempt {} failed", attempts + 1);
-                attempts++;
-            }
-        }
-
-        logger.warn("MUI click fallback to JS");
-        jsClick(element);
+        muiClick(waitForClickable(locator));
     }
 
     private void jsClick(WebElement element) {
         ((JavascriptExecutor) driver)
                 .executeScript("arguments[0].click();", element);
     }
-    //-------------------------
+    
+    //check accordion is expanded
     private boolean isAccordion(WebElement element) {
         return element.getAttribute("aria-expanded") != null;
     }
-    /*
-    private void waitForAccordionToExpand(WebElement element) {
-        wait.until(driver -> "true".equals(element.getAttribute("aria-expanded")));
-    }
-    */
-
-    public void muiClick1(WebElement element) {
+    
+    //muiClick
+    public void muiClick(WebElement element) {
         int attempts = 0;
 
         while (attempts < MAX_RETRIES) {
@@ -153,7 +115,7 @@ public class MuiActionsUtil {
         input.sendKeys(Keys.DELETE);
         input.sendKeys(text);
     }
-    
+ /*   
     public void muiType(By inputLocator, String value) {
 
         WebElement input = wait.until(
@@ -178,7 +140,7 @@ public class MuiActionsUtil {
         // Type value
         input.sendKeys(value);
     }
-
+*/
 
 
     // =============================
@@ -195,8 +157,9 @@ public class MuiActionsUtil {
         selectMuiOption(optionText);
     }
 
-    private void selectMuiOption(String optionText) {
-        By option =By.xpath("//li[@role='option' and normalize-space()='" + optionText + "']");  //By.xpath("//li[normalize-space()='" + optionText + "']");
+    public void selectMuiOption(String optionText) {
+        By option = By.xpath("//li[@role='option' and contains(normalize-space(),'" + optionText + "')]");
+
         WebElement optionEl = waitForVisible(option);
         muiClick(optionEl);
     }
@@ -229,7 +192,164 @@ public class MuiActionsUtil {
         By label = By.xpath("//label[.//text()[normalize-space()='" + labelText + "']]");
         muiClick(label);
     }
+    
+    //check box 
+    public void setCheckbox(By checkboxInput, boolean shouldBeChecked) {
 
+        wait.until(ExpectedConditions.presenceOfElementLocated(checkboxInput));
+
+        boolean isChecked = driver.findElement(checkboxInput).isSelected();
+
+        if (isChecked != shouldBeChecked) {
+            muiClick(getCheckboxLabel(checkboxInput));
+
+            if (shouldBeChecked) {
+                wait.until(ExpectedConditions.elementToBeSelected(checkboxInput));
+            } else {
+                wait.until(ExpectedConditions.not(
+                        ExpectedConditions.elementToBeSelected(checkboxInput)));
+            }
+        }
+    }
+    
+    //check box helper method
+    private By getCheckboxLabel(By checkboxInput) {
+
+        WebElement input = wait.until(
+                ExpectedConditions.presenceOfElementLocated(checkboxInput));
+
+        WebElement label = input.findElement(By.xpath("./ancestor::label"));
+
+        String forAttr = label.getAttribute("for");
+
+        if (forAttr != null) {
+            return By.cssSelector("label[for='" + forAttr + "']");
+        }
+
+        return By.xpath("//label[.//input[@type='checkbox']]");
+    }
+    //check box new
+    public void setCheckboxNew(By checkboxInput, boolean shouldBeChecked) {
+
+        WebElement input = wait.until(
+                ExpectedConditions.presenceOfElementLocated(checkboxInput));
+
+        scrollIntoView(input);
+
+        boolean currentState = input.isSelected();
+
+        if (currentState == shouldBeChecked) {
+            logger.info("Checkbox already in desired state: {}", shouldBeChecked);
+            return;
+        }
+
+        try {
+
+            // ⭐ Click visual checkbox container instead of input
+            WebElement clickable = input.findElement(
+                    By.xpath("./ancestor::span[contains(@class,'MuiCheckbox-root')]"));
+
+            muiClick(clickable);
+
+        } catch (Exception e) {
+
+            logger.warn("Clickable span not found, falling back to JS click");
+
+            ((JavascriptExecutor) driver)
+                    .executeScript("arguments[0].click();", input);
+        }
+
+        // ⭐ Wait React state commit
+        wait.until(driver -> driver.findElement(checkboxInput).isSelected() == shouldBeChecked);
+    }
+
+    //===================================
+    //error fields
+    //===================================
+    //
+    public boolean isMuiFieldError(By inputLocator) {
+
+        WebElement input = wait.until(
+                ExpectedConditions.presenceOfElementLocated(inputLocator));
+
+        WebElement wrapper = input.findElement(
+                By.xpath("./ancestor::div[contains(@class,'MuiOutlinedInput-root')]"));
+
+        return wrapper.getAttribute("class").contains("Mui-error");
+    }
+    
+    //
+    public WebElement goToFirstErrorField() {
+
+        By errorFields = By.xpath("//*[contains(@class,'Mui-error')]");
+
+        List<WebElement> errors = driver.findElements(errorFields);
+
+        if (errors.isEmpty()) {
+            logger.info("No error fields found");
+            return null;
+        }
+
+        WebElement firstError = errors.get(0);
+
+        // Scroll into view
+        ((JavascriptExecutor) driver)
+                .executeScript("arguments[0].scrollIntoView({block:'center'});", firstError);
+
+        // Highlight (visual debugging)
+        highlightElement(firstError);
+
+        logger.info("Navigated to first MUI error field");
+
+        return firstError;
+    }
+    private void highlightElement(WebElement element) {
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        js.executeScript(
+                "arguments[0].style.border='3px solid red'; arguments[0].style.background='rgba(255,0,0,0.1)';",
+                element
+        );
+    }
+    public String goToFirstErrorAndGetMessage() {
+
+        WebElement errorField = goToFirstErrorField();
+
+        if (errorField == null)
+            return null;
+
+        try {
+            WebElement message = errorField.findElement(
+                    By.xpath(".//following::p[contains(@class,'MuiFormHelperText-root')][1]"));
+
+            return message.getText();
+
+        } catch (Exception e) {
+            logger.warn("Error message not found");
+            return null;
+        }
+    }
+    public boolean hasMuiErrors() {
+        return !driver.findElements(
+                By.xpath("//*[contains(@class,'Mui-error')]")
+        ).isEmpty();
+    }
+    public List<String> getAllMuiErrorMessages() {
+
+        List<WebElement> messages = driver.findElements(
+                By.xpath("//p[contains(@class,'MuiFormHelperText-root')]"));
+
+        return messages.stream()
+                .map(WebElement::getText)
+                .filter(msg -> !msg.isBlank())
+                .toList();
+    }
+
+
+
+
+    
     // =============================
     // MUI MENU / CONTEXT MENU
     // =============================
@@ -294,12 +414,7 @@ public class MuiActionsUtil {
     }
     
 //==============================Radio button=====================================
-    /**
-     * React/MUI-safe Radio Button selector
-     *
-     * @param name  radio group name attribute
-     * @param value radio value attribute (true / false)
-     */
+
     public void selectRadio(String name, String value) {
 
         By radioInput = By.xpath("//input[@type='radio' and @name='" + name + "' and @value='" + value + "']");
@@ -345,73 +460,246 @@ public class MuiActionsUtil {
         // Make sure it's interactable
         ((JavascriptExecutor) driver)
             .executeScript("arguments[0].style.display='block';", input);
-        File file = new File(absolutePath);
+        File file=new File(absolutePath);
 
-        if (!file.exists()) {
-            throw new RuntimeException("❌ File not found: " + file.getAbsolutePath());
-        }
-        input.sendKeys(absolutePath);
+        input.sendKeys(file.getAbsolutePath());
+        logger.info("absolutePath: "+absolutePath+" file.getAbsolutePath: "+file.getAbsolutePath());
     }
     public WebElement waitForPresent(By locator) {
         return new WebDriverWait(driver, Duration.ofSeconds(20))
                 .until(ExpectedConditions.presenceOfElementLocated(locator));
     }
-    
  // =============================
  // MUI DATE PICKER
  // =============================
+ public void muiSetDate(By inputLocator, String date) {
 
- /**
-  * Sets MUI DatePicker by typing value (recommended)
-  * Works for DesktopDatePicker / MobileDatePicker
-  *
-  * @param inputLocator date input field
-  * @param dateValue    date string (e.g. 01/25/2026 or 2026-01-25)
-  */
- public void muiDatePickerType(By inputLocator, String dateValue) {
-     WebElement input = waitForVisible(inputLocator);
+     WebElement input = wait.until(
+             ExpectedConditions.presenceOfElementLocated(inputLocator));
 
-     waitForMuiIdle();
-     scrollIntoView(input);
+     // Scroll into view
+     ((JavascriptExecutor) driver)
+             .executeScript("arguments[0].scrollIntoView({block:'center'});", input);
 
-     // Focus input (important for MUI)
+     // Focus input
+     wait.until(ExpectedConditions.elementToBeClickable(input));
      input.click();
 
      // Clear existing value
      input.sendKeys(Keys.chord(Keys.CONTROL, "a"));
      input.sendKeys(Keys.DELETE);
 
-     // Type date
-     input.sendKeys(dateValue);
+     // Type date (MM/DD/YYYY)
+     input.sendKeys(date);
 
-     // Blur to trigger React state update
+     // Blur to trigger React validation
      input.sendKeys(Keys.TAB);
  }
+ /*
+ public void muiSetDate(By inputLocator, String date) {
 
- /**
-  * Selects date from MUI calendar popup
-  *
-  * @param datePickerButton calendar icon button
-  * @param day              day of month (1–31)
-  */
- public void muiDatePickerSelectDay(By datePickerButton, int day) {
-     // Open calendar
-     muiClick(datePickerButton);
+	    WebElement input = wait.until(
+	            ExpectedConditions.presenceOfElementLocated(inputLocator));
 
-     // Wait for calendar dialog
-     By calendar = By.xpath("//div[contains(@class,'MuiPickersPopper-root') or @role='dialog']");
-     waitForVisible(calendar);
+	    ((JavascriptExecutor) driver)
+	            .executeScript("arguments[0].scrollIntoView({block:'center'});", input);
 
-     // Select day
-     By dayLocator = By.xpath(
-         "//button[not(@disabled) and normalize-space()='" + day + "']"
-     );
+	    input.click();
+	    input.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+	    input.sendKeys(Keys.DELETE);
+	    input.sendKeys(date);
 
-     WebElement dayBtn = waitForClickable(dayLocator);
-     muiClick(dayBtn);
+	    // CRITICAL for React state commit
+	    input.sendKeys(Keys.TAB);
 
-     waitForMuiIdle();
- }
+	    // Small wait for dependent fields to render
+	    try {
+	        Thread.sleep(300);
+	    } catch (InterruptedException ignored) {}
+	}
+*/
+ public boolean isElementPresent(By locator) {
+	    return !driver.findElements(locator).isEmpty();
+	}
+ public void waitForElementToRender(By locator) {
 
-  
+	    wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+	    wait.until(ExpectedConditions.elementToBeClickable(locator));
+	}
+
+ /*
+ public void openMuiAccordion(By accordionBtn, By innerField) {
+
+	    WebElement accordion = wait.until(
+	            ExpectedConditions.elementToBeClickable(accordionBtn));
+
+	    accordion.click();
+
+	    // HARD PROOF accordion is open
+	    wait.until(ExpectedConditions.presenceOfElementLocated(innerField));
+
+	    logger.info("MUI accordion fully expanded and content mounted");
+	}*/
+ public void openMuiAccordion(By accordionBtn, By innerField) {
+
+	    WebElement accordion = wait.until(
+	        ExpectedConditions.visibilityOfElementLocated(accordionBtn));
+
+	    // Scroll to avoid overlay issues
+	    ((JavascriptExecutor) driver)
+	        .executeScript("arguments[0].scrollIntoView({block:'center'});", accordion);
+
+	    accordion.click();
+
+	    // PROOF accordion is open
+	    wait.until(ExpectedConditions.presenceOfElementLocated(innerField));
+
+	    logger.info("MUI accordion expanded and inner content rendered");
+	}
+ 
+ //vin number input not working
+ /*public void muiType(By inputLocator, String value) {
+	    wait.until(driver -> {
+	        WebElement input = driver.findElement(inputLocator);
+	        return input.isDisplayed() && input.isEnabled();
+	    });
+
+	    WebElement input = driver.findElement(inputLocator);
+	    input.click();
+	    input.clear();
+	    input.sendKeys(value);
+	}*/
+ public void waitForInputEnabled(By inputLocator) {
+	    wait.until(driver -> {
+	        WebElement input = driver.findElement(inputLocator);
+	        return input.isDisplayed() && input.isEnabled();
+	    });
+	}
+//--model name not working
+ public void muiType(By inputLocator, String value) {
+
+	    WebElement input = wait.until(
+	            ExpectedConditions.presenceOfElementLocated(inputLocator));
+
+	    // MUI FormControl wrapper (THIS IS CRITICAL)
+	    WebElement container =
+	            input.findElement(By.xpath("./ancestor::div[contains(@class,'MuiFormControl-root')]"));
+
+	    // Scroll container, not input
+	    ((JavascriptExecutor) driver)
+	            .executeScript("arguments[0].scrollIntoView({block:'center'});", container);
+
+	    // Click container to trigger React focus
+	    wait.until(ExpectedConditions.elementToBeClickable(container));
+	    container.click();
+
+	    // Now type
+	    input.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+	    input.sendKeys(Keys.DELETE);
+	    input.sendKeys(value);
+	}
+
+ /*public void muiTypeDeferredInput(By inputLocator, String value) {
+
+	    WebElement input = wait.until(
+	            ExpectedConditions.presenceOfElementLocated(inputLocator));
+
+	    // Scroll input itself (NOT FormControl)
+	    ((JavascriptExecutor) driver)
+	            .executeScript("arguments[0].scrollIntoView({block:'center'});", input);
+
+	    // Force focus using JS (React-safe)
+	    ((JavascriptExecutor) driver)
+	            .executeScript("arguments[0].focus();", input);
+
+	    // Small pause for React state settle
+	    waitForMuiIdle();
+
+	    // Clear & type
+	    input.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+	    input.sendKeys(Keys.DELETE);
+	    input.sendKeys(value);
+
+	    // Commit React state
+	    input.sendKeys(Keys.TAB);
+	}*/
+ public void muiTypeDeferredInput(By inputLocator, String value) {
+
+	    WebElement input = wait.until(
+	            ExpectedConditions.presenceOfElementLocated(inputLocator));
+
+	    // Scroll input
+	    ((JavascriptExecutor) driver)
+	            .executeScript("arguments[0].scrollIntoView({block:'center'});", input);
+
+	    // Focus safely (React controlled input)
+	    ((JavascriptExecutor) driver)
+	            .executeScript("arguments[0].focus();", input);
+
+	    // ⛔ REMOVE waitForMuiIdle() — THIS WAS BREAKING YOUR TEST
+
+	    // Clear & type
+	    input.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+	    input.sendKeys(Keys.DELETE);
+	    input.sendKeys(value);
+
+	    // Commit React state
+	    input.sendKeys(Keys.TAB);
+	}
+
+ public void waitForMuiIdle() {
+	    try {
+	        // Wait briefly for React microtasks, not UI disappearance
+	        Thread.sleep(200);
+	    } catch (InterruptedException ignored) {}
+	}
+//--not opening accordian it reaches vin input and failed
+ public void expandMuiAccordion(By accordionRoot) {
+
+	    // Wait for accordion root to be present
+	    WebElement root = wait.until(
+	            ExpectedConditions.presenceOfElementLocated(accordionRoot));
+
+	    // Find Accordion Summary (this is the clickable part)
+	    WebElement summary = root.findElement(
+	            By.cssSelector(".MuiAccordionSummary-root"));
+
+	    // Scroll into view (important for MUI)
+	    ((JavascriptExecutor) driver)
+	            .executeScript("arguments[0].scrollIntoView({block:'center'});", summary);
+
+	    // Click when clickable
+	    wait.until(ExpectedConditions.elementToBeClickable(summary));
+	    summary.click();
+
+	    // Wait until accordion is expanded (aria-expanded = true)
+	    wait.until(d ->
+	            "true".equals(summary.getAttribute("aria-expanded")));
+	}
+
+//address field not working 
+ public void muiTypeAndBlur(By inputLocator, String value) {
+
+	    WebElement input = wait.until(
+	            ExpectedConditions.presenceOfElementLocated(inputLocator));
+
+	    // Scroll
+	    ((JavascriptExecutor) driver)
+	            .executeScript("arguments[0].scrollIntoView({block:'center'});", input);
+
+	    // Focus using JS (React-safe)
+	    ((JavascriptExecutor) driver)
+	            .executeScript("arguments[0].focus();", input);
+
+	    // Clear + type
+	    input.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+	    input.sendKeys(Keys.DELETE);
+	    input.sendKeys(value);
+
+	    // 🔑 CRITICAL: trigger React onBlur / state commit
+	    input.sendKeys(Keys.TAB);
+	}
+
+
 }

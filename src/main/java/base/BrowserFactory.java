@@ -1,6 +1,5 @@
 package base;
 
-import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -28,6 +27,7 @@ public class BrowserFactory {
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions chromeOptions = new ChromeOptions();
                 
+                //set location: USA
                 Map<String, Object> prefs = new HashMap<>();
                 prefs.put("profile.default_content_setting_values.geolocation", 1);
 
@@ -40,10 +40,8 @@ public class BrowserFactory {
                 proxy.setSslProxy("us-proxy-ip:port");
 
                 chromeOptions.setProxy(proxy);
-
                 
-                
-                //String filePath=System.getProperty("user.dir")+"\\Photos\\VPNUSAPlanet.crx";
+                //String filePath=System.getProperty("user.dir")+"\\TestData\\VPNUSAPlanet.crx";
                 //chromeOptions.addExtensions(new File(filePath));
 
                 if (HEADLESS) {

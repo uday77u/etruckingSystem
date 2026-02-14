@@ -17,7 +17,7 @@ public class VerifyUserRequestDataRemoveNullFields {
 	
 	
 	public VerifyUserRequestDataRemoveNullFields(String firstName, String lastName, String email, String countryENCode,
-			String countryCode, String phone, String dotNumber) {
+			String countryCode, String phone, String DOTNumber) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -26,7 +26,7 @@ public class VerifyUserRequestDataRemoveNullFields {
 		this.countryCode = countryCode;
 		this.phone = phone;
 		
-		this.dotNumber = dotNumber;
+		this.dotNumber = DOTNumber;
 	}
 	
 	public String getFirstName() {
@@ -76,19 +76,19 @@ public class VerifyUserRequestDataRemoveNullFields {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-
-	public String getDOTNumber() {
+	
+	public String getDotNumber() {
 		return dotNumber;
 	}
 
-	public void setDOTNumber(String dotNumber) {
+	public void setDotNumber(String dotNumber) {
 		this.dotNumber = dotNumber;
 	}
 
 	@Override
 	public String toString() {
-		return "VerifyUserRequestData [firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
-				+ ", countryENCode=" + countryENCode + ", countryCode=" + countryCode + ", phone=" + phone
+		return "VerifyUserRequestDataRemoveNullFields [firstName=" + firstName + ", lastName=" + lastName + ", email="
+				+ email + ", countryENCode=" + countryENCode + ", countryCode=" + countryCode + ", phone=" + phone
 				+ ", dotNumber=" + dotNumber + "]";
 	}
 

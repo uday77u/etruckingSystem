@@ -10,7 +10,7 @@
       "type": "string"
     },
     "code": {
-      "type": ["string", "number", "null"]
+      "type": ["number", "null"]
     },
     "error": {
       "type": ["string", "null"]
@@ -22,5 +22,5 @@
       "type": ["string", "object", "array", "null"]
     }
   },
-  "additionalProperties": true
+  "additionalProperties": false
 }

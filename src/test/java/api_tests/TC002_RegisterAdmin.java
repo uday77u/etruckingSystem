@@ -15,9 +15,6 @@ public void setup() {
     adminService = new AdminService();
 }
 
-public void register_TC_AR_001_() {
-	
-}
 
 
 }

@@ -15,8 +15,7 @@ public interface ErrorMessageConstants {
     String INVALID_OLDPASSWORD= "Old Password does not match";
     String INVALID_ROLE= "Invalid role";
     String SAME_PASSWORD_Old= "Old password and new password must be different.";
-   String  INVALID_PASSWORD= "Password must have 8 to 15 characters with at least one lowercase; uppercase; numeric value and a special character";
-    String WRONG_PASSWORD= "Incorrect old password";
+   String  INVALID_PASSWORD= "Password must have 8 to 15 characters with at least one lowercase, uppercase, numeric value and a special character";
     String SAME_PASSWORD_new= "New password can't be same as old password";
     String ROLE_EXIST= "Role already exists";
    String  DEPARTMENT_EXIST= "Department already exists";
@@ -153,36 +152,46 @@ String     INVALID_CREDENTIALS= "Invalid email or password";
      String END_REQUEST_NOT_MATCH =" End Trip Location is not as per requested Location";
      
      //=================Added error messages=============================================
-    String PHONE_LENGTH_LEAST7="phone: phone length must be at least 7 characters long";
-    String PHONE_LENGTH_MOST10="phone: phone length must be less than or equal to 15 characters long";
+    String PHONE_LENGTH_LEAST7="Phone length must be at least 7 characters long";
+    String PHONE_LENGTH_MOST10="Phone length must be less than or equal to 15 characters long";
     
-    String MISSING_PHONE_NUMBER= "phone: phone is required";
-    String MISSING_FIRST_NAME="firstName: firstName is required";
-    String MISSING_LAST_NAME="lastName: lastName is required";
-    String MISSING_COUNTRY_CODE="countryCode: countryCode is required";
-    String MISSING_DOT_NUMBER="DOTNumber: DOTNumber is required";
-    String MISSING_COUNTRY_ENCODE="countryENCode: countryENCode is required";
+    String MISSING_PHONE_NUMBER=	"Phone is required";
+    String MISSING_FIRST_NAME=		"FirstName is required";
+    String MISSING_LAST_NAME=		"LastName is required";
+    String MISSING_COUNTRY_EN_CODE="CountryENCode is required";
+    String MISSING_COUNTRY_CODE=	"CountryCode is required";
+    String MISSING_PHONE=			"Phone is required";
+    String MISSING_DOT_NUMBER=		"DOTNumber is required";
+    String MISSING_COUNTRY_ENCODE=	"CountryENCode is required";
+    String MISSING_PASSWORD=		"Password is required";
+    String MISSING_COMPANY_NAME=    "Company name is required";
+    String MISSING_ROLE=			"Roll is required";
+    
     
     String INVALID_CHARACTERS="Invalid charecters";
     
-    String NULL_PHONE_NUMBER= "phone: phone must be a string";
-    String NULL_FIRST_NAME="firstName: firstName must be a string";
-    String NULL_LAST_NAME="lastName: lastName must be a string";
-    String NULL_COUNTRY_CODE="countryCode: countryCode must be a string";
-    String NULL_DOT_NUMBER="DOTNumber: DOTNumber must be a string";
-    String NULL_COUNTRY_ENCODE="countryENCode: countryENCode must be a string";
-    String NULL_EMAIL="email: email must be a string";
+    String NULL_PHONE_NUMBER=   "Phone must be a string";
+    String NULL_FIRST_NAME=		"FirstName must be a string";
+    String NULL_LAST_NAME=		"LastName must be a string";
+    String NULL_COUNTRY_CODE=	"CountryCode must be a string";
+    String NULL_DOT_NUMBER=		"DOTNumber must be a string";
+    String NULL_COUNTRY_ENCODE=	"CountryENCode must be a string";
+    String NULL_EMAIL=			"Email must be a string";
     
-    String INVALID_PHONE_NUMBER= "phone: phone must be a valid phone";
-    String INVALID_FIRST_NAME="firstName: firstName must be a valid firstName";
-    String INVALID_LAST_NAME="lastName: lastName must be a valid lastName";
-    String INVALID_COUNTRY_CODE="countryCode: countryCode must be a valid countryCode";
-    String INVALID_DOT_NUMBER="DOTNumber: DOTNumber must be a valid DOTNumber";
-    String INVALID_COUNTRY_ENCODE="countryENCode: countryENCode must be a valid countryENCode";
-    String INVALID_EMAIL_updated="email: email must be a valid email";
+    String INVALID_PHONE_NUMBER= 	"Invalid phone";
+    String INVALID_FIRST_NAME=		"Invalid first name";
+    String INVALID_LAST_NAME=		"Invalid last name";
+    String INVALID_COUNTRY_EN_CODE=	"Invalid countryENCode";
+    String INVALID_COUNTRY_CODE=	"Invalid countryCode";
+    String INVALID_DOT_NUMBER=		"Invalid DOTNumber";
+    String INVALID_COMPANY_NAME=	"Invalid CompanyName";
+    String INVALID_COUNTRY_ENCODE=	"Invalid countryENCode";
+    String INVALID_EMAIL_updated=	"Email must be a valid email";           //Actual message: [email: email must be a valid email]
+    String INVALID_IMAGE_URL=		"Invalid ImageUrl";
+    String INVALID_MODIFIED_BY=		"Invalid Modified By";
     
-    
-    
+    String ADMIN_NOT_FOUND="not found";
+    String ADMIN_INACTIVE="inactive";
 	
 
 }

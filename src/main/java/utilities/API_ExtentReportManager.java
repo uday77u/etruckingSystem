@@ -85,7 +85,7 @@ public class API_ExtentReportManager implements ITestListener {
         test = extent.createTest(className + " :: " + methodName);
         test.assignCategory(result.getMethod().getGroups());
 
-        logger.info("Starting Test {} : {}", testCounter, methodName);
+        logger.info("\n\n### Starting Test {} : {} ###", testCounter, methodName);
     }
 
 
@@ -143,4 +143,37 @@ public class API_ExtentReportManager implements ITestListener {
             logger.error("Failed to open Extent Report", e);
         }
     }
+    //-----------------Added for re usable method for assertion messages---------------
+   /* private static final ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
+
+    private API_ExtentReportManager() {}
+
+    public static void setTest(ExtentTest test) {
+        extentTest.set(test);
+    }
+
+    public static ExtentTest getTest() {
+        return extentTest.get();
+    }
+
+    // ✅ INFO
+    public static void logInfo(String message) {
+        if (getTest() != null) {
+            getTest().info(message);
+        }
+    }
+
+    // ✅ PASS
+    public static void logPass(String message) {
+        if (getTest() != null) {
+            getTest().pass(message);
+        }
+    }
+
+    // ✅ FAIL
+    public static void logFail(String message) {
+        if (getTest() != null) {
+            getTest().fail(message);
+        }
+    }*/
 }

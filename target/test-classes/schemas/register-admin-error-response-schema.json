@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Register Admin Error Response",
+  "type": "object",
+  "required": ["status", "message", "code", "error", "description"],
+  "properties": {
+    "status": {
+      "type": "boolean",
+      "const": false
+    },
+    "message": {
+      "type": "string",
+      "minLength": 1
+    },
+    "code": {
+      "type": "integer"
+    },
+    "error": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "data": { "type": ["null", "array", "object"] }
+  },
+  "additionalProperties": false
+}
